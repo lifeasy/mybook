@@ -6,6 +6,11 @@
     "styles": {
       "website": "./public-repertory/css/gitbook-configure.css"
     },
+    "links": {
+      "sidebar": {
+          "我的小站": "https://www.liangqili.com"
+      }
+    },
     "plugins": [
       "theme-comscore",
       "prism",
@@ -57,7 +62,7 @@
           "prismjs/themes/prism-solarizedlight.css"
         ],
         "lang": {
-          "shell": "zsh"
+          "shell": "bash"
         }
       },
       "tbfed-pagefooter": {
