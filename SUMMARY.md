@@ -5,6 +5,8 @@
 ---
 
 * iOS
+  * Swift
+    * [Swift源码编译](articles/iOS/swift/Swift源码编译.md)
   * UI
   * 多线程
   * Runtime
@@ -18,5 +20,7 @@
 
 * 常用工具
   * homebrew
-    * [homebrew换源](articles/tool/homebrew换源.md)
+    * [homebrew换源](articles/tool/homebrew/homebrew换源.md)
+  * node
+    * [npm修改配置文件](articles/tool/node/npm修改配置文件.md)
 

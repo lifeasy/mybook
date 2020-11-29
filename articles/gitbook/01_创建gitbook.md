@@ -172,6 +172,28 @@ $ gitbook mobi
 
 * 目前存在排版和乱码问题，后续解决
 
+## 存在问题
+
+ * ```shell
+   TypeError: cb.apply is not a function
+       at /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js:287:18
+       at FSReqCallback.oncomplete (fs.js:184:5)
+   ```
+
+   和node版本有关
+
+   解决：
+
+    1. node降级
+
+    2. 注释`/usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js`62-64行
+
+       ```js
+       fs.stat = statFix(fs.stat)
+       fs.fstat = statFix(fs.fstat)
+       fs.lstat = statFix(fs.lstat)
+       ```
+
 ## 参考文献
 
 [官方文档](https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md)
