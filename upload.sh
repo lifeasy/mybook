@@ -1,0 +1,1 @@
+scp -r ./_book root@47.106.123.122:/var/www/html/myGitbook/
