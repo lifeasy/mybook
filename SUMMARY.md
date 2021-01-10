@@ -21,6 +21,13 @@
   * 多线程
   * Runtime
 
+----
+
+* [数据结构与算法](articles/algorithm/算法.md)
+  * 算法基础
+    * [复杂度](articles/algorithm/geektime_note/01_复杂度.md)
+    * [数组](articles/algorithm/geektime_note/02_数组.md)
+
 ---
 
 * Shell
