@@ -27,6 +27,11 @@
   * 算法基础
     * [复杂度](articles/algorithm/geektime_note/01_复杂度.md)
     * [数组](articles/algorithm/geektime_note/02_数组.md)
+  * [Swift中相关的数据结构和算法](articles/algorithm/swift_algorithm/index.md)
+    * [字符串](articles/algorithm/swift_algorithm/String.md)
+    * [数组](articles/algorithm/swift_algorithm/Array.md)
+    * [字典](articles/algorithm/swift_algorithm/Dictionary.md)
+    * [集合](articles/algorithm/swift_algorithm/Set.md)
 
 ---
 
