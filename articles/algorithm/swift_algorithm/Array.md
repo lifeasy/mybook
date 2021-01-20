@@ -83,6 +83,12 @@ arr.removeSubrange(0...2)
 print(arr)//[1]
 arr.removeAll()
 print(arr)//[]
+let arr1 = [1, 2, 3, 4, 7, 3]
+print(arr1.drop{$0<4})// drop掉第一个给定表达式的值，返回后面的子序列 [4, 7, 3]
+print(arr1.dropFirst())//[2, 3, 4, 7, 3]
+print(arr1.dropFirst(2))//[3, 4, 7, 3]
+print(arr1.dropLast())//[1, 2, 3, 4, 7]
+print(arr1.dropLast(2))//[1, 2, 3, 4]
 ```
 
 ## 运算符操作
@@ -95,7 +101,7 @@ ret = [6] + arr
 print(ret)//[6, 1, 2, 3, 4, 7, 3] //reduce可以利用这个操作进行魔法
 ```
 
-## 属性
+## 属性&常用操作
 
 ```swift
 let arr = [1, 2, 3, 4, 7, 3]
@@ -107,6 +113,7 @@ print(arr.max()!) // 7
 print(arr.contains(3))//true
 print(arr.lastIndex(of: 2)!)//1
 print(arr.firstIndex(of: 4)!)//3
+
 ```
 
 ## 高阶函数
