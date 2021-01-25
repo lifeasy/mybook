@@ -23,6 +23,7 @@
   * 学习笔记
     * iOS强化
       * [01_多环境配置](articles/iOS/note/iOS强化/01_多环境配置.md)
+      * [02_Mach-O和符号](articles/iOS/note/iOS强化/02_Mach-O和符号.md)
 
 ----
 
