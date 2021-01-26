@@ -204,4 +204,36 @@ swift符号
 
 默认本地符号
 
-声明为public，编程全局符号
+声明为public，变成全局符号
+
+
+
+strip 脱符号表
+
+App中，除了间接符号表，其他的符号理论上都可以脱去
+
+![image-20210125233140214](02_Mach-O和符号.assets/image-20210125233140214.png)
+
+deadcode_strip，这里挖坑？
+
+![image-20210125234117851](02_Mach-O和符号.assets/image-20210125234117851.png)
+
+
+
+
+
+![image-20210125234225131](02_Mach-O和符号.assets/image-20210125234225131.png)
+
+
+
+调试strip命令
+
+从文件中读取断点 br read -f  <file>
+
+br list strip 断点放到组
+
+br enable strp 断点启用组
+
+![image-20210126000955748](02_Mach-O和符号.assets/image-20210126000955748.png)
+
+br write -f 写入断点
