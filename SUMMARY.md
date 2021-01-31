@@ -42,7 +42,6 @@
 
 * Shell
   * [常用命令](articles/shell/常用命令.md)
-  * [正则表达式](articles/shell/reg/reg.md)
 
 ---
 
@@ -59,4 +58,6 @@
   * git
     * [git常用操作](articles/tool/git/git常用操作.md)
     * [git常用命令](articles/tool/git/git常用命令.md)
+  * 正则表达式
+    * [Js中的正则表达式](articles/tool/reg/reg.md)
 
