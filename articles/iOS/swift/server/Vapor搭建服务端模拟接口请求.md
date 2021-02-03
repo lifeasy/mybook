@@ -330,5 +330,21 @@ lsof -i tcp:8080
 kill <pid>
 ```
 
+4. 查看ubuntu系统版本
+
+```shell
+# 查看ubuntu版本
+lsb_release -a 
+```
+
+5. error: missing LinuxMain.swift file in the Tests directory
+
+When using Swift 5.1 or later, use the `--enable-test-discovery` flag to bypass LinuxMain.swift.
+
+```shell
+swift test --enable-test-discovery
+swift run --enable-test-discovery
+```
+
 
 
