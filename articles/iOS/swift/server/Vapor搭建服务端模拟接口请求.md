@@ -10,20 +10,16 @@
 
 [Vapor中文文档](https://cn.docs.vapor.codes/4.0/)
 
+[Vapor4 的安装与配置](https://zhuanlan.zhihu.com/p/138718198)
+
 ## 安装Vapor
 
 ### macOS
 
-```shell
-brew install vapor
 ```
-
-```shell
+brew install vapor
 # To make sure Vapor is correctly installed run
 vapor
-```
-
-```shell
 # success 
 > vapor
 Usage: vapor <command>
@@ -50,18 +46,18 @@ Error: Error: Missing command
 
 查看系统版本
 
-```shell
+```
 $ lsb_release -a
-LSB Version:	core-9.20170808ubuntu1-noarch:security-9.20170808ubuntu1-noarch
-Distributor ID:	Ubuntu
-Description:	Ubuntu 18.04.3 LTS
-Release:	18.04
-Codename:	bionic
+LSB Version:  core-9.20170808ubuntu1-noarch:security-9.20170808ubuntu1-noarch
+Distributor ID: Ubuntu
+Description:  Ubuntu 18.04.3 LTS
+Release:  18.04
+Codename: bionic
 ```
 
 安装对用版本Swift必要依赖（swift.org上可以查找）
 
-```shell
+```
 sudo apt-get install clang
 sudo apt-get install libcurl3 libpython2.7
 ...
@@ -69,19 +65,19 @@ sudo apt-get install libcurl3 libpython2.7
 
 下载对应版本的Swift
 
-```shell
+```
 wget https://swift.org/builds/swift-5.3.3-release/ubuntu1804/swift-5.3.3-RELEASE/swift-5.3.3-RELEASE-ubuntu18.04.tar.gz
 ```
 
 解压（可自行指定目录）
 
-```shell
+```
 tar xzf swift-5.3.3-RELEASE-ubuntu18.04.tar.gz -C ~/swift
 ```
 
 设置环境变量
 
-```shell
+```
 sudo vi ~/.bashrc
 
 export PATH=~/swift/swift-5.3.3-RELEASE-ubuntu18.04.tar.gz/usr/bin:$PATH
@@ -89,38 +85,56 @@ export PATH=~/swift/swift-5.3.3-RELEASE-ubuntu18.04.tar.gz/usr/bin:$PATH
 
 验证是否安装成功
 
-```shell
+```
 swift -version
 ```
 
 #### 安装Vapor
 
-```shell
-# 1
+```
 git clone https://github.com/vapor/toolbox.git
-# 2
 cd toolbox
-# 3
-git checkout 18.0.0
-# 4
-swift build -c release --disable-sandbox --enable-test-discovery
-# 5
-mv .build/release/vapor /usr/local/bin
+git checkout <desired version>
+make install
+```
+
+#### 安装对应版本系统依赖库
+
+参考https://swift.org/download/#using-downloads说明，我这里安装的是20.04对应的依赖
 
 ```
+$ apt-get install \
+          binutils \
+          git \
+          gnupg2 \
+          libc6-dev \
+          libcurl4 \
+          libedit2 \
+          libgcc-9-dev \
+          libpython2.7 \
+          libsqlite3-0 \
+          libstdc++-9-dev \
+          libxml2 \
+          libz3-dev \
+          pkg-config \
+          tzdata \
+          zlib1g-dev
+```
+
+
 
 ## 搭建App
 
 创建目录
 
-```shell
+```
 mkdir ~/vapor
 cd ~/vapor
 ```
 
 新建项目
 
-```shell
+```
 $ vapor new HelloVapor
 Cloning template...
 name: HelloVapor
@@ -137,7 +151,7 @@ Generating project files
 
 运行项目
 
-```shell
+```
 # 1
 cd HelloVapor
 # 2
@@ -146,7 +160,7 @@ swift run
 
 初次会下载安装所有依赖库，完成后项目开始运行
 
-```shell
+```
 Resolving https://github.com/vapor/multipart-kit.git at 4.0.0
 Cloning https://github.com/apple/swift-nio-extras.git
 Resolving https://github.com/apple/swift-nio-extras.git at 1.7.0
@@ -156,13 +170,13 @@ Resolving https://github.com/apple/swift-nio-extras.git at 1.7.0
 
 浏览器输入*http://localhost:8080/hello*访问
 
-![image-20210201170136038](Vapor搭建服务端模拟接口请求.assets/image-20210201170136038.png)
+![image-20210201170136038](Vapor搭建服务端模拟接口请求.assets/image-20210201170136038-2515915.png)
 
 ## 在Xcode中运行
 
 打开Package.swift文件
 
-```shell
+```
 open Package.swift
 ```
 
@@ -172,7 +186,7 @@ open Package.swift
 
 编辑`routes.swift`文件
 
-```swift
+```
 app.get("hello", "vapor") { req -> String in
   return "Hello Vapor!"
 }
@@ -180,11 +194,11 @@ app.get("hello", "vapor") { req -> String in
 
 访问*http://localhost:8080/hello/vapor*
 
-![image-20210201170217139](Vapor搭建服务端模拟接口请求.assets/image-20210201170217139.png)
+![image-20210201170217139](Vapor搭建服务端模拟接口请求.assets/image-20210201170217139-2515915.png)
 
 ## 获取Url上的参数
 
-```swift
+```
 // 1
 app.get("hello", ":name") { req -> String in
   //2
@@ -198,23 +212,23 @@ app.get("hello", ":name") { req -> String in
 
 访问*http://localhost:8080/hello/Tim*
 
-![image-20210201170305364](Vapor搭建服务端模拟接口请求.assets/image-20210201170305364.png)
+![image-20210201170305364](Vapor搭建服务端模拟接口请求.assets/image-20210201170305364-2515915.png)
 
 ## 获取Post参数
 
 发送请求（使用软件：*RESTed*）
 
-* *URL*: *http://localhost:8080/info*
-* *Method*: *POST*
-* header: Content-Type=application/json 
-* params：name
-* JSON-encoded
+- *URL*: *http://localhost:8080/info*
+- *Method*: *POST*
+- header: Content-Type=application/json 
+- params：name
+- JSON-encoded
 
-![image-20210201170615399](Vapor搭建服务端模拟接口请求.assets/image-20210201170615399.png)
+![image-20210201170615399](Vapor搭建服务端模拟接口请求.assets/image-20210201170615399-2515915.png)
 
 在`routes.swift`下面创建请求参数结构体
 
-```swift
+```
 struct InfoData: Content {
  let name: String
 }
@@ -222,7 +236,7 @@ struct InfoData: Content {
 
 获取请求中的参数
 
-```swift
+```
 // 1
 app.post("info") { req -> String in
   // 2
@@ -232,11 +246,11 @@ app.post("info") { req -> String in
 }
 ```
 
-![image-20210201170825494](Vapor搭建服务端模拟接口请求.assets/image-20210201170825494.png)
+![image-20210201170825494](Vapor搭建服务端模拟接口请求.assets/image-20210201170825494-2515915.png)
 
 使用curl测试
 
-```shell
+```
 $ curl http://localhost:8080/info \
   -H "Content-Type: application/json" \
   -d '{"name":"Tim"}'
@@ -247,7 +261,7 @@ Hello Tim!%
 
 新建响应类型
 
-```swift
+```
 struct InfoResponse: Content {
   let request: InfoData
 }
@@ -255,7 +269,7 @@ struct InfoResponse: Content {
 
 新建请求路由
 
-```swift
+```
 // 1
 app.post("info") { req -> InfoResponse in
   let data = try req.content.decode(InfoData.self)
@@ -264,7 +278,7 @@ app.post("info") { req -> InfoResponse in
 }
 ```
 
-![image-20210201171137334](Vapor搭建服务端模拟接口请求.assets/image-20210201171137334.png)
+![image-20210201171137334](Vapor搭建服务端模拟接口请求.assets/image-20210201171137334-2515915.png)
 
 ## 更新依赖
 
@@ -274,7 +288,7 @@ app.post("info") { req -> InfoResponse in
 
 ### 在Terminal中
 
-```shell
+```
 swift package update
 ```
 
@@ -298,7 +312,7 @@ swift package update
 
 1. Linux上Swift运行报错
 
-```shell
+```
 $ swift
 error: ld-2.27.so 0x7fffffff0005c564: adding range [0x1464a-0x146ba) which has a base that is less than the function's low PC 0x14dc0. Please file a bug and attach the file at the start of this error message
 error: ld-2.27.so 0x7fffffff0005c564: adding range [0x146d0-0x146d6) which has a base that is less than the function's low PC 0x14dc0. Please file a bug and attach the file at the start of this error message
@@ -310,41 +324,22 @@ Type :help for assistance.
 
 解决：https://bugs.swift.org/browse/SR-8690
 
-```shell
+```
 sudo apt remove libc6-dbg
 ```
 
-2. 离开Swift命令行
+1. 离开Swift命令行
 
-```shell
+```
 # 命令前加:
 :quit
 ```
 
-3. 端口占用
+1. 端口占用
 
-```shell
+```
 #查看端口占用情况
 lsof -i tcp:8080 
 #杀掉进程
 kill <pid>
 ```
-
-4. 查看ubuntu系统版本
-
-```shell
-# 查看ubuntu版本
-lsb_release -a 
-```
-
-5. error: missing LinuxMain.swift file in the Tests directory
-
-When using Swift 5.1 or later, use the `--enable-test-discovery` flag to bypass LinuxMain.swift.
-
-```shell
-swift test --enable-test-discovery
-swift run --enable-test-discovery
-```
-
-
-
