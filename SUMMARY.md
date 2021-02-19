@@ -46,6 +46,7 @@
     * [散列表（一）](articles/algorithm/geektime_note/10_散列表_1.md)
     * [散列表（二）](articles/algorithm/geektime_note/10_散列表_2.md)
     * [散列表（三）](articles/algorithm/geektime_note/10_散列表_3.md)
+    * [哈希算法](articles/algorithm/geektime_note/11_哈希算法.md)
   * [Swift中相关的数据结构和算法](articles/algorithm/swift_algorithm/index.md)
     * [字符串](articles/algorithm/swift_algorithm/String.md)
     * [数组](articles/algorithm/swift_algorithm/Array.md)
