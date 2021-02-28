@@ -22,6 +22,9 @@
   * UI
   * 多线程
   * Runtime
+  * 持续集成
+    * [Jenkins](articles/iOS/ci/jenkins.md)
+  * [iOS逆向](articles/iOS/iosre/iosre.md)
   * 学习笔记
     * iOS强化
       * [01_多环境配置](articles/iOS/note/iOS强化/01_多环境配置.md)
