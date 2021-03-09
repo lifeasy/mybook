@@ -24,7 +24,17 @@
   * Runtime
   * 持续集成
     * [Jenkins](articles/iOS/ci/jenkins.md)
-  * [iOS逆向](articles/iOS/iosre/iosre.md)
+  * iOS逆向
+    * [iOS逆向简介](articles/iOS/iosre/iosre.md)
+    * [01_iPhone越狱](articles/iOS/iosre/01_jailbreak.md)
+    * [02_SSH远程访问越狱设备](articles/iOS/iosre/02_ssh.md)
+    * [03_usbmuxd蓝牙访问](articles/iOS/iosre/03_usbmuxd.md)
+    * [04_iPhone终端中文问题](articles/iOS/iosre/04_terminal_zh.md)
+    * [05_Cycript](articles/iOS/iosre/05_cycript.md)
+    * [06_Reveal](articles/iOS/iosre/06_reveal.md)
+    * [07_逆向思路](articles/iOS/iosre/07_reverse.md)
+    * [08_Mach-O](articles/iOS/iosre/08_macho.md)
+    * [09_动态库共享缓存](articles/iOS/iosre/09_dyld_shared_cache.md)
   * 学习笔记
     * iOS强化
       * [01_多环境配置](articles/iOS/note/iOS强化/01_多环境配置.md)
