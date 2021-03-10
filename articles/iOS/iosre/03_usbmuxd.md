@@ -26,7 +26,18 @@ usbmuxd 是苹果的一个服务，这个服务主要用于在USB协议上实现
 
 [peertalk](https://github.com/rsms/peertalk)
 
-### 三、python-client转发
+iproxy
+
+## 三、iproxy转发
+
+```shell
+$ brew install usbmuxd
+# 安装usbmuxd库之后，就顺带安装了一个小工具iproxy
+# iproxy 本地端口 映射端口 
+$ iproxy 10010 22
+```
+
+## 四、python-client转发
 
 1）开启python-client
 

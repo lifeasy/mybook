@@ -35,6 +35,9 @@
     * [07_逆向思路](articles/iOS/iosre/07_reverse.md)
     * [08_Mach-O](articles/iOS/iosre/08_macho.md)
     * [09_动态库共享缓存](articles/iOS/iosre/09_dyld_shared_cache.md)
+    * [10_脱壳](articles/iOS/iosre/10_dumpdecrypted.md)
+    * [11_Theos](articles/iOS/iosre/11_theos.md)
+    * [12_动态调试](articles/iOS/iosre/12_debug.md)
   * 学习笔记
     * iOS强化
       * [01_多环境配置](articles/iOS/note/iOS强化/01_多环境配置.md)

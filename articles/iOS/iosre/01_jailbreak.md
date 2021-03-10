@@ -56,3 +56,5 @@
   * 配合Mac端的Reveal，可查看App的UI架构
 * Vi IMproved
   * 文本编辑器
+* Apple File Conduit
+  * 可通过Mac软件（类似iFunBox）查看手机文件系统

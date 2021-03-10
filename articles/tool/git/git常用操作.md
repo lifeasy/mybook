@@ -19,3 +19,12 @@ git config  --global user.name xxx
 git config  --global user.email xxx
 ```
 
+## oh-my-zsh git 慢/卡顿问题
+
+[oh-my-zsh slow, but only for certain Git repo](https://stackoverflow.com/questions/12765344/oh-my-zsh-slow-but-only-for-certain-git-repo)
+
+```shell
+$ git config --add oh-my-zsh.hide-dirty 1
+$ git config --add oh-my-zsh.hide-status 1
+```
+
