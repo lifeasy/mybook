@@ -8,8 +8,8 @@
   * LLDB
     * [LLDB常用命令](articles/iOS/lldb/LLDB常用命令.md)
   * Swift
-    * [Swift源码编译](articles/iOS/swift/Swift源码编译.md)
     * [Swift常用命令](articles/iOS/swift/Swift常用命令.md)
+    * [Swift源码编译](articles/iOS/swift/Swift源码编译.md)
     * 逻辑进阶笔记
       * [01_类、对象、属性](articles/iOS/swift/logicEdu/01_类、对象、属性.md)
       * [02_值类型、引用类型](articles/iOS/swift/logicEdu/02_值类型、引用类型.md)
@@ -25,6 +25,7 @@
   * 持续集成
     * [Jenkins](articles/iOS/ci/jenkins.md)
   * iOS逆向
+    * [iOS逆向常用命令](articles/iOS/iosre/command_iosre.md)
     * [iOS逆向简介](articles/iOS/iosre/iosre.md)
     * [01_iPhone越狱](articles/iOS/iosre/01_jailbreak.md)
     * [02_SSH远程访问越狱设备](articles/iOS/iosre/02_ssh.md)
@@ -44,6 +45,7 @@
     * [16_动态库注入](articles/iOS/iosre/16_injection.md)
   * 学习笔记
     * iOS强化
+      * [iOS底层常用命令](articles/iOS/note/iOS强化/command_ioslowlevel.md)
       * [01_多环境配置](articles/iOS/note/iOS强化/01_多环境配置.md)
       * [02_Mach-O和符号](articles/iOS/note/iOS强化/02_Mach-O和符号.md)
 
@@ -101,8 +103,8 @@
   * node
     * [npm修改配置文件](articles/tool/node/npm修改配置文件.md)
   * git
-    * [git常用操作](articles/tool/git/git常用操作.md)
     * [git常用命令](articles/tool/git/git常用命令.md)
+    * [git常用操作](articles/tool/git/git常用操作.md)
   * 正则表达式
     * [Js中的正则表达式](articles/tool/reg/reg.md)
 

@@ -99,10 +99,6 @@ old value: 0x0000000000000000
 new value: 0x00000001006fc0a0
 ```
 
-
-
-
-
 ## breakpoint 
 
 > 设置断点
@@ -252,5 +248,24 @@ General Purpose Registers:
 [  0] BB914D93-708D-35F5-BD97-2AEE2D59FC3B 0x0000000100000000 /Users/360jr/Library/Developer/Xcode/DerivedData/LGSwift-fvgrncxxsmdtgkdnysjqhlyzosii/Build/Products/Debug/LGSwift 
 [  1] 2705F0D8-C104-3DE9-BEB5-B1EF6E28656D 0x0000000100014000 /usr/lib/dyld 
 ...
+
+(lldb) image list -o -f
+[  0] 0x0000000001164000 /var/containers/Bundle/Application/C4BD67F6-5D1E-4FB8-AAAC-CD9EE05248E9/ChangeColor.app/ChangeColor(0x0000000101164000)
+[  1] 0x0000000101490000 /Users/360jr/Library/Developer/Xcode/iOS DeviceSupport/12.4.8 (16G201)/Symbols/usr/lib/dyld
+[  2] 0x000000010117c000 /usr/lib/substitute-inserter.dylib(0x000000010117c000)
+[  3] 0x00000000263a8000 /Users/360jr/Library/Developer/Xcode/iOS DeviceSupport/12.4.8 (16G201)/Symbols/System/Library/Frameworks/Foundation.framework/Foundation
+[  4] 0x00000000263a8000 /Users/360jr/Library/Developer/Xcode/iOS DeviceSupport/12.4.8 (16G201)/Symbols/usr/lib/libobjc.A.dylib
+```
+
+## process
+
+```shell
+# 链接到某个debugserver
+(lldb) process connect connect://127.0.0.1:10086
+Process 14359 stopped
+* thread #1, queue = 'com.apple.main-thread', stop reason = signal SIGSTOP
+    frame #0: 0x00000001a6dff0f4 libsystem_kernel.dylib`mach_msg_trap + 8
+libsystem_kernel.dylib`mach_msg_trap:
+->  0x1a6dff0f4 <+8>: ret
 ```
 
