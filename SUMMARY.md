@@ -38,6 +38,10 @@
     * [10_脱壳](articles/iOS/iosre/10_dumpdecrypted.md)
     * [11_Theos](articles/iOS/iosre/11_theos.md)
     * [12_动态调试](articles/iOS/iosre/12_debug.md)
+    * [13_RSA](articles/iOS/iosre/13_rsa.md)
+    * [14_Hash](articles/iOS/iosre/14_hash.md)
+    * [15_重签名](articles/iOS/iosre/15_resign.md)
+    * [16_动态库注入](articles/iOS/iosre/16_injection.md)
   * 学习笔记
     * iOS强化
       * [01_多环境配置](articles/iOS/note/iOS强化/01_多环境配置.md)
