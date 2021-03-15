@@ -35,6 +35,9 @@ Identifier=com.tencent.xin
 # codesign -fs "（证书名称或者id）" （FrameWork名称）
 $ codesign -fs "iPhone Developer: 840385400@qq.com (NZJQGFWAYE)" mars.framework
 
+# 强制重签名
+$ codesign --force --deep --sign - <path> 
+
 ```
 
 ## ldid
