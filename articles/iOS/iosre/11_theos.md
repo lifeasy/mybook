@@ -72,7 +72,7 @@ export THEOS_DEVICE_PORT = 22
 # 打包架构 一般为安装设备的架构
 ARCHS = arm64
 # 导入的FRAMEWORK
-
+<name>_FRAMEWORKS = UIKIT
 ```
 
 * Tweak.x
