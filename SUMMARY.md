@@ -102,6 +102,7 @@
     * [homebrew换源](articles/tool/homebrew/homebrew换源.md)
   * node
     * [npm修改配置文件](articles/tool/node/npm修改配置文件.md)
+    * [卸载重装node](articles/tool/node/卸载node.md)
   * git
     * [git常用命令](articles/tool/git/git常用命令.md)
     * [git常用操作](articles/tool/git/git常用操作.md)
