@@ -52,6 +52,7 @@ objdump --macho --indirect-symbols ${MACH_PATH}
 ```shell
 # 人类友好的方式输出符号表
 nm -m <path>
+# -n 排序 -p 不排序
 ```
 
 ### lipo
@@ -73,19 +74,99 @@ $ lipo 文件路径1 文件路径2 -output 输出文件路径
 $ ar -x BioAuthEngine64
 ```
 
-strings
+### strings
 
 ```shell
 # 查看二进制文件中的strings
 $ strings qihooloan_ios | grep --color=auto -ir "checkCachedLicense"
 ```
 
-Xcode
+### Xcode
 
 ```shell
 # 查看当前环境的SDK版本
-xcodebuild -showsdks
+$ xcodebuild -showsdks
+# 查看编译时间
+$ defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES
+
+# Xcode环境变量
+# 查看App启动时间
+DYLD_PRINT_STATISTICS DYLD_PRINT_STATISTICS_DETAILS
 ```
 
+### Xcrun
+
+```shell
+# 查看Rebase和Bind信息
+$ xcrun dyldinfo -bind InjectDemo
+bind information:
+segment section          address        type    addend dylib            symbol
+__DATA  __objc_data      0x100008E18    pointer      0 libobjc          _OBJC_METACLASS_$_NSObject
+__DATA  __objc_data      0x100008E40    pointer      0 libobjc          _OBJC_METACLASS_$_NSObject
+__DATA  __objc_data      0x100008E00    pointer      0 libobjc          __objc_empty_cache
+__DATA  __objc_data      0x100008E28    pointer      0 libobjc          __objc_empty_cache
+__DATA  __objc_data      0x100008E50    pointer      0 libobjc          __objc_empty_cache
+...
+```
+
+
+
 ## 编译链接相关
+
+### 预处理
+
+```shell
+# 查看预处理
+xcrun clang -E main.c
+```
+
+### 词法分析(lexical anaysis)
+
+生成token
+
+```shell
+# 词法分析
+$ xcrun clang -fmodules -fsyntax-only -Xclang -dump-tokens main.c
+```
+
+### 语法分析(semantic analysis)
+
+词法分析的Token流会被解析成一颗抽象语法树(abstract syntax tree - AST)。
+
+有了抽象语法树，clang就可以对这个树进行分析，找出代码中的错误。比如类型不匹配，亦或Objective C中向target发送了一个未实现的消息。
+
+```shell
+# 语法分析
+$ xcrun clang -fsyntax-only -Xclang -ast-dump main.c | open -f
+```
+
+### CodeGen （生成IR）
+
+```shell
+$ xcrun clang -S -emit-llvm main.c -o main.ll
+```
+
+### 生成汇编代码
+
+```shell
+$ xcrun clang -S main.c -o main.s
+```
+
+### 汇编器（机器码、目标文件）
+
+```shell
+$ xcrun clang -fmodules -c main.c -o main.o
+```
+
+### 链接（生成mach-o）
+
+```shell
+$ xcrun clang main.o -o main
+```
+
+## 
+
+
+
+
 
