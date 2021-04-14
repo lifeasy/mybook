@@ -20,6 +20,7 @@
     * Swift服务端
       * [Vapor搭建服务端模拟接口请求](articles/iOS/swift/server/Vapor搭建服务端模拟接口请求.md)
   * UI
+    * [核心动画](articles/iOS/ui/CoreAnimation.md)
   * 多线程
   * Runtime
   * 持续集成

@@ -54,15 +54,19 @@
         "button": "打赏",
         "alipayText": "支付宝打赏",
         "wechatText": "微信打赏",
-        "alipay": "./source/images/alipay.jpeg",
-        "wechat": "./source/images/wxpay.jpeg"
+        "alipay": "https://www.liangqili.com/hexo/images/alipay.png",
+        "wechat": "https://www.liangqili.com/hexo/images/wechatpay.png"
       },
       "prism": {
         "css": [
-          "prismjs/themes/prism-solarizedlight.css"
+          "prismjs/themes/prism-okaidia.css"
         ],
         "lang": {
-          "shell": "bash"
+          "shel": "bash",
+          "shell": "bash",
+          "objective-c": "objectivec",
+          "swi": "swift",
+          "swif": "swift"
         }
       },
       "tbfed-pagefooter": {
