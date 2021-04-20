@@ -976,9 +976,344 @@ locations 数组并不是强制要求的，但是如果你给它赋值了就一�
 
 ## 六、隐式动画
 
+### 6.1、事务
+
 > 在做动画时，会发现动画会被平滑的完成，而不是跳变，其实这就是隐式动画。是因为并没有指定任何动画的类型。我们仅仅改变了一个属性，然后Core Animation来决定如何并且何时去做动画。
 
+```objective-c
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:1];
+    CGFloat red = arc4random() / (CGFloat)INT_MAX;
+    CGFloat green = arc4random() / (CGFloat)INT_MAX;
+    CGFloat blue = arc4random() / (CGFloat)INT_MAX;
+    self.testLayer.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0].CGColor;
+    [CATransaction commit];
+}
 
+- (void)transactionTesting {
+    [self.view addSubview:self.containerView];
+    self.containerView.frame = CGRectMake(0, 200, self.view.frame.size.width, 200);
+    
+    self.testLayer = [CALayer layer];
+    self.testLayer.frame = self.containerView.bounds;
+    [self.containerView.layer addSublayer:self.testLayer];
+    self.testLayer.backgroundColor = [UIColor redColor].CGColor;
+}
+```
+
+`UIView`有两个方法，`+beginAnimations:context:`和`+commitAnimations`，和`CATransaction`的`+begin`和`+commit`方法类似。实际上在`+beginAnimations:context:`和`+commitAnimations`之间所有视图或者图层属性的改变而做的动画都是由于设置了`CATransaction`的原因。
+
+```objective-c
+[CATransaction setCompletionBlock:^{
+        NSLog(@"事务完成");
+    }];
+```
+
+本地事务未完成下次事务又来的时候，本地事务会立即结束。
+
+图层默认会有隐式动画，0.25s
+
+### 6.2、图层行为
+
+> 对于直接添加到UIView上的layer，会发现隐式动画立即完成。
+
+Core Animation通常对`CALayer`的所有属性（可动画的属性）做动画，但是`UIView`把它关联的图层的这个特性关闭了。
+
+我们把改变属性时`CALayer`自动应用的动画称作*行为*，当`CALayer`的属性被修改时候，它会调用`-actionForKey:`方法，传递属性的名称。剩下的操作都在`CALayer`的头文件中有详细的说明，实质上是如下几步：
+
+- 图层首先检测它是否有委托，并且是否实现`CALayerDelegate`协议指定的`-actionForLayer:forKey`方法。如果有，直接调用并返回结果。
+- 如果没有委托，或者委托没有实现`-actionForLayer:forKey`方法，图层接着检查包含属性名称对应行为映射的`actions`字典。
+- 如果`actions字典`没有包含对应的属性，那么图层接着在它的`style`字典接着搜索属性名。
+- 最后，如果在`style`里面也找不到对应的行为，那么图层将会直接调用定义了每个属性的标准行为的`-defaultActionForKey:`方法。
+
+所以一轮完整的搜索结束之后，`-actionForKey:`要么返回空（这种情况下将不会有动画发生），要么是`CAAction`协议对应的对象，最后`CALayer`拿这个结果去对先前和当前的值做动画。
+
+于是这就解释了UIKit是如何禁用隐式动画的：每个`UIView`对它关联的图层都扮演了一个委托，并且提供了`-actionForLayer:forKey`的实现方法。当不在一个动画块的实现中，`UIView`对所有图层行为返回`nil`，但是在动画block范围之内，它就返回了一个非空值。
+
+当然返回`nil`并不是禁用隐式动画唯一的办法，`CATransacition`有个方法叫做`+setDisableActions:`，可以用来对所有属性打开或者关闭隐式动画。如果在清单7.2的`[CATransaction begin]`之后添加下面的代码，同样也会阻止动画的发生：
+
+```objective-c
+[CATransaction setDisableActions:YES];
+```
+
+总结一下，我们知道了如下几点
+
+- `UIView`关联的图层禁用了隐式动画，对这种图层做动画的唯一办法就是使用`UIView`的动画函数（而不是依赖`CATransaction`），或者继承`UIView`，并覆盖`-actionForLayer:forKey:`方法，或者直接创建一个显式动画。
+- 对于单独存在的图层，我们可以通过实现图层的`-actionForLayer:forKey:`委托方法，或者提供一个`actions`字典来控制隐式动画。
+
+**案例：使用推进过渡的色值动画**
+
+```objective-c
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    CGFloat red = arc4random() / (CGFloat)INT_MAX;
+    CGFloat green = arc4random() / (CGFloat)INT_MAX;
+    CGFloat blue = arc4random() / (CGFloat)INT_MAX;
+    self.testLayer.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0].CGColor;
+}
+
+- (void)transactionTesting {
+    self.testLayer = [CALayer layer];
+    self.testLayer.frame = CGRectMake(200, 200, 200, 200);
+    [self.view.layer addSublayer:self.testLayer];
+    self.testLayer.backgroundColor = [UIColor redColor].CGColor;
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionPush;
+    transition.subtype = kCATransitionFromLeft;
+    self.testLayer.actions = @{@"backgroundColor":transition};
+}
+```
+
+### 6.3、呈现与模型
+
+CALayer 的属性行为其实很不正常，因为改变一个图层的属性并没有立刻生效，而是通过一段时间渐变更新。这是怎么做到的呢？
+
+当你改变一个图层的属性，属性值的确是立刻更新的（如果你读取它的数据，你会发现它的值在你设置它的那一刻就已经生效了），但是屏幕上并没有马上发生改 变。这是因为你设置的属性并没有直接调整图层的外观，相反，他只是定义了图层动画结束之后将要变化的外观。
+
+当设置 CALayer 的属性，实际上是在定义当前事务结束之后图层如何显示的模 型。Core Animation扮演了一个控制器的角色，并且负责根据图层行为和事务设置去不断更新视图的这些属性在屏幕上的状态。
+
+每个图层属性的显示值都被存储在一个叫做呈现图层的独立图层当中，他可以通 过 -**presentationLayer** 方法来访问。**这个呈现图层实际上是模型图层的复制**， **但是它的属性值代表了在任何指定时刻当前外观效果。在呈现图层上调用 – modelLayer 将会返回它正在呈现所依赖的 CALayer 。
+
+<img src="CoreAnimation.assets/image-20210419172113315.png" alt="image-20210419172113315" style="zoom:50%;" />
+
+```objective-c
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    CGPoint point = [[touches anyObject] locationInView:self.view];
+    if ([self.testLayer.presentationLayer hitTest:point]) {
+        CGFloat red = arc4random() / (CGFloat)INT_MAX;
+        CGFloat green = arc4random() / (CGFloat)INT_MAX;
+        CGFloat blue = arc4random() / (CGFloat)INT_MAX;
+        self.testLayer.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0].CGColor;
+    } else {
+        [CATransaction begin];
+        [CATransaction setAnimationDuration:4.0];
+        self.testLayer.position = point;
+        [CATransaction commit];
+    }
+}
+
+- (void)presentationTesting {
+    self.testLayer = [CALayer layer];
+    self.testLayer.frame = CGRectMake(0, 0, 100, 100);
+    self.testLayer.position = self.view.center;
+    self.testLayer.backgroundColor = [UIColor redColor].CGColor;
+    [self.view.layer addSublayer:self.testLayer];
+}
+```
+
+## 七、显示动画
+
+> **隐式动画是在iOS平台创建动态用户界面的一种直 接方式，也是UIKit动画机制的基础，不过它并不能涵盖所有的动画类型。接下来将要研究一下显式动画，它能够对一些属性做指定的自定义动画，或者创建非线性动画，比如沿着任意一条曲线移动。**
+
+<img src="CoreAnimation.assets/image-20210419172227842.png" alt="image-20210419172227842" style="zoom:50%;" />
+
+### 7.1、属性动画
+
+#### 7.1.1、CABaseAnimation
+
+> **使用CABaseAnimation可以实现视图的移动、旋转动画、缩小动画等**
+
+```objective-c
+- (void)animationTesting {
+    self.testLayer = [CALayer layer];
+    self.testLayer.frame = CGRectMake(0, 0, 100, 100);
+    self.testLayer.position = self.view.center;
+    self.testLayer.backgroundColor = [UIColor redColor].CGColor;
+    [self.view.layer addSublayer:self.testLayer];
+    
+    CABasicAnimation *animtion = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animtion.toValue = @(M_PI_2);
+    animtion.duration = 4;
+    animtion.cumulative = YES;
+    animtion.repeatCount = INFINITY;
+    animtion.autoreverses = YES;
+    [self.testLayer addAnimation:animtion forKey:@"rotation"];
+}
+```
+
+#### 7.1.2、关键帧动画CAKeyframeAnimation
+
+CAKeyframeAnimation 是另一种UIKit没有暴露出来但功能强大的类。 和 CABasicAnimation 类似， **CAKeyframeAnimation 同样 是 CAPropertyAnimation 的一个子类，它依然作用于单一的一个属性，但是 和 CABasicAnimation不一样的是，它不限制于设置一个起始和结束的值，而是可以根据一连串随意的值来做动画。**
+
+```objective-c
+CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"backgroundColor"];
+    animation.duration = 2.0;
+    animation.values = @[
+        (__bridge id)[UIColor blueColor].CGColor,
+        (__bridge id)[UIColor redColor].CGColor,
+        (__bridge id)[UIColor greenColor].CGColor,
+        (__bridge id)[UIColor blueColor].CGColor ];
+    animation.repeatCount = INFINITY;
+    [self.testLayer addAnimation:animation forKey:nil];
+```
+
+**案例： 沿着一个贝塞尔曲线对图层做动画**
+
+```objective-c
+// 关键帧动画2
+    [self.view addSubview:self.containerView];
+    self.containerView.frame = CGRectMake(0, 200, self.view.frame.size.width, 500);
+    self.containerView.backgroundColor = [UIColor lightGrayColor];
+    UIBezierPath *bezierPath = [[UIBezierPath alloc] init];
+    [bezierPath moveToPoint:CGPointMake(0, 150)];
+    [bezierPath addCurveToPoint:CGPointMake(self.view.frame.size.width, 150) controlPoint1:CGPointMake(75, 0) controlPoint2:CGPointMake(225, 300)];
+    CAShapeLayer *pathLayer = [CAShapeLayer layer];
+    pathLayer.path = bezierPath.CGPath;
+    pathLayer.fillColor = [UIColor clearColor].CGColor;
+    pathLayer.strokeColor = [UIColor redColor].CGColor;
+    pathLayer.lineWidth = 3.0f;
+    [self.containerView.layer addSublayer:pathLayer];
+    
+    CALayer *airLayer = [CALayer layer];
+    airLayer.frame = CGRectMake(0, 0, 64, 64);
+    airLayer.position = CGPointMake(0, 150);
+    airLayer.contents = (__bridge id)[UIImage imageNamed:@"Airplane"].CGImage;
+    [self.containerView.layer addSublayer:airLayer];
+    
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+    animation.keyPath = @"position";
+    animation.duration = 4.0f;
+    animation.path = bezierPath.CGPath;
+    // 根据path切线自动旋转
+    animation.rotationMode = kCAAnimationRotateAuto;
+    animation.repeatCount = INFINITY;
+    [airLayer addAnimation:animation forKey:nil];
+```
+
+### 7.2、动画组CAAnimationGroup
+
+CABasicAnimation 和 CAKeyframeAnimation 仅仅作用于单独的属性， 而 CAAnimationGroup 可以把这些动画组合在一起。 CAAnimationGroup 是另一个继承于CAAnimation 的子类，它添加了一个 animations 数组的属性，用来组合别的动画。
+
+```objective-c
+// 动画组
+    CABasicAnimation *baseAnimation = [CABasicAnimation animation];
+    baseAnimation.keyPath = @"backgroundColor";
+    baseAnimation.toValue = (__bridge id)[UIColor redColor].CGColor;
+    
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    group.animations = @[animation,baseAnimation];
+    group.duration = 4.0f;
+    group.repeatCount = INFINITY;
+    [airLayer addAnimation:group forKey:nil];
+```
+
+### 7.3、过渡动画
+
+为了创建一个过渡动画，我们将使用 CATransition ，同样是另一 个CAAnimation 的子类，和别的子类不同， CATransition有一 个type 和 subtype 来标识变换效果。
+
+过渡并不像属性动画那样平滑地在两个值之间做动画，而是影响到整个图层的变化。过渡动画首先展示之前的图层外观，然后通过一个交换过渡到新的外观。
+
+```objective-c
+//set up crossfade transition
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionFade;
+    //apply transition to imageview backing layer
+    [self.imageView.layer addAnimation:transition forKey:nil];
+    //cycle to next image
+    UIImage *currentImage = self.imageView.image;
+    NSUInteger index = [self.images indexOfObject:currentImage];
+    index = (index + 1) % [self.images count];
+    self.imageView.image = self.images[index];
+```
+
+你可以从代码中看出，过渡动画和之前的属性动画或者动画组添加到图层上的方式一致，都是通过`-addAnimation:forKey:`方法。**但是和属性动画不同的是，对指定的图层一次只能使用一次`CATransition`，因此，无论你对动画的键设置什么值，过渡动画都会对它的键设置成“transition”，也就是常量`kCATransition`。**
+
+#### 7.3.1、隐式过渡
+
+`CATransision`可以对图层任何变化平滑过渡的事实使得它成为那些不好做动画的属性图层行为的理想候选。苹果当然意识到了这点，并且当设置了`CALayer`的`content`属性的时候，`CATransition`的确是默认的行为。但是对于视图关联的图层，或者是其他隐式动画的行为，这个特性依然是被禁用的，但是对于你自己创建的图层，这意味着对图层`contents`图片做的改动都会自动附上淡入淡出的动画。
+
+#### 7.3.2、对图层树的动画
+
+`CATransition`并不作用于指定的图层属性，这就是说你可以在即使不能准确得知改变了什么的情况下对图层做动画，例如，在不知道`UITableView`哪一行被添加或者删除的情况下，直接就可以平滑地刷新它，或者在不知道`UIViewController`内部的视图层级的情况下对两个不同的实例做过渡动画。
+
+只需要将动画添加到被影响图层的`superlayer`。
+
+**案例 对`UITabBarController`做动画**
+
+```objective-c
+#import "AppDelegate.h"
+#import "FirstViewController.h" 
+#import "SecondViewController.h"
+#import 
+@implementation AppDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
+    UIViewController *viewController1 = [[FirstViewController alloc] init];
+    UIViewController *viewController2 = [[SecondViewController alloc] init];
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = @[viewController1, viewController2];
+    self.tabBarController.delegate = self;
+    self.window.rootViewController = self.tabBarController;
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    ￼//set up crossfade transition
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionFade;
+    //apply transition to tab bar controller's view
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+}
+@end
+```
+
+#### 7.3.3 自定义动画
+
+过渡动画做基础的原则就是对原始的图层外观截图，然后添加一段动画，平滑过渡到图层改变之后那个截图的效果。如果我们知道如何对图层截图，我们就可以使用属性动画来代替`CATransition`或者是UIKit的过渡方法来实现动画。
+
+事实证明，对图层做截图还是很简单的。`CALayer`有一个`-renderInContext:`方法，可以通过把它绘制到Core Graphics的上下文中捕获当前内容的图片，然后在另外的视图中显示出来。如果我们把这个截屏视图置于原始视图之上，就可以遮住真实视图的所有变化，于是重新创建了一个简单的过渡效果。
+
+**案例 用`renderInContext:`创建自定义过渡效果**
+
+```objective-c
+@implementation ViewController
+- (IBAction)performTransition
+{
+    //preserve the current view snapshot
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 0.0);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *coverImage = UIGraphicsGetImageFromCurrentImageContext();
+    //insert snapshot view in front of this one
+    UIView *coverView = [[UIImageView alloc] initWithImage:coverImage];
+    coverView.frame = self.view.bounds;
+    [self.view addSubview:coverView];
+    //update the view (we'll simply randomize the layer background color)
+    CGFloat red = arc4random() / (CGFloat)INT_MAX;
+    CGFloat green = arc4random() / (CGFloat)INT_MAX;
+    CGFloat blue = arc4random() / (CGFloat)INT_MAX;
+    self.view.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+    //perform animation (anything you like)
+    [UIView animateWithDuration:1.0 animations:^{
+        //scale, rotate and fade the view
+        CGAffineTransform transform = CGAffineTransformMakeScale(0.01, 0.01);
+        transform = CGAffineTransformRotate(transform, M_PI_2);
+        coverView.transform = transform;
+        coverView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        //remove the cover view now we're finished with it
+        [coverView removeFromSuperview];
+    }];
+}
+@end
+```
+
+### 7.4、取消动画
+
+为了终止一个指定的动画，你可以用如下方法把它从图层移除掉：
+
+```objective-c
+- (void)removeAnimationForKey:(NSString *)key;
+```
+
+或者移除所有动画：
+
+```objective-c
+- (void)removeAllAnimations;
+```
+
+动画一旦被移除，图层的外观就立刻更新到当前的模型图层的值。一般说来，动画在结束之后被自动移除，除非设置`removedOnCompletion`为`NO`，如果你设置动画在结束之后不被自动移除，那么当它不需要的时候你要手动移除它；否则它会一直存在于内存中，直到图层被销毁。
 
 ## 参考文献
 
