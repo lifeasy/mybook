@@ -2,6 +2,8 @@
 
 * JavaScript中，字符串是不可变的
 * JavaScript中，所有字符串都使用UTF-16编码
+* 大写字母对应的ASCII范围为：65~90
+* 小写字母对应的ASCII范围为：97~122
 
 ## 基本操作
 
@@ -180,5 +182,14 @@ alert( String.fromCodePoint(90) ); // Z
 ```js
 // 在十六进制系统中 90 为 5a
 alert( '\u005a' ); // Z
+```
+
+## 字符和ASCII转换
+
+```js
+let str = "abc"
+console.log(str.charCodeAt(0)) // 97
+
+console.log(String.fromCharCode(97)) // a
 ```
 

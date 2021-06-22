@@ -1,0 +1,2028 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>二叉树 · lifeasy 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Liang_QL">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="13_红黑树.html" />
+    
+    
+    <link rel="prev" href="11_哈希算法.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"lifeasy","repo":"mybook","type":"star","count":true,"size":"small"},{"user":"lifeasy","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.liangqili.com" target="_blank" class="custom-link">我的小站</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    iOS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" >
+            
+                <span>
+            
+                    
+                    LLDB
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="../../iOS/lldb/LLDB常用命令.html">
+            
+                <a href="../../iOS/lldb/LLDB常用命令.html">
+            
+                    
+                    LLDB常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" >
+            
+                <span>
+            
+                    
+                    Swift
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.1" data-path="../../iOS/swift/Swift常用命令.html">
+            
+                <a href="../../iOS/swift/Swift常用命令.html">
+            
+                    
+                    Swift常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.2" data-path="../../iOS/swift/Swift源码编译.html">
+            
+                <a href="../../iOS/swift/Swift源码编译.html">
+            
+                    
+                    Swift源码编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3" >
+            
+                <span>
+            
+                    
+                    逻辑进阶笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.3.1" data-path="../../iOS/swift/logicEdu/01_类、对象、属性.html">
+            
+                <a href="../../iOS/swift/logicEdu/01_类、对象、属性.html">
+            
+                    
+                    01_类、对象、属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3.2" data-path="../../iOS/swift/logicEdu/02_值类型、引用类型.html">
+            
+                <a href="../../iOS/swift/logicEdu/02_值类型、引用类型.html">
+            
+                    
+                    02_值类型、引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4" >
+            
+                <span>
+            
+                    
+                    Swift语法学习笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.4.1" data-path="../../iOS/swift/language/01_基础部分.html">
+            
+                <a href="../../iOS/swift/language/01_基础部分.html">
+            
+                    
+                    01_基础部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4.2" data-path="../../iOS/swift/language/02_运算符.html">
+            
+                <a href="../../iOS/swift/language/02_运算符.html">
+            
+                    
+                    02_运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4.3" data-path="../../iOS/swift/language/03_字符串.html">
+            
+                <a href="../../iOS/swift/language/03_字符串.html">
+            
+                    
+                    03_字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.5" >
+            
+                <span>
+            
+                    
+                    Swift服务端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.5.1" data-path="../../iOS/swift/server/Vapor搭建服务端模拟接口请求.html">
+            
+                <a href="../../iOS/swift/server/Vapor搭建服务端模拟接口请求.html">
+            
+                    
+                    Vapor搭建服务端模拟接口请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" >
+            
+                <span>
+            
+                    
+                    UI
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.3.1" data-path="../../iOS/ui/CoreAnimation.html">
+            
+                <a href="../../iOS/ui/CoreAnimation.html">
+            
+                    
+                    核心动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" >
+            
+                <span>
+            
+                    
+                    网咯
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.4.1" data-path="../../iOS/network/tcpip.html">
+            
+                <a href="../../iOS/network/tcpip.html">
+            
+                    
+                    图解TCP/IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" >
+            
+                <span>
+            
+                    
+                    多线程
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" >
+            
+                <span>
+            
+                    
+                    Runtime
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" >
+            
+                <span>
+            
+                    
+                    持续集成
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.7.1" data-path="../../iOS/ci/jenkins.html">
+            
+                <a href="../../iOS/ci/jenkins.html">
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../../iOS/underlying/">
+            
+                <a href="../../iOS/underlying/">
+            
+                    
+                    iOS底层原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.8.1" data-path="../../iOS/underlying/pre_runtime.html">
+            
+                <a href="../../iOS/underlying/pre_runtime.html">
+            
+                    
+                    前奏_Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8.2" data-path="../../iOS/underlying/01_object.html">
+            
+                <a href="../../iOS/underlying/01_object.html">
+            
+                    
+                    01_OC对象原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" >
+            
+                <span>
+            
+                    
+                    iOS逆向
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.9.1" data-path="../../iOS/iosre/command_iosre.html">
+            
+                <a href="../../iOS/iosre/command_iosre.html">
+            
+                    
+                    iOS逆向常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.2" data-path="../../iOS/iosre/iosre.html">
+            
+                <a href="../../iOS/iosre/iosre.html">
+            
+                    
+                    iOS逆向简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.3" data-path="../../iOS/iosre/01_jailbreak.html">
+            
+                <a href="../../iOS/iosre/01_jailbreak.html">
+            
+                    
+                    01_iPhone越狱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.4" data-path="../../iOS/iosre/02_ssh.html">
+            
+                <a href="../../iOS/iosre/02_ssh.html">
+            
+                    
+                    02_SSH远程访问越狱设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.5" data-path="../../iOS/iosre/03_usbmuxd.html">
+            
+                <a href="../../iOS/iosre/03_usbmuxd.html">
+            
+                    
+                    03_usbmuxd蓝牙访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.6" data-path="../../iOS/iosre/04_terminal_zh.html">
+            
+                <a href="../../iOS/iosre/04_terminal_zh.html">
+            
+                    
+                    04_iPhone终端中文问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.7" data-path="../../iOS/iosre/05_cycript.html">
+            
+                <a href="../../iOS/iosre/05_cycript.html">
+            
+                    
+                    05_Cycript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.8" data-path="../../iOS/iosre/06_reveal.html">
+            
+                <a href="../../iOS/iosre/06_reveal.html">
+            
+                    
+                    06_Reveal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.9" data-path="../../iOS/iosre/07_reverse.html">
+            
+                <a href="../../iOS/iosre/07_reverse.html">
+            
+                    
+                    07_逆向思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.10" data-path="../../iOS/iosre/08_macho.html">
+            
+                <a href="../../iOS/iosre/08_macho.html">
+            
+                    
+                    08_Mach-O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.11" data-path="../../iOS/iosre/09_dyld_shared_cache.html">
+            
+                <a href="../../iOS/iosre/09_dyld_shared_cache.html">
+            
+                    
+                    09_动态库共享缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.12" data-path="../../iOS/iosre/10_dumpdecrypted.html">
+            
+                <a href="../../iOS/iosre/10_dumpdecrypted.html">
+            
+                    
+                    10_脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.13" data-path="../../iOS/iosre/11_theos.html">
+            
+                <a href="../../iOS/iosre/11_theos.html">
+            
+                    
+                    11_Theos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.14" data-path="../../iOS/iosre/12_debug.html">
+            
+                <a href="../../iOS/iosre/12_debug.html">
+            
+                    
+                    12_动态调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.15" data-path="../../iOS/iosre/13_rsa.html">
+            
+                <a href="../../iOS/iosre/13_rsa.html">
+            
+                    
+                    13_RSA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.16" data-path="../../iOS/iosre/14_hash.html">
+            
+                <a href="../../iOS/iosre/14_hash.html">
+            
+                    
+                    14_Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.17" data-path="../../iOS/iosre/15_resign.html">
+            
+                <a href="../../iOS/iosre/15_resign.html">
+            
+                    
+                    15_重签名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.18" data-path="../../iOS/iosre/16_injection.html">
+            
+                <a href="../../iOS/iosre/16_injection.html">
+            
+                    
+                    16_动态库注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" >
+            
+                <span>
+            
+                    
+                    学习笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.10.1" >
+            
+                <span>
+            
+                    
+                    iOS强化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.10.1.1" data-path="../../iOS/note/iOS强化/command_ioslowlevel.html">
+            
+                <a href="../../iOS/note/iOS强化/command_ioslowlevel.html">
+            
+                    
+                    iOS底层常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.1.2" data-path="../../iOS/note/iOS强化/01_多环境配置.html">
+            
+                <a href="../../iOS/note/iOS强化/01_多环境配置.html">
+            
+                    
+                    01_多环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.1.3" data-path="../../iOS/note/iOS强化/02_Mach-O和符号.html">
+            
+                <a href="../../iOS/note/iOS强化/02_Mach-O和符号.html">
+            
+                    
+                    02_Mach-O和符号
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" >
+            
+                <span>
+            
+                    
+                    Xcode
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.11.1" >
+            
+                <span>
+            
+                    
+                    Instruments
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.11.1.1" data-path="../../iOS/xcode/instruments/time_profiler.html">
+            
+                <a href="../../iOS/xcode/instruments/time_profiler.html">
+            
+                    
+                    TimeProfiler
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    源码
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" >
+            
+                <span>
+            
+                    
+                    WebKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../opensource/webkit/webkitcompile.html">
+            
+                <a href="../../opensource/webkit/webkitcompile.html">
+            
+                    
+                    WebKit编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" >
+            
+                <span>
+            
+                    
+                    LLVM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="../../opensource/llvm/llvmcompile.html">
+            
+                <a href="../../opensource/llvm/llvmcompile.html">
+            
+                    
+                    LLVM编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../算法.html">
+            
+                <a href="../算法.html">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" >
+            
+                <span>
+            
+                    
+                    算法基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="01_复杂度.html">
+            
+                <a href="01_复杂度.html">
+            
+                    
+                    复杂度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="02_数组.html">
+            
+                <a href="02_数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="03_链表.html">
+            
+                <a href="03_链表.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.4" data-path="04_栈.html">
+            
+                <a href="04_栈.html">
+            
+                    
+                    栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.5" data-path="05_队列.html">
+            
+                <a href="05_队列.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.6" data-path="06_递归.html">
+            
+                <a href="06_递归.html">
+            
+                    
+                    递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.7" data-path="07_排序_1.html">
+            
+                <a href="07_排序_1.html">
+            
+                    
+                    排序（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.8" data-path="07_排序_2.html">
+            
+                <a href="07_排序_2.html">
+            
+                    
+                    排序（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.9" data-path="07_排序_3.html">
+            
+                <a href="07_排序_3.html">
+            
+                    
+                    排序（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.10" data-path="08_二分查找_1.html">
+            
+                <a href="08_二分查找_1.html">
+            
+                    
+                    二分查找（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.11" data-path="08_二分查找_2.html">
+            
+                <a href="08_二分查找_2.html">
+            
+                    
+                    二分查找（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.12" data-path="09_跳表.html">
+            
+                <a href="09_跳表.html">
+            
+                    
+                    跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.13" data-path="10_散列表_1.html">
+            
+                <a href="10_散列表_1.html">
+            
+                    
+                    散列表（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.14" data-path="10_散列表_2.html">
+            
+                <a href="10_散列表_2.html">
+            
+                    
+                    散列表（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.15" data-path="10_散列表_3.html">
+            
+                <a href="10_散列表_3.html">
+            
+                    
+                    散列表（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.16" data-path="11_哈希算法.html">
+            
+                <a href="11_哈希算法.html">
+            
+                    
+                    哈希算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.1.17" data-path="12_二叉树.html">
+            
+                <a href="12_二叉树.html">
+            
+                    
+                    二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.18" data-path="13_红黑树.html">
+            
+                <a href="13_红黑树.html">
+            
+                    
+                    红黑树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../swift_algorithm/">
+            
+                <a href="../swift_algorithm/">
+            
+                    
+                    Swift中相关的数据结构和算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../swift_algorithm/String.html">
+            
+                <a href="../swift_algorithm/String.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../swift_algorithm/Array.html">
+            
+                <a href="../swift_algorithm/Array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.3" data-path="../swift_algorithm/Dictionary.html">
+            
+                <a href="../swift_algorithm/Dictionary.html">
+            
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.4" data-path="../swift_algorithm/Set.html">
+            
+                <a href="../swift_algorithm/Set.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../js_algorithm/">
+            
+                <a href="../js_algorithm/">
+            
+                    
+                    JavaScript中相关的数据结构和算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../js_algorithm/String.html">
+            
+                <a href="../js_algorithm/String.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../js_algorithm/Array.html">
+            
+                <a href="../js_algorithm/Array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.3" data-path="../js_algorithm/Map.html">
+            
+                <a href="../js_algorithm/Map.html">
+            
+                    
+                    映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.4" data-path="../js_algorithm/Set.html">
+            
+                <a href="../js_algorithm/Set.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <span>
+            
+                    
+                    Shell
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../shell/常用命令.html">
+            
+                <a href="../../shell/常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <span>
+            
+                    
+                    Gitbook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../gitbook/01_创建gitbook.html">
+            
+                <a href="../../gitbook/01_创建gitbook.html">
+            
+                    
+                    创建gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" >
+            
+                <span>
+            
+                    
+                    常用工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" >
+            
+                <span>
+            
+                    
+                    homebrew
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1.1" data-path="../../tool/homebrew/homebrew换源.html">
+            
+                <a href="../../tool/homebrew/homebrew换源.html">
+            
+                    
+                    homebrew换源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" >
+            
+                <span>
+            
+                    
+                    node
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.2.1" data-path="../../tool/node/npm修改配置文件.html">
+            
+                <a href="../../tool/node/npm修改配置文件.html">
+            
+                    
+                    npm修改配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2.2" data-path="../../tool/node/卸载node.html">
+            
+                <a href="../../tool/node/卸载node.html">
+            
+                    
+                    卸载重装node
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" >
+            
+                <span>
+            
+                    
+                    git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.3.1" data-path="../../tool/git/git常用命令.html">
+            
+                <a href="../../tool/git/git常用命令.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3.2" data-path="../../tool/git/git常用操作.html">
+            
+                <a href="../../tool/git/git常用操作.html">
+            
+                    
+                    git常用操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" >
+            
+                <span>
+            
+                    
+                    正则表达式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.4.1" data-path="../../tool/reg/reg.html">
+            
+                <a href="../../tool/reg/reg.html">
+            
+                    
+                    Js中的正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >二叉树</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4E8C;&#x53C9;&#x6811;"><b></b>&#x4E8C;&#x53C9;&#x6811;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6811;&#xFF08;tree&#xFF09;"><b></b>&#x6811;&#xFF08;Tree&#xFF09;</a></li><ul><li><span class="title-icon "></span><a href="#&#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;&#x3001;&#x6DF1;&#x5EA6;&#x3001;&#x5C42;"><b></b>&#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;&#x3001;&#x6DF1;&#x5EA6;&#x3001;&#x5C42;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E8C;&#x53C9;&#x6811;&#xFF08;binary-tree&#xFF09;"><b></b>&#x4E8C;&#x53C9;&#x6811;&#xFF08;Binary Tree&#xFF09;</a></li><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x8868;&#x793A;&#xFF08;&#x6216;&#x8005;&#x5B58;&#x50A8;&#xFF09;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;"><b></b>&#x5982;&#x4F55;&#x8868;&#x793A;&#xFF08;&#x6216;&#x8005;&#x5B58;&#x50A8;&#xFF09;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E8C;&#x53C9;&#x94FE;&#x5F0F;&#x5B58;&#x50A8;&#x6CD5;"><b></b>&#x4E8C;&#x53C9;&#x94FE;&#x5F0F;&#x5B58;&#x50A8;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x57FA;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x987A;&#x5E8F;&#x5B58;&#x50A8;&#x6CD5;"><b></b>&#x57FA;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x987A;&#x5E8F;&#x5B58;&#x50A8;&#x6CD5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x904D;&#x5386;"><b></b>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x904D;&#x5386;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#xFF08;binary-search-tree&#xFF09;"><b></b>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#xFF08;Binary Search Tree&#xFF09;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x67E5;&#x627E;&#x64CD;&#x4F5C;"><b></b>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x67E5;&#x627E;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;"><b></b>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x5220;&#x9664;&#x64CD;&#x4F5C;"><b></b>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x5220;&#x9664;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;"><b></b>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x652F;&#x6301;&#x91CD;&#x590D;&#x6570;&#x636E;&#x7684;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;"><b></b>&#x652F;&#x6301;&#x91CD;&#x590D;&#x6570;&#x636E;&#x7684;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;"><b></b>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</a></li><li><span class="title-icon "></span><a href="#&#x95EE;&#x9898;&#xFF1A;&#x6709;&#x4E86;&#x5982;&#x6B64;&#x9AD8;&#x6548;&#x7684;&#x6563;&#x5217;&#x8868;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD8;&#x9700;&#x8981;&#x4E8C;&#x53C9;&#x6811;&#xFF1F;"><b></b>&#x95EE;&#x9898;&#xFF1A;&#x6709;&#x4E86;&#x5982;&#x6B64;&#x9AD8;&#x6548;&#x7684;&#x6563;&#x5217;&#x8868;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD8;&#x9700;&#x8981;&#x4E8C;&#x53C9;&#x6811;&#xFF1F;</a></li><li><span class="title-icon "></span><a href="#&#x95EE;&#x9898;&#xFF1A;&#x6C42;&#x51FA;&#x4E00;&#x68F5;&#x7ED9;&#x5B9A;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x786E;&#x5207;&#x9AD8;&#x5EA6;&#x5462;&#xFF1F;"><b></b>&#x95EE;&#x9898;&#xFF1A;&#x6C42;&#x51FA;&#x4E00;&#x68F5;&#x7ED9;&#x5B9A;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x786E;&#x5207;&#x9AD8;&#x5EA6;&#x5462;&#xFF1F;</a></li></ul></ul></div><a href="#&#x4E8C;&#x53C9;&#x6811;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4E8C;&#x53C9;&#x6811;"><a name="&#x4E8C;&#x53C9;&#x6811;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x53C9;&#x6811;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x6811;</h1>
+<h2 id="&#x6811;&#xFF08;tree&#xFF09;"><a name="&#x6811;&#xFF08;tree&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x6811;&#xFF08;tree&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6811;&#xFF08;Tree&#xFF09;</h2>
+<ul>
+<li>&#x7236;&#x8282;&#x70B9;</li>
+<li>&#x5B50;&#x8282;&#x70B9;</li>
+<li>&#x5144;&#x5F1F;&#x8282;&#x70B9;&#xFF1A;&#x7236;&#x8282;&#x70B9;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;</li>
+<li>&#x6839;&#x8282;&#x70B9;&#xFF1A;&#x6CA1;&#x6709;&#x7236;&#x8282;&#x70B9;&#x7684;&#x8282;&#x70B9;&#x53EB;&#x505A;&#x6839;&#x8282;&#x70B9;</li>
+</ul>
+<h3 id="&#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;&#x3001;&#x6DF1;&#x5EA6;&#x3001;&#x5C42;"><a name="&#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;&#x3001;&#x6DF1;&#x5EA6;&#x3001;&#x5C42;" class="anchor-navigation-ex-anchor" href="#&#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;&#x3001;&#x6DF1;&#x5EA6;&#x3001;&#x5C42;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8282;&#x70B9;&#x7684;&#x9AD8;&#x5EA6;&#x3001;&#x6DF1;&#x5EA6;&#x3001;&#x5C42;</h3>
+<p><img src="12_&#x4E8C;&#x53C9;&#x6811;.assets/image-20210220002040071.png" alt="image-20210220002040071" style="zoom: 33%;"></p>
+<p><img src="12_&#x4E8C;&#x53C9;&#x6811;.assets/image-20210220002051485.png" alt="image-20210220002051485" style="zoom: 33%;"></p>
+<h2 id="&#x4E8C;&#x53C9;&#x6811;&#xFF08;binary-tree&#xFF09;"><a name="&#x4E8C;&#x53C9;&#x6811;&#xFF08;binary-tree&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x53C9;&#x6811;&#xFF08;binary-tree&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x6811;&#xFF08;Binary Tree&#xFF09;</h2>
+<blockquote>
+<p>&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x6700;&#x591A;&#x6709;&#x4E24;&#x4E2A;&#x201C;&#x53C9;&#x201D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E24;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x5206;&#x522B;&#x662F;&#x5DE6;&#x5B50;&#x8282;&#x70B9;&#x548C;&#x53F3;&#x5B50;&#x8282;&#x70B9;&#x3002;</p>
+</blockquote>
+<p><strong>&#x6EE1;&#x4E8C;&#x53C9;&#x6811;&#xFF1A;</strong>&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5168;&#x90FD;&#x5728;&#x6700;&#x5E95;&#x5C42;&#xFF0C;&#x9664;&#x4E86;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x4E4B;&#x5916;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x6709;&#x5DE6;&#x53F3;&#x4E24;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x8FD9;&#x79CD;&#x4E8C;&#x53C9;&#x6811;&#x5C31;&#x53EB;&#x505A;&#x6EE1;&#x4E8C;&#x53C9;&#x6811;</p>
+<p><strong>&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#xFF1A;</strong>&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x90FD;&#x5728;&#x6700;&#x5E95;&#x4E0B;&#x4E24;&#x5C42;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x5C42;&#x7684;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x90FD;&#x9760;&#x5DE6;&#x6392;&#x5217;&#xFF0C;&#x5E76;&#x4E14;&#x9664;&#x4E86;&#x6700;&#x540E;&#x4E00;&#x5C42;&#xFF0C;&#x5176;&#x4ED6;&#x5C42;&#x7684;&#x8282;&#x70B9;&#x4E2A;&#x6570;&#x90FD;&#x8981;&#x8FBE;&#x5230;&#x6700;&#x5927;&#xFF0C;&#x8FD9;&#x79CD;&#x4E8C;&#x53C9;&#x6811;&#x53EB;&#x505A;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;</p>
+<p>&#x6EE1;&#x4E8C;&#x53C9;&#x6811;&#x662F;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;</p>
+<h2 id="&#x5982;&#x4F55;&#x8868;&#x793A;&#xFF08;&#x6216;&#x8005;&#x5B58;&#x50A8;&#xFF09;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;"><a name="&#x5982;&#x4F55;&#x8868;&#x793A;&#xFF08;&#x6216;&#x8005;&#x5B58;&#x50A8;&#xFF09;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x8868;&#x793A;&#xFF08;&#x6216;&#x8005;&#x5B58;&#x50A8;&#xFF09;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x8868;&#x793A;&#xFF08;&#x6216;&#x8005;&#x5B58;&#x50A8;&#xFF09;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;</h2>
+<h3 id="&#x4E8C;&#x53C9;&#x94FE;&#x5F0F;&#x5B58;&#x50A8;&#x6CD5;"><a name="&#x4E8C;&#x53C9;&#x94FE;&#x5F0F;&#x5B58;&#x50A8;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x53C9;&#x94FE;&#x5F0F;&#x5B58;&#x50A8;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x94FE;&#x5F0F;&#x5B58;&#x50A8;&#x6CD5;</h3>
+<p>&#x9700;&#x8981;&#x989D;&#x5916;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x5B58;&#x653E;&#x6307;&#x9488;</p>
+<p><img src="12_&#x4E8C;&#x53C9;&#x6811;.assets/image-20210220002401692.png" alt="image-20210220002401692" style="zoom:33%;"></p>
+<h3 id="&#x57FA;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x987A;&#x5E8F;&#x5B58;&#x50A8;&#x6CD5;"><a name="&#x57FA;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x987A;&#x5E8F;&#x5B58;&#x50A8;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x987A;&#x5E8F;&#x5B58;&#x50A8;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x987A;&#x5E8F;&#x5B58;&#x50A8;&#x6CD5;</h3>
+<p>&#x628A;&#x6839;&#x8282;&#x70B9;&#x5B58;&#x50A8;&#x5728;&#x4E0B;&#x6807; i = 1 &#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x90A3;&#x5DE6;&#x5B50;&#x8282;&#x70B9;&#x5B58;&#x50A8;&#x5728;&#x4E0B;&#x6807; 2 <em> i = 2 &#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x53F3;&#x5B50;&#x8282;&#x70B9;&#x5B58;&#x50A8;&#x5728; 2 </em> i + 1 = 3 &#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#xFF0C;B &#x8282;&#x70B9;&#x7684;&#x5DE6;&#x5B50;&#x8282;&#x70B9;&#x5B58;&#x50A8;&#x5728; 2 <em> i = 2 </em> 2 = 4 &#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x53F3;&#x5B50;&#x8282;&#x70B9;&#x5B58;&#x50A8;&#x5728; 2 <em> i + 1 = 2 </em> 2 + 1 = 5 &#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p><img src="12_&#x4E8C;&#x53C9;&#x6811;.assets/image-20210220002520580.png" alt="image-20210220002520580" style="zoom:33%;"></p>
+<p>&#x5982;&#x679C;&#x8282;&#x70B9; X &#x5B58;&#x50A8;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x4E0B;&#x6807;&#x4E3A; i &#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E0B;&#x6807;&#x4E3A; 2 <em> i &#x7684;&#x4F4D;&#x7F6E;&#x5B58;&#x50A8;&#x7684;&#x5C31;&#x662F;&#x5DE6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x4E0B;&#x6807;&#x4E3A; 2 </em> i + 1 &#x7684;&#x4F4D;&#x7F6E;&#x5B58;&#x50A8;&#x7684;&#x5C31;&#x662F;&#x53F3;&#x5B50;&#x8282;&#x70B9;&#x3002;&#x53CD;&#x8FC7;&#x6765;&#xFF0C;&#x4E0B;&#x6807;&#x4E3A; i/2 &#x7684;&#x4F4D;&#x7F6E;&#x5B58;&#x50A8;&#x5C31;&#x662F;&#x5B83;&#x7684;&#x7236;&#x8282;&#x70B9;&#x3002;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x77E5;&#x9053;&#x6839;&#x8282;&#x70B9;&#x5B58;&#x50A8;&#x7684;&#x4F4D;&#x7F6E;&#xFF08;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8BA1;&#x7B97;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x6839;&#x8282;&#x70B9;&#x4F1A;&#x5B58;&#x50A8;&#x5728;&#x4E0B;&#x6807;&#x4E3A; 1 &#x7684;&#x4F4D;&#x7F6E;&#xFF09;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0B;&#x6807;&#x8BA1;&#x7B97;&#xFF0C;&#x628A;&#x6574;&#x68F5;&#x6811;&#x90FD;&#x4E32;&#x8D77;&#x6765;&#x3002;</p>
+<p><strong>&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#x4EC5;&#x4EC5;&#x201C;&#x6D6A;&#x8D39;&#x201D;&#x4E86;&#x4E00;&#x4E2A;&#x4E0B;&#x6807;&#x4E3A; 0 &#x7684;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x662F;&#x975E;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x5176;&#x5B9E;&#x4F1A;&#x6D6A;&#x8D39;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x6570;&#x7EC4;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;</strong></p>
+<p><strong>&#x5806;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x6570;&#x7EC4;&#x3002;</strong></p>
+<h2 id="&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x904D;&#x5386;"><a name="&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x904D;&#x5386;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x904D;&#x5386;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x904D;&#x5386;</h2>
+<ul>
+<li>&#x524D;&#x5E8F;&#x904D;&#x5386;&#x662F;&#x6307;&#xFF0C;&#x5BF9;&#x4E8E;&#x6811;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x8282;&#x70B9;&#x6765;&#x8BF4;&#xFF0C;&#x5148;&#x6253;&#x5370;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6253;&#x5370;&#x5B83;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#xFF0C;&#x6700;&#x540E;&#x6253;&#x5370;&#x5B83;&#x7684;&#x53F3;&#x5B50;&#x6811;&#x3002;</li>
+<li>&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x662F;&#x6307;&#xFF0C;&#x5BF9;&#x4E8E;&#x6811;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x8282;&#x70B9;&#x6765;&#x8BF4;&#xFF0C;&#x5148;&#x6253;&#x5370;&#x5B83;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6253;&#x5370;&#x5B83;&#x672C;&#x8EAB;&#xFF0C;&#x6700;&#x540E;&#x6253;&#x5370;&#x5B83;&#x7684;&#x53F3;&#x5B50;&#x6811;&#x3002;</li>
+<li>&#x540E;&#x5E8F;&#x904D;&#x5386;&#x662F;&#x6307;&#xFF0C;&#x5BF9;&#x4E8E;&#x6811;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x8282;&#x70B9;&#x6765;&#x8BF4;&#xFF0C;&#x5148;&#x6253;&#x5370;&#x5B83;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6253;&#x5370;&#x5B83;&#x7684;&#x53F3;&#x5B50;&#x6811;&#xFF0C;&#x6700;&#x540E;&#x6253;&#x5370;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x672C;&#x8EAB;&#x3002;</li>
+</ul>
+<p><img src="12_&#x4E8C;&#x53C9;&#x6811;.assets/image-20210220002724076.png" alt="image-20210220002724076" style="zoom:33%;"></p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">void</span> <span class="token function">preOrder</span><span class="token punctuation">(</span>Node<span class="token operator">*</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+  print root <span class="token comment">// &#x6B64;&#x5904;&#x4E3A;&#x4F2A;&#x4EE3;&#x7801;&#xFF0C;&#x8868;&#x793A;&#x6253;&#x5370;root&#x8282;&#x70B9;</span>
+  <span class="token function">preOrder</span><span class="token punctuation">(</span>root<span class="token operator">-&gt;</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">preOrder</span><span class="token punctuation">(</span>root<span class="token operator">-&gt;</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">inOrder</span><span class="token punctuation">(</span>Node<span class="token operator">*</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token function">inOrder</span><span class="token punctuation">(</span>root<span class="token operator">-&gt;</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  print root <span class="token comment">// &#x6B64;&#x5904;&#x4E3A;&#x4F2A;&#x4EE3;&#x7801;&#xFF0C;&#x8868;&#x793A;&#x6253;&#x5370;root&#x8282;&#x70B9;</span>
+  <span class="token function">inOrder</span><span class="token punctuation">(</span>root<span class="token operator">-&gt;</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">postOrder</span><span class="token punctuation">(</span>Node<span class="token operator">*</span> root<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>root <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token function">postOrder</span><span class="token punctuation">(</span>root<span class="token operator">-&gt;</span>left<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">postOrder</span><span class="token punctuation">(</span>root<span class="token operator">-&gt;</span>right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  print root <span class="token comment">// &#x6B64;&#x5904;&#x4E3A;&#x4F2A;&#x4EE3;&#x7801;&#xFF0C;&#x8868;&#x793A;&#x6253;&#x5370;root&#x8282;&#x70B9;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E8C;&#x53C9;&#x6811;&#x904D;&#x5386;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; O(n)&#x3002;</p>
+<h2 id="&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#xFF08;binary-search-tree&#xFF09;"><a name="&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#xFF08;binary-search-tree&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#xFF08;binary-search-tree&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#xFF08;Binary Search Tree&#xFF09;</h2>
+<p>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x8981;&#x6C42;&#xFF0C;&#x5728;&#x6811;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x5176;&#x5DE6;&#x5B50;&#x6811;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;&#xFF0C;&#x90FD;&#x8981;&#x5C0F;&#x4E8E;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;&#xFF0C;&#x800C;&#x53F3;&#x5B50;&#x6811;&#x8282;&#x70B9;&#x7684;&#x503C;&#x90FD;&#x5927;&#x4E8E;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;&#x3002;</p>
+<h3 id="&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x67E5;&#x627E;&#x64CD;&#x4F5C;"><a name="&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x67E5;&#x627E;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x67E5;&#x627E;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x67E5;&#x627E;&#x64CD;&#x4F5C;</h3>
+<p>&#x5982;&#x679C;&#x8981;&#x67E5;&#x627E;&#x7684;&#x6570;&#x636E;&#x6BD4;&#x6839;&#x8282;&#x70B9;&#x7684;&#x503C;&#x5C0F;&#xFF0C;&#x90A3;&#x5C31;&#x5728;&#x5DE6;&#x5B50;&#x6811;&#x4E2D;&#x9012;&#x5F52;&#x67E5;&#x627E;&#xFF1B;&#x5982;&#x679C;&#x8981;&#x67E5;&#x627E;&#x7684;&#x6570;&#x636E;&#x6BD4;&#x6839;&#x8282;&#x70B9;&#x7684;&#x503C;&#x5927;&#xFF0C;&#x90A3;&#x5C31;&#x5728;&#x53F3;&#x5B50;&#x6811;&#x4E2D;&#x9012;&#x5F52;&#x67E5;&#x627E;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BinarySearchTree</span> <span class="token punctuation">{</span>
+  <span class="token keyword">private</span> <span class="token class-name">Node</span> tree<span class="token punctuation">;</span>
+
+  <span class="token keyword">public</span> <span class="token class-name">Node</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Node</span> p <span class="token operator">=</span> tree<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>p <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>data <span class="token operator">&lt;</span> p<span class="token punctuation">.</span>data<span class="token punctuation">)</span> p <span class="token operator">=</span> p<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
+      <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>data <span class="token operator">&gt;</span> p<span class="token punctuation">.</span>data<span class="token punctuation">)</span> p <span class="token operator">=</span> p<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+      <span class="token keyword">else</span> <span class="token keyword">return</span> p<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">Node</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> data<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Node</span> left<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Node</span> right<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Node</span><span class="token punctuation">(</span><span class="token keyword">int</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;"><a name="&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x63D2;&#x5165;&#x64CD;&#x4F5C;</h3>
+<p>&#x65B0;&#x63D2;&#x5165;&#x7684;&#x6570;&#x636E;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x5728;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5F00;&#x59CB;&#xFF0C;&#x4F9D;&#x6B21;&#x6BD4;&#x8F83;&#x8981;&#x63D2;&#x5165;&#x7684;&#x6570;&#x636E;&#x548C;&#x8282;&#x70B9;&#x7684;&#x5927;&#x5C0F;&#x5173;&#x7CFB;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8981;&#x63D2;&#x5165;&#x7684;&#x6570;&#x636E;&#x6BD4;&#x8282;&#x70B9;&#x7684;&#x6570;&#x636E;&#x5927;&#xFF0C;&#x5E76;&#x4E14;&#x8282;&#x70B9;&#x7684;&#x53F3;&#x5B50;&#x6811;&#x4E3A;&#x7A7A;&#xFF0C;&#x5C31;&#x5C06;&#x65B0;&#x6570;&#x636E;&#x76F4;&#x63A5;&#x63D2;&#x5230;&#x53F3;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#xFF1B;&#x5982;&#x679C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5C31;&#x518D;&#x9012;&#x5F52;&#x904D;&#x5386;&#x53F3;&#x5B50;&#x6811;&#xFF0C;&#x67E5;&#x627E;&#x63D2;&#x5165;&#x4F4D;&#x7F6E;&#x3002;&#x540C;&#x7406;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x63D2;&#x5165;&#x7684;&#x6570;&#x636E;&#x6BD4;&#x8282;&#x70B9;&#x6570;&#x503C;&#x5C0F;&#xFF0C;&#x5E76;&#x4E14;&#x8282;&#x70B9;&#x7684;&#x5DE6;&#x5B50;&#x6811;&#x4E3A;&#x7A7A;&#xFF0C;&#x5C31;&#x5C06;&#x65B0;&#x6570;&#x636E;&#x63D2;&#x5165;&#x5230;&#x5DE6;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#xFF1B;&#x5982;&#x679C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5C31;&#x518D;&#x9012;&#x5F52;&#x904D;&#x5386;&#x5DE6;&#x5B50;&#x6811;&#xFF0C;&#x67E5;&#x627E;&#x63D2;&#x5165;&#x4F4D;&#x7F6E;&#x3002;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token keyword">int</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>tree <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    tree <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token class-name">Node</span> p <span class="token operator">=</span> tree<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>p <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>data <span class="token operator">&gt;</span> p<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>p<span class="token punctuation">.</span>right <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        p<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      p <span class="token operator">=</span> p<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span> <span class="token comment">// data &lt; p.data</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>p<span class="token punctuation">.</span>left <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        p<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      p <span class="token operator">=</span> p<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x5220;&#x9664;&#x64CD;&#x4F5C;"><a name="&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x5220;&#x9664;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x5220;&#x9664;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x5220;&#x9664;&#x64CD;&#x4F5C;</h3>
+<p>&#x7B2C;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5220;&#x9664;&#x7684;&#x8282;&#x70B9;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x76F4;&#x63A5;&#x5C06;&#x7236;&#x8282;&#x70B9;&#x4E2D;&#xFF0C;&#x6307;&#x5411;&#x8981;&#x5220;&#x9664;&#x8282;&#x70B9;&#x7684;&#x6307;&#x9488;&#x7F6E;&#x4E3A; null&#x3002;&#x6BD4;&#x5982;&#x56FE;&#x4E2D;&#x7684;&#x5220;&#x9664;&#x8282;&#x70B9; 55&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#x60C5;&#x51B5;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5220;&#x9664;&#x7684;&#x8282;&#x70B9;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#xFF08;&#x53EA;&#x6709;&#x5DE6;&#x5B50;&#x8282;&#x70B9;&#x6216;&#x8005;&#x53F3;&#x5B50;&#x8282;&#x70B9;&#xFF09;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7236;&#x8282;&#x70B9;&#x4E2D;&#xFF0C;&#x6307;&#x5411;&#x8981;&#x5220;&#x9664;&#x8282;&#x70B9;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x8BA9;&#x5B83;&#x6307;&#x5411;&#x8981;&#x5220;&#x9664;&#x8282;&#x70B9;&#x7684;&#x5B50;&#x8282;&#x70B9;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x6BD4;&#x5982;&#x56FE;&#x4E2D;&#x7684;&#x5220;&#x9664;&#x8282;&#x70B9; 13&#x3002;</p>
+<p>&#x7B2C;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5220;&#x9664;&#x7684;&#x8282;&#x70B9;&#x6709;&#x4E24;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x8FD9;&#x5C31;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x4E86;&#x3002;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x53F3;&#x5B50;&#x6811;&#x4E2D;&#x7684;&#x6700;&#x5C0F;&#x8282;&#x70B9;&#xFF0C;&#x628A;&#x5B83;&#x66FF;&#x6362;&#x5230;&#x8981;&#x5220;&#x9664;&#x7684;&#x8282;&#x70B9;&#x4E0A;&#x3002;&#x7136;&#x540E;&#x518D;&#x5220;&#x9664;&#x6389;&#x8FD9;&#x4E2A;&#x6700;&#x5C0F;&#x8282;&#x70B9;&#xFF0C;&#x56E0;&#x4E3A;&#x6700;&#x5C0F;&#x8282;&#x70B9;&#x80AF;&#x5B9A;&#x6CA1;&#x6709;&#x5DE6;&#x5B50;&#x8282;&#x70B9;&#xFF08;&#x5982;&#x679C;&#x6709;&#x5DE6;&#x5B50;&#x7ED3;&#x70B9;&#xFF0C;&#x90A3;&#x5C31;&#x4E0D;&#x662F;&#x6700;&#x5C0F;&#x8282;&#x70B9;&#x4E86;&#xFF09;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5E94;&#x7528;&#x4E0A;&#x9762;&#x4E24;&#x6761;&#x89C4;&#x5219;&#x6765;&#x5220;&#x9664;&#x8FD9;&#x4E2A;&#x6700;&#x5C0F;&#x8282;&#x70B9;&#x3002;&#x6BD4;&#x5982;&#x56FE;&#x4E2D;&#x7684;&#x5220;&#x9664;&#x8282;&#x70B9; 18&#x3002;</p>
+<p><img src="12_&#x4E8C;&#x53C9;&#x6811;.assets/image-20210221002352728.png" alt="image-20210221002352728" style="zoom:33%;"></p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">delete</span><span class="token punctuation">(</span><span class="token keyword">int</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token class-name">Node</span> p <span class="token operator">=</span> tree<span class="token punctuation">;</span> <span class="token comment">// p&#x6307;&#x5411;&#x8981;&#x5220;&#x9664;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x6307;&#x5411;&#x6839;&#x8282;&#x70B9;</span>
+  <span class="token class-name">Node</span> pp <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// pp&#x8BB0;&#x5F55;&#x7684;&#x662F;p&#x7684;&#x7236;&#x8282;&#x70B9;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>p <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> p<span class="token punctuation">.</span>data <span class="token operator">!=</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    pp <span class="token operator">=</span> p<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>data <span class="token operator">&gt;</span> p<span class="token punctuation">.</span>data<span class="token punctuation">)</span> p <span class="token operator">=</span> p<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+    <span class="token keyword">else</span> p <span class="token operator">=</span> p<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>p <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span> <span class="token comment">// &#x6CA1;&#x6709;&#x627E;&#x5230;</span>
+
+  <span class="token comment">// &#x8981;&#x5220;&#x9664;&#x7684;&#x8282;&#x70B9;&#x6709;&#x4E24;&#x4E2A;&#x5B50;&#x8282;&#x70B9;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>p<span class="token punctuation">.</span>left <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> p<span class="token punctuation">.</span>right <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// &#x67E5;&#x627E;&#x53F3;&#x5B50;&#x6811;&#x4E2D;&#x6700;&#x5C0F;&#x8282;&#x70B9;</span>
+    <span class="token class-name">Node</span> minP <span class="token operator">=</span> p<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+    <span class="token class-name">Node</span> minPP <span class="token operator">=</span> p<span class="token punctuation">;</span> <span class="token comment">// minPP&#x8868;&#x793A;minP&#x7684;&#x7236;&#x8282;&#x70B9;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>minP<span class="token punctuation">.</span>left <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      minPP <span class="token operator">=</span> minP<span class="token punctuation">;</span>
+      minP <span class="token operator">=</span> minP<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    p<span class="token punctuation">.</span>data <span class="token operator">=</span> minP<span class="token punctuation">.</span>data<span class="token punctuation">;</span> <span class="token comment">// &#x5C06;minP&#x7684;&#x6570;&#x636E;&#x66FF;&#x6362;&#x5230;p&#x4E2D;</span>
+    p <span class="token operator">=</span> minP<span class="token punctuation">;</span> <span class="token comment">// &#x4E0B;&#x9762;&#x5C31;&#x53D8;&#x6210;&#x4E86;&#x5220;&#x9664;minP&#x4E86;</span>
+    pp <span class="token operator">=</span> minPP<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// &#x5220;&#x9664;&#x8282;&#x70B9;&#x662F;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x6216;&#x8005;&#x4EC5;&#x6709;&#x4E00;&#x4E2A;&#x5B50;&#x8282;&#x70B9;</span>
+  <span class="token class-name">Node</span> child<span class="token punctuation">;</span> <span class="token comment">// p&#x7684;&#x5B50;&#x8282;&#x70B9;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>p<span class="token punctuation">.</span>left <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> child <span class="token operator">=</span> p<span class="token punctuation">.</span>left<span class="token punctuation">;</span>
+  <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>p<span class="token punctuation">.</span>right <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> child <span class="token operator">=</span> p<span class="token punctuation">.</span>right<span class="token punctuation">;</span>
+  <span class="token keyword">else</span> child <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>pp <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> tree <span class="token operator">=</span> child<span class="token punctuation">;</span> <span class="token comment">// &#x5220;&#x9664;&#x7684;&#x662F;&#x6839;&#x8282;&#x70B9;</span>
+  <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>pp<span class="token punctuation">.</span>left <span class="token operator">==</span> p<span class="token punctuation">)</span> pp<span class="token punctuation">.</span>left <span class="token operator">=</span> child<span class="token punctuation">;</span>
+  <span class="token keyword">else</span> pp<span class="token punctuation">.</span>right <span class="token operator">=</span> child<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;"><a name="&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;</h3>
+<p>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x4E2D;&#x8FD8;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x5FEB;&#x901F;&#x5730;&#x67E5;&#x627E;&#x6700;&#x5927;&#x8282;&#x70B9;&#x548C;&#x6700;&#x5C0F;&#x8282;&#x70B9;&#x3001;&#x524D;&#x9A71;&#x8282;&#x70B9;&#x548C;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#x3002;</p>
+<ul>
+<li>&#x67E5;&#x627E;&#x6700;&#x5927;&#x8282;&#x70B9;---&#x76F4;&#x63A5;&#x5411;&#x53F3;&#x904D;&#x5386;&#x5230;&#x5E95; </li>
+<li>&#x67E5;&#x627E;&#x6700;&#x5C0F;&#x8282;&#x70B9;---&#x76F4;&#x63A5;&#x5411;&#x5DE6;&#x904D;&#x5386;&#x5230;&#x5E95; </li>
+<li>&#x67E5;&#x627E;&#x524D;&#x9A71;&#x8282;&#x70B9;---&#x627E;&#x5230;&#x5F53;&#x524D;&#x8282;&#x70B9;&#xFF0C;&#x5BF9;&#x5176;&#x5DE6;&#x5B50;&#x6811;&#x8FDB;&#x884C;&#x5411;&#x53F3;&#x904D;&#x5386;&#x5230;&#x5E95; </li>
+<li>&#x67E5;&#x627E;&#x540E;&#x7EE7;&#x8282;&#x70B9;---&#x627E;&#x5230;&#x5F53;&#x524D;&#x8282;&#x70B9;&#xFF0C;&#x5BF9;&#x5176;&#x53F3;&#x5B50;&#x6811;&#x8FDB;&#x884C;&#x5411;&#x5DE6;&#x904D;&#x5386;&#x5230;&#x5E95;</li>
+</ul>
+<p><strong>&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#xFF0C;&#x53EF;&#x4EE5;&#x8F93;&#x51FA;&#x6709;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x5E8F;&#x5217;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F; O(n)&#xFF0C;&#x975E;&#x5E38;&#x9AD8;&#x6548;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x4E5F;&#x53EB;&#x4F5C;&#x4E8C;&#x53C9;&#x6392;&#x5E8F;&#x6811;&#x3002;</strong></p>
+<h2 id="&#x652F;&#x6301;&#x91CD;&#x590D;&#x6570;&#x636E;&#x7684;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;"><a name="&#x652F;&#x6301;&#x91CD;&#x590D;&#x6570;&#x636E;&#x7684;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;" class="anchor-navigation-ex-anchor" href="#&#x652F;&#x6301;&#x91CD;&#x590D;&#x6570;&#x636E;&#x7684;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x652F;&#x6301;&#x91CD;&#x590D;&#x6570;&#x636E;&#x7684;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;</h2>
+<p>&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x3002;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x4E2D;&#x6BCF;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x4E0D;&#x4EC5;&#x4F1A;&#x5B58;&#x50A8;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x94FE;&#x8868;&#x548C;&#x652F;&#x6301;&#x52A8;&#x6001;&#x6269;&#x5BB9;&#x7684;&#x6570;&#x7EC4;&#x7B49;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x628A;&#x503C;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x90FD;&#x5B58;&#x50A8;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x4E0A;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#x6BD4;&#x8F83;&#x4E0D;&#x597D;&#x7406;&#x89E3;&#xFF0C;&#x4E0D;&#x8FC7;&#x66F4;&#x52A0;&#x4F18;&#x96C5;&#x3002;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x4ECD;&#x7136;&#x53EA;&#x5B58;&#x50A8;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x3002;&#x5728;&#x67E5;&#x627E;&#x63D2;&#x5165;&#x4F4D;&#x7F6E;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x78B0;&#x5230;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;&#xFF0C;&#x4E0E;&#x8981;&#x63D2;&#x5165;&#x6570;&#x636E;&#x7684;&#x503C;&#x76F8;&#x540C;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x5C06;&#x8FD9;&#x4E2A;&#x8981;&#x63D2;&#x5165;&#x7684;&#x6570;&#x636E;&#x653E;&#x5230;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x53F3;&#x5B50;&#x6811;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x628A;&#x8FD9;&#x4E2A;&#x65B0;&#x63D2;&#x5165;&#x7684;&#x6570;&#x636E;&#x5F53;&#x4F5C;&#x5927;&#x4E8E;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x503C;&#x6765;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x5F53;&#x8981;&#x67E5;&#x627E;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9047;&#x5230;&#x503C;&#x76F8;&#x540C;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x505C;&#x6B62;&#x67E5;&#x627E;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x662F;&#x7EE7;&#x7EED;&#x5728;&#x53F3;&#x5B50;&#x6811;&#x4E2D;&#x67E5;&#x627E;&#xFF0C;&#x76F4;&#x5230;&#x9047;&#x5230;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x624D;&#x505C;&#x6B62;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x628A;&#x952E;&#x503C;&#x7B49;&#x4E8E;&#x8981;&#x67E5;&#x627E;&#x503C;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x90FD;&#x627E;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x9700;&#x8981;&#x5148;&#x67E5;&#x627E;&#x5230;&#x6BCF;&#x4E2A;&#x8981;&#x5220;&#x9664;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6309;&#x524D;&#x9762;&#x8BB2;&#x7684;&#x5220;&#x9664;&#x64CD;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4F9D;&#x6B21;&#x5220;&#x9664;&#x3002;</p>
+<p><img src="12_&#x4E8C;&#x53C9;&#x6811;.assets/image-20210221002812747.png" alt="image-20210221002812747" style="zoom:50%;"></p>
+<p><img src="12_&#x4E8C;&#x53C9;&#x6811;.assets/image-20210221002834353.png" alt="image-20210221002834353" style="zoom:50%;"></p>
+<h2 id="&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;"><a name="&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</h2>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5176;&#x5B9E;&#x90FD;&#x8DDF;&#x6811;&#x7684;&#x9AD8;&#x5EA6;&#x6210;&#x6B63;&#x6BD4;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; O(height)</p>
+<p>&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x9AD8;&#x5EA6;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E; log2n</p>
+<p>&#x5728;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x4E2D;&#xFF0C;&#x67E5;&#x627E;&#x3001;&#x63D2;&#x5165;&#x3001;&#x5220;&#x9664;&#x7B49;&#x5F88;&#x591A;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x90FD;&#x8DDF;&#x6811;&#x7684;&#x9AD8;&#x5EA6;&#x6210;&#x6B63;&#x6BD4;&#x3002;&#x4E24;&#x4E2A;&#x6781;&#x7AEF;&#x60C5;&#x51B5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x522B;&#x662F; O(n) &#x548C; O(logn)&#xFF0C;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x4E8C;&#x53C9;&#x6811;&#x9000;&#x5316;&#x6210;&#x94FE;&#x8868;&#x7684;&#x60C5;&#x51B5;&#x548C;&#x5B8C;&#x5168;&#x4E8C;&#x53C9;&#x6811;&#x3002;</p>
+<p>&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x5B58;&#x5728;&#x6027;&#x80FD;&#x9000;&#x5316;&#x95EE;&#x9898;&#xFF0C;&#x4F7F;&#x7528;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x3002;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x9AD8;&#x5EA6;&#x63A5;&#x8FD1; logn&#xFF0C;&#x6240;&#x4EE5;&#x63D2;&#x5165;&#x3001;&#x5220;&#x9664;&#x3001;&#x67E5;&#x627E;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E5F;&#x6BD4;&#x8F83;&#x7A33;&#x5B9A;&#xFF0C;&#x662F; O(logn)&#x3002;</p>
+<h2 id="&#x95EE;&#x9898;&#xFF1A;&#x6709;&#x4E86;&#x5982;&#x6B64;&#x9AD8;&#x6548;&#x7684;&#x6563;&#x5217;&#x8868;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD8;&#x9700;&#x8981;&#x4E8C;&#x53C9;&#x6811;&#xFF1F;"><a name="&#x95EE;&#x9898;&#xFF1A;&#x6709;&#x4E86;&#x5982;&#x6B64;&#x9AD8;&#x6548;&#x7684;&#x6563;&#x5217;&#x8868;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD8;&#x9700;&#x8981;&#x4E8C;&#x53C9;&#x6811;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x95EE;&#x9898;&#xFF1A;&#x6709;&#x4E86;&#x5982;&#x6B64;&#x9AD8;&#x6548;&#x7684;&#x6563;&#x5217;&#x8868;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD8;&#x9700;&#x8981;&#x4E8C;&#x53C9;&#x6811;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x95EE;&#x9898;&#xFF1A;&#x6709;&#x4E86;&#x5982;&#x6B64;&#x9AD8;&#x6548;&#x7684;&#x6563;&#x5217;&#x8868;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8FD8;&#x9700;&#x8981;&#x4E8C;&#x53C9;&#x6811;&#xFF1F;</h2>
+<p>&#x7B2C;&#x4E00;&#xFF0C;&#x6563;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x662F;&#x65E0;&#x5E8F;&#x5B58;&#x50A8;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x8F93;&#x51FA;&#x6709;&#x5E8F;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x800C;&#x5BF9;&#x4E8E;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x6765;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x4E2D;&#x5E8F;&#x904D;&#x5386;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728; O(n) &#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5185;&#xFF0C;&#x8F93;&#x51FA;&#x6709;&#x5E8F;&#x7684;&#x6570;&#x636E;&#x5E8F;&#x5217;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#xFF0C;&#x6563;&#x5217;&#x8868;&#x6269;&#x5BB9;&#x8017;&#x65F6;&#x5F88;&#x591A;&#xFF0C;&#x800C;&#x4E14;&#x5F53;&#x9047;&#x5230;&#x6563;&#x5217;&#x51B2;&#x7A81;&#x65F6;&#xFF0C;&#x6027;&#x80FD;&#x4E0D;&#x7A33;&#x5B9A;&#xFF0C;&#x5C3D;&#x7BA1;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x6027;&#x80FD;&#x4E0D;&#x7A33;&#x5B9A;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5DE5;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6700;&#x5E38;&#x7528;&#x7684;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x6027;&#x80FD;&#x975E;&#x5E38;&#x7A33;&#x5B9A;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x7A33;&#x5B9A;&#x5728; O(logn)&#x3002;</p>
+<p>&#x7B2C;&#x4E09;&#xFF0C;&#x7B3C;&#x7EDF;&#x5730;&#x6765;&#x8BF4;&#xFF0C;&#x5C3D;&#x7BA1;&#x6563;&#x5217;&#x8868;&#x7684;&#x67E5;&#x627E;&#x7B49;&#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;&#x5E38;&#x91CF;&#x7EA7;&#x7684;&#xFF0C;&#x4F46;&#x56E0;&#x4E3A;&#x54C8;&#x5E0C;&#x51B2;&#x7A81;&#x7684;&#x5B58;&#x5728;&#xFF0C;&#x8FD9;&#x4E2A;&#x5E38;&#x91CF;&#x4E0D;&#x4E00;&#x5B9A;&#x6BD4; logn &#x5C0F;&#xFF0C;&#x6240;&#x4EE5;&#x5B9E;&#x9645;&#x7684;&#x67E5;&#x627E;&#x901F;&#x5EA6;&#x53EF;&#x80FD;&#x4E0D;&#x4E00;&#x5B9A;&#x6BD4; O(logn) &#x5FEB;&#x3002;&#x52A0;&#x4E0A;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x7684;&#x8017;&#x65F6;&#xFF0C;&#x4E5F;&#x4E0D;&#x4E00;&#x5B9A;&#x5C31;&#x6BD4;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x7684;&#x6548;&#x7387;&#x9AD8;&#x3002;</p>
+<p>&#x7B2C;&#x56DB;&#xFF0C;&#x6563;&#x5217;&#x8868;&#x7684;&#x6784;&#x9020;&#x6BD4;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x8981;&#x590D;&#x6742;&#xFF0C;&#x9700;&#x8981;&#x8003;&#x8651;&#x7684;&#x4E1C;&#x897F;&#x5F88;&#x591A;&#x3002;&#x6BD4;&#x5982;&#x6563;&#x5217;&#x51FD;&#x6570;&#x7684;&#x8BBE;&#x8BA1;&#x3001;&#x51B2;&#x7A81;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x3001;&#x6269;&#x5BB9;&#x3001;&#x7F29;&#x5BB9;&#x7B49;&#x3002;&#x5E73;&#x8861;&#x4E8C;&#x53C9;&#x67E5;&#x627E;&#x6811;&#x53EA;&#x9700;&#x8981;&#x8003;&#x8651;&#x5E73;&#x8861;&#x6027;&#x8FD9;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x4E14;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x6BD4;&#x8F83;&#x6210;&#x719F;&#x3001;&#x56FA;&#x5B9A;&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x8FC7;&#x591A;&#x7684;&#x6563;&#x5217;&#x51B2;&#x7A81;&#xFF0C;&#x6563;&#x5217;&#x8868;&#x88C5;&#x8F7D;&#x56E0;&#x5B50;&#x4E0D;&#x80FD;&#x592A;&#x5927;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x57FA;&#x4E8E;&#x5F00;&#x653E;&#x5BFB;&#x5740;&#x6CD5;&#x89E3;&#x51B3;&#x51B2;&#x7A81;&#x7684;&#x6563;&#x5217;&#x8868;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x6D6A;&#x8D39;&#x4E00;&#x5B9A;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x3002;</p>
+<h2 id="&#x95EE;&#x9898;&#xFF1A;&#x6C42;&#x51FA;&#x4E00;&#x68F5;&#x7ED9;&#x5B9A;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x786E;&#x5207;&#x9AD8;&#x5EA6;&#x5462;&#xFF1F;"><a name="&#x95EE;&#x9898;&#xFF1A;&#x6C42;&#x51FA;&#x4E00;&#x68F5;&#x7ED9;&#x5B9A;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x786E;&#x5207;&#x9AD8;&#x5EA6;&#x5462;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x95EE;&#x9898;&#xFF1A;&#x6C42;&#x51FA;&#x4E00;&#x68F5;&#x7ED9;&#x5B9A;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x786E;&#x5207;&#x9AD8;&#x5EA6;&#x5462;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x95EE;&#x9898;&#xFF1A;&#x6C42;&#x51FA;&#x4E00;&#x68F5;&#x7ED9;&#x5B9A;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x786E;&#x5207;&#x9AD8;&#x5EA6;&#x5462;&#xFF1F;</h2>
+<p>&#x9012;&#x5F52;&#x6CD5;&#xFF0C;&#x6839;&#x8282;&#x70B9;&#x9AD8;&#x5EA6;=max(&#x5DE6;&#x5B50;&#x6811;&#x9AD8;&#x5EA6;&#xFF0C;&#x53F3;&#x5B50;&#x6811;&#x9AD8;&#x5EA6;)+1</p>
+<pre class="language-"><code class="lang-swift"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+    <span class="token keyword">func</span> <span class="token function">maxDepth</span><span class="token punctuation">(</span><span class="token number">_</span> root<span class="token punctuation">:</span> <span class="token builtin">TreeNode</span><span class="token operator">?</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">Int</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> root <span class="token operator">==</span> <span class="token constant">nil</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">var</span> leftDepth <span class="token operator">=</span> <span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token operator">!</span><span class="token punctuation">.</span><span class="token keyword">left</span><span class="token punctuation">)</span>
+        <span class="token keyword">var</span> rightDepth <span class="token operator">=</span> <span class="token function">maxDepth</span><span class="token punctuation">(</span>root<span class="token operator">!</span><span class="token punctuation">.</span><span class="token keyword">right</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token function">max</span><span class="token punctuation">(</span>leftDepth<span class="token punctuation">,</span>rightDepth<span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; lifeasy.top 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-02-22 10:48:01
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="11_哈希算法.html" class="navigation navigation-prev " aria-label="Previous page: 哈希算法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="13_红黑树.html" class="navigation navigation-next " aria-label="Next page: 红黑树">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"二叉树","level":"4.1.1.17","depth":3,"next":{"title":"红黑树","level":"4.1.1.18","depth":3,"path":"articles/algorithm/geektime_note/13_红黑树.md","ref":"articles/algorithm/geektime_note/13_红黑树.md","articles":[]},"previous":{"title":"哈希算法","level":"4.1.1.16","depth":3,"path":"articles/algorithm/geektime_note/11_哈希算法.md","ref":"articles/algorithm/geektime_note/11_哈希算法.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github","github-buttons","donate","tbfed-pagefooter","anchor-navigation-ex"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy lifeasy.top 2020","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shel":"bash","shell":"bash","objective-c":"objectivec","swi":"swift","swif":"swift","c++":"cpp"}},"github":{"url":"https://github.com/lifeasy"},"splitter":{},"search-pro":{},"donate":{"alipay":"https://www.liangqili.com/hexo/images/alipay.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://www.liangqili.com/hexo/images/wechatpay.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"lifeasy","repo":"mybook","type":"star","count":true,"size":"small"},{"user":"lifeasy","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Liang_QL","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"lifeasy 的文档库","language":"zh-hans","links":{"sidebar":{"我的小站":"https://www.liangqili.com"}},"gitbook":"*","description":"随便写写"},"file":{"path":"articles/algorithm/geektime_note/12_二叉树.md","mtime":"2021-02-22T02:48:01.729Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-15T03:50:32.577Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

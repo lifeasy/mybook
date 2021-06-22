@@ -1,0 +1,2573 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Js中的正则表达式 · lifeasy 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Liang_QL">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"lifeasy","repo":"mybook","type":"star","count":true,"size":"small"},{"user":"lifeasy","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.liangqili.com" target="_blank" class="custom-link">我的小站</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    iOS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" >
+            
+                <span>
+            
+                    
+                    LLDB
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="../../iOS/lldb/LLDB常用命令.html">
+            
+                <a href="../../iOS/lldb/LLDB常用命令.html">
+            
+                    
+                    LLDB常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" >
+            
+                <span>
+            
+                    
+                    Swift
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.1" data-path="../../iOS/swift/Swift常用命令.html">
+            
+                <a href="../../iOS/swift/Swift常用命令.html">
+            
+                    
+                    Swift常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.2" data-path="../../iOS/swift/Swift源码编译.html">
+            
+                <a href="../../iOS/swift/Swift源码编译.html">
+            
+                    
+                    Swift源码编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3" >
+            
+                <span>
+            
+                    
+                    逻辑进阶笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.3.1" data-path="../../iOS/swift/logicEdu/01_类、对象、属性.html">
+            
+                <a href="../../iOS/swift/logicEdu/01_类、对象、属性.html">
+            
+                    
+                    01_类、对象、属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3.2" data-path="../../iOS/swift/logicEdu/02_值类型、引用类型.html">
+            
+                <a href="../../iOS/swift/logicEdu/02_值类型、引用类型.html">
+            
+                    
+                    02_值类型、引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4" >
+            
+                <span>
+            
+                    
+                    Swift语法学习笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.4.1" data-path="../../iOS/swift/language/01_基础部分.html">
+            
+                <a href="../../iOS/swift/language/01_基础部分.html">
+            
+                    
+                    01_基础部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4.2" data-path="../../iOS/swift/language/02_运算符.html">
+            
+                <a href="../../iOS/swift/language/02_运算符.html">
+            
+                    
+                    02_运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4.3" data-path="../../iOS/swift/language/03_字符串.html">
+            
+                <a href="../../iOS/swift/language/03_字符串.html">
+            
+                    
+                    03_字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.5" >
+            
+                <span>
+            
+                    
+                    Swift服务端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.5.1" data-path="../../iOS/swift/server/Vapor搭建服务端模拟接口请求.html">
+            
+                <a href="../../iOS/swift/server/Vapor搭建服务端模拟接口请求.html">
+            
+                    
+                    Vapor搭建服务端模拟接口请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" >
+            
+                <span>
+            
+                    
+                    UI
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.3.1" data-path="../../iOS/ui/CoreAnimation.html">
+            
+                <a href="../../iOS/ui/CoreAnimation.html">
+            
+                    
+                    核心动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" >
+            
+                <span>
+            
+                    
+                    网咯
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.4.1" data-path="../../iOS/network/tcpip.html">
+            
+                <a href="../../iOS/network/tcpip.html">
+            
+                    
+                    图解TCP/IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" >
+            
+                <span>
+            
+                    
+                    多线程
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" >
+            
+                <span>
+            
+                    
+                    Runtime
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" >
+            
+                <span>
+            
+                    
+                    持续集成
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.7.1" data-path="../../iOS/ci/jenkins.html">
+            
+                <a href="../../iOS/ci/jenkins.html">
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../../iOS/underlying/">
+            
+                <a href="../../iOS/underlying/">
+            
+                    
+                    iOS底层原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.8.1" data-path="../../iOS/underlying/pre_runtime.html">
+            
+                <a href="../../iOS/underlying/pre_runtime.html">
+            
+                    
+                    前奏_Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8.2" data-path="../../iOS/underlying/01_object.html">
+            
+                <a href="../../iOS/underlying/01_object.html">
+            
+                    
+                    01_OC对象原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" >
+            
+                <span>
+            
+                    
+                    iOS逆向
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.9.1" data-path="../../iOS/iosre/command_iosre.html">
+            
+                <a href="../../iOS/iosre/command_iosre.html">
+            
+                    
+                    iOS逆向常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.2" data-path="../../iOS/iosre/iosre.html">
+            
+                <a href="../../iOS/iosre/iosre.html">
+            
+                    
+                    iOS逆向简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.3" data-path="../../iOS/iosre/01_jailbreak.html">
+            
+                <a href="../../iOS/iosre/01_jailbreak.html">
+            
+                    
+                    01_iPhone越狱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.4" data-path="../../iOS/iosre/02_ssh.html">
+            
+                <a href="../../iOS/iosre/02_ssh.html">
+            
+                    
+                    02_SSH远程访问越狱设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.5" data-path="../../iOS/iosre/03_usbmuxd.html">
+            
+                <a href="../../iOS/iosre/03_usbmuxd.html">
+            
+                    
+                    03_usbmuxd蓝牙访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.6" data-path="../../iOS/iosre/04_terminal_zh.html">
+            
+                <a href="../../iOS/iosre/04_terminal_zh.html">
+            
+                    
+                    04_iPhone终端中文问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.7" data-path="../../iOS/iosre/05_cycript.html">
+            
+                <a href="../../iOS/iosre/05_cycript.html">
+            
+                    
+                    05_Cycript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.8" data-path="../../iOS/iosre/06_reveal.html">
+            
+                <a href="../../iOS/iosre/06_reveal.html">
+            
+                    
+                    06_Reveal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.9" data-path="../../iOS/iosre/07_reverse.html">
+            
+                <a href="../../iOS/iosre/07_reverse.html">
+            
+                    
+                    07_逆向思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.10" data-path="../../iOS/iosre/08_macho.html">
+            
+                <a href="../../iOS/iosre/08_macho.html">
+            
+                    
+                    08_Mach-O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.11" data-path="../../iOS/iosre/09_dyld_shared_cache.html">
+            
+                <a href="../../iOS/iosre/09_dyld_shared_cache.html">
+            
+                    
+                    09_动态库共享缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.12" data-path="../../iOS/iosre/10_dumpdecrypted.html">
+            
+                <a href="../../iOS/iosre/10_dumpdecrypted.html">
+            
+                    
+                    10_脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.13" data-path="../../iOS/iosre/11_theos.html">
+            
+                <a href="../../iOS/iosre/11_theos.html">
+            
+                    
+                    11_Theos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.14" data-path="../../iOS/iosre/12_debug.html">
+            
+                <a href="../../iOS/iosre/12_debug.html">
+            
+                    
+                    12_动态调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.15" data-path="../../iOS/iosre/13_rsa.html">
+            
+                <a href="../../iOS/iosre/13_rsa.html">
+            
+                    
+                    13_RSA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.16" data-path="../../iOS/iosre/14_hash.html">
+            
+                <a href="../../iOS/iosre/14_hash.html">
+            
+                    
+                    14_Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.17" data-path="../../iOS/iosre/15_resign.html">
+            
+                <a href="../../iOS/iosre/15_resign.html">
+            
+                    
+                    15_重签名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.18" data-path="../../iOS/iosre/16_injection.html">
+            
+                <a href="../../iOS/iosre/16_injection.html">
+            
+                    
+                    16_动态库注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" >
+            
+                <span>
+            
+                    
+                    学习笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.10.1" >
+            
+                <span>
+            
+                    
+                    iOS强化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.10.1.1" data-path="../../iOS/note/iOS强化/command_ioslowlevel.html">
+            
+                <a href="../../iOS/note/iOS强化/command_ioslowlevel.html">
+            
+                    
+                    iOS底层常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.1.2" data-path="../../iOS/note/iOS强化/01_多环境配置.html">
+            
+                <a href="../../iOS/note/iOS强化/01_多环境配置.html">
+            
+                    
+                    01_多环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.1.3" data-path="../../iOS/note/iOS强化/02_Mach-O和符号.html">
+            
+                <a href="../../iOS/note/iOS强化/02_Mach-O和符号.html">
+            
+                    
+                    02_Mach-O和符号
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" >
+            
+                <span>
+            
+                    
+                    Xcode
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.11.1" >
+            
+                <span>
+            
+                    
+                    Instruments
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.11.1.1" data-path="../../iOS/xcode/instruments/time_profiler.html">
+            
+                <a href="../../iOS/xcode/instruments/time_profiler.html">
+            
+                    
+                    TimeProfiler
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    源码
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" >
+            
+                <span>
+            
+                    
+                    WebKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../opensource/webkit/webkitcompile.html">
+            
+                <a href="../../opensource/webkit/webkitcompile.html">
+            
+                    
+                    WebKit编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" >
+            
+                <span>
+            
+                    
+                    LLVM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="../../opensource/llvm/llvmcompile.html">
+            
+                <a href="../../opensource/llvm/llvmcompile.html">
+            
+                    
+                    LLVM编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../algorithm/算法.html">
+            
+                <a href="../../algorithm/算法.html">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" >
+            
+                <span>
+            
+                    
+                    算法基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../algorithm/geektime_note/01_复杂度.html">
+            
+                <a href="../../algorithm/geektime_note/01_复杂度.html">
+            
+                    
+                    复杂度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="../../algorithm/geektime_note/02_数组.html">
+            
+                <a href="../../algorithm/geektime_note/02_数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="../../algorithm/geektime_note/03_链表.html">
+            
+                <a href="../../algorithm/geektime_note/03_链表.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.4" data-path="../../algorithm/geektime_note/04_栈.html">
+            
+                <a href="../../algorithm/geektime_note/04_栈.html">
+            
+                    
+                    栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.5" data-path="../../algorithm/geektime_note/05_队列.html">
+            
+                <a href="../../algorithm/geektime_note/05_队列.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.6" data-path="../../algorithm/geektime_note/06_递归.html">
+            
+                <a href="../../algorithm/geektime_note/06_递归.html">
+            
+                    
+                    递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.7" data-path="../../algorithm/geektime_note/07_排序_1.html">
+            
+                <a href="../../algorithm/geektime_note/07_排序_1.html">
+            
+                    
+                    排序（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.8" data-path="../../algorithm/geektime_note/07_排序_2.html">
+            
+                <a href="../../algorithm/geektime_note/07_排序_2.html">
+            
+                    
+                    排序（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.9" data-path="../../algorithm/geektime_note/07_排序_3.html">
+            
+                <a href="../../algorithm/geektime_note/07_排序_3.html">
+            
+                    
+                    排序（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.10" data-path="../../algorithm/geektime_note/08_二分查找_1.html">
+            
+                <a href="../../algorithm/geektime_note/08_二分查找_1.html">
+            
+                    
+                    二分查找（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.11" data-path="../../algorithm/geektime_note/08_二分查找_2.html">
+            
+                <a href="../../algorithm/geektime_note/08_二分查找_2.html">
+            
+                    
+                    二分查找（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.12" data-path="../../algorithm/geektime_note/09_跳表.html">
+            
+                <a href="../../algorithm/geektime_note/09_跳表.html">
+            
+                    
+                    跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.13" data-path="../../algorithm/geektime_note/10_散列表_1.html">
+            
+                <a href="../../algorithm/geektime_note/10_散列表_1.html">
+            
+                    
+                    散列表（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.14" data-path="../../algorithm/geektime_note/10_散列表_2.html">
+            
+                <a href="../../algorithm/geektime_note/10_散列表_2.html">
+            
+                    
+                    散列表（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.15" data-path="../../algorithm/geektime_note/10_散列表_3.html">
+            
+                <a href="../../algorithm/geektime_note/10_散列表_3.html">
+            
+                    
+                    散列表（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.16" data-path="../../algorithm/geektime_note/11_哈希算法.html">
+            
+                <a href="../../algorithm/geektime_note/11_哈希算法.html">
+            
+                    
+                    哈希算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.17" data-path="../../algorithm/geektime_note/12_二叉树.html">
+            
+                <a href="../../algorithm/geektime_note/12_二叉树.html">
+            
+                    
+                    二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.18" data-path="../../algorithm/geektime_note/13_红黑树.html">
+            
+                <a href="../../algorithm/geektime_note/13_红黑树.html">
+            
+                    
+                    红黑树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../algorithm/swift_algorithm/">
+            
+                <a href="../../algorithm/swift_algorithm/">
+            
+                    
+                    Swift中相关的数据结构和算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../../algorithm/swift_algorithm/String.html">
+            
+                <a href="../../algorithm/swift_algorithm/String.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../../algorithm/swift_algorithm/Array.html">
+            
+                <a href="../../algorithm/swift_algorithm/Array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.3" data-path="../../algorithm/swift_algorithm/Dictionary.html">
+            
+                <a href="../../algorithm/swift_algorithm/Dictionary.html">
+            
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.4" data-path="../../algorithm/swift_algorithm/Set.html">
+            
+                <a href="../../algorithm/swift_algorithm/Set.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../algorithm/js_algorithm/">
+            
+                <a href="../../algorithm/js_algorithm/">
+            
+                    
+                    JavaScript中相关的数据结构和算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="../../algorithm/js_algorithm/String.html">
+            
+                <a href="../../algorithm/js_algorithm/String.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.2" data-path="../../algorithm/js_algorithm/Array.html">
+            
+                <a href="../../algorithm/js_algorithm/Array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.3" data-path="../../algorithm/js_algorithm/Map.html">
+            
+                <a href="../../algorithm/js_algorithm/Map.html">
+            
+                    
+                    映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3.4" data-path="../../algorithm/js_algorithm/Set.html">
+            
+                <a href="../../algorithm/js_algorithm/Set.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <span>
+            
+                    
+                    Shell
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../shell/常用命令.html">
+            
+                <a href="../../shell/常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <span>
+            
+                    
+                    Gitbook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../gitbook/01_创建gitbook.html">
+            
+                <a href="../../gitbook/01_创建gitbook.html">
+            
+                    
+                    创建gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" >
+            
+                <span>
+            
+                    
+                    常用工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" >
+            
+                <span>
+            
+                    
+                    homebrew
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1.1" data-path="../homebrew/homebrew换源.html">
+            
+                <a href="../homebrew/homebrew换源.html">
+            
+                    
+                    homebrew换源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" >
+            
+                <span>
+            
+                    
+                    node
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.2.1" data-path="../node/npm修改配置文件.html">
+            
+                <a href="../node/npm修改配置文件.html">
+            
+                    
+                    npm修改配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2.2" data-path="../node/卸载node.html">
+            
+                <a href="../node/卸载node.html">
+            
+                    
+                    卸载重装node
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" >
+            
+                <span>
+            
+                    
+                    git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.3.1" data-path="../git/git常用命令.html">
+            
+                <a href="../git/git常用命令.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3.2" data-path="../git/git常用操作.html">
+            
+                <a href="../git/git常用操作.html">
+            
+                    
+                    git常用操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" >
+            
+                <span>
+            
+                    
+                    正则表达式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="7.1.4.1" data-path="reg.html">
+            
+                <a href="reg.html">
+            
+                    
+                    Js中的正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Js中的正则表达式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><b></b>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;&#x6587;&#x732E;"><b></b>&#x53C2;&#x8003;&#x6587;&#x732E;</a></li><li><span class="title-icon "></span><a href="#1-&#x57FA;&#x672C;&#x5339;&#x914D;"><b></b>1. &#x57FA;&#x672C;&#x5339;&#x914D;</a></li><li><span class="title-icon "></span><a href="#2-&#x5143;&#x5B57;&#x7B26;"><b></b>2. &#x5143;&#x5B57;&#x7B26;</a></li><ul><li><span class="title-icon "></span><a href="#21-&#x70B9;&#x8FD0;&#x7B97;&#x7B26;-"><b></b>2.1 &#x70B9;&#x8FD0;&#x7B97;&#x7B26; .</a></li><li><span class="title-icon "></span><a href="#22-&#x5B57;&#x7B26;&#x96C6;-"><b></b>2.2 &#x5B57;&#x7B26;&#x96C6; []</a></li><li><span class="title-icon "></span><a href="#23-&#x91CD;&#x590D;&#x6B21;&#x6570;"><b></b>2.3 &#x91CD;&#x590D;&#x6B21;&#x6570;</a></li><li><span class="title-icon "></span><a href="#24--&#x53F7;"><b></b>2.4 {} &#x53F7;</a></li><li><span class="title-icon "></span><a href="#25--&#x7279;&#x5F81;&#x6807;&#x7FA4;"><b></b>2.5 (...) &#x7279;&#x5F81;&#x6807;&#x7FA4;</a></li><li><span class="title-icon "></span><a href="#26--&#x6216;&#x8FD0;&#x7B97;&#x7B26;"><b></b>2.6 | &#x6216;&#x8FD0;&#x7B97;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#27-&#x8F6C;&#x7801;&#x7279;&#x6B8A;&#x5B57;&#x7B26;"><b></b>2.7 &#x8F6C;&#x7801;&#x7279;&#x6B8A;&#x5B57;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#28-&#x951A;&#x70B9;"><b></b>2.8 &#x951A;&#x70B9;</a></li></ul><li><span class="title-icon "></span><a href="#3-&#x7B80;&#x5199;&#x5B57;&#x7B26;&#x96C6;"><b></b>3. &#x7B80;&#x5199;&#x5B57;&#x7B26;&#x96C6;</a></li><li><span class="title-icon "></span><a href="#4-&#x96F6;&#x5BBD;&#x5EA6;&#x65AD;&#x8A00;&#xFF08;&#x524D;&#x540E;&#x9884;&#x67E5;&#xFF09;"><b></b>4. &#x96F6;&#x5BBD;&#x5EA6;&#x65AD;&#x8A00;&#xFF08;&#x524D;&#x540E;&#x9884;&#x67E5;&#xFF09;</a></li><ul><li><span class="title-icon "></span><a href="#41--&#x6B63;&#x5148;&#x884C;&#x65AD;&#x8A00;"><b></b>4.1 ?=... &#x6B63;&#x5148;&#x884C;&#x65AD;&#x8A00;</a></li><li><span class="title-icon "></span><a href="#42--&#x8D1F;&#x5148;&#x884C;&#x65AD;&#x8A00;"><b></b>4.2 ?!... &#x8D1F;&#x5148;&#x884C;&#x65AD;&#x8A00;</a></li><li><span class="title-icon "></span><a href="#43---&#x6B63;&#x540E;&#x53D1;&#x65AD;&#x8A00;"><b></b>4.3 ?<= ...="" 正后发断言<="" a=""></=></a></li><li><span class="title-icon "></span><a href="#44--&#x8D1F;&#x540E;&#x53D1;&#x65AD;&#x8A00;"><b></b>4.4 ?<!... 负后发断言</a></a></li></ul><li><span class="title-icon "></span><a href="#5-&#x6807;&#x5FD7;"><b></b>5. &#x6807;&#x5FD7;</a></li><ul><li><span class="title-icon "></span><a href="#51-&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;-case-insensitive"><b></b>5.1 &#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199; (Case Insensitive)</a></li><li><span class="title-icon "></span><a href="#52-&#x5168;&#x5C40;&#x641C;&#x7D22;-global-search"><b></b>5.2 &#x5168;&#x5C40;&#x641C;&#x7D22; (Global search)</a></li><li><span class="title-icon "></span><a href="#53-&#x591A;&#x884C;&#x4FEE;&#x9970;&#x7B26;-multiline"><b></b>5.3 &#x591A;&#x884C;&#x4FEE;&#x9970;&#x7B26; (Multiline)</a></li></ul><li><span class="title-icon "></span><a href="#6-&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x4E0E;&#x60F0;&#x6027;&#x5339;&#x914D;-greedy-vs-lazy-matching"><b></b>6. &#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x4E0E;&#x60F0;&#x6027;&#x5339;&#x914D; (Greedy vs lazy matching)</a></li><li><span class="title-icon "></span><a href="#7-&#x6355;&#x83B7;&#x7EC4;"><b></b>7. &#x6355;&#x83B7;&#x7EC4;</a></li><ul><li><span class="title-icon "></span><a href="#71-&#x666E;&#x901A;&#x6355;&#x83B7;&#x7EC4;"><b></b>7.1 &#x666E;&#x901A;&#x6355;&#x83B7;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#72-&#x547D;&#x540D;&#x6355;&#x83B7;&#x7EC4;"><b></b>7.2 &#x547D;&#x540D;&#x6355;&#x83B7;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#73-&#x6355;&#x83B7;&#x7EC4;&#x7684;&#x5F15;&#x7528;"><b></b>7.3 &#x6355;&#x83B7;&#x7EC4;&#x7684;&#x5F15;&#x7528;</a></li><li><span class="title-icon "></span><a href="#74-&#x975E;&#x6355;&#x83B7;&#x7EC4;"><b></b>7.4 &#x975E;&#x6355;&#x83B7;&#x7EC4;(?:)</a></li></ul><li><span class="title-icon "></span><a href="#8-unicode-&#x5C5E;&#x6027;&#xFF08;unicode-properties&#xFF09;p"><b></b>8. Unicode &#x5C5E;&#x6027;&#xFF08;Unicode properties&#xFF09;\p{&#x2026;}</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x4F8B;&#xFF1A;16-&#x8FDB;&#x5236;&#x6570;&#x5B57;"><b></b>&#x5B9E;&#x4F8B;&#xFF1A;16 &#x8FDB;&#x5236;&#x6570;&#x5B57;</a></li><li><span class="title-icon "></span><a href="#&#x5B9E;&#x4F8B;&#xFF1A;&#x4E2D;&#x6587;&#x5B57;&#x7B26;"><b></b>&#x5B9E;&#x4F8B;&#xFF1A;&#x4E2D;&#x6587;&#x5B57;&#x7B26;</a></li></ul><li><span class="title-icon "></span><a href="#9-&#x8BCD;&#x8FB9;&#x754C;-b"><b></b>9. &#x8BCD;&#x8FB9;&#x754C; \b</a></li></ul></ul></div><a href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><a name="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h1>
+<h2 id="&#x53C2;&#x8003;&#x6587;&#x732E;"><a name="&#x53C2;&#x8003;&#x6587;&#x732E;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;&#x6587;&#x732E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;&#x6587;&#x732E;</h2>
+<p><a href="https://github.com/ziishaned/learn-regex" target="_blank">learn-regex</a></p>
+<p><a href="https://mp.weixin.qq.com/s/wkCHL_QzAJwWEg9JZaZnCQ" target="_blank">&#x4E00;&#x6587;&#x638C;&#x63E1;&#x5F00;&#x53D1;&#x5229;&#x5668;&#xFF1A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</a></p>
+<p><a href="https://zh.javascript.info/regular-expressions" target="_blank">&#x73B0;&#x4EE3;JavaScript&#x6559;&#x7A0B;/&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</a></p>
+<h2 id="1-&#x57FA;&#x672C;&#x5339;&#x914D;"><a name="1-&#x57FA;&#x672C;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#1-&#x57FA;&#x672C;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x57FA;&#x672C;&#x5339;&#x914D;</h2>
+<p>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5728;&#x6267;&#x884C;&#x641C;&#x7D22;&#x65F6;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x5B83;&#x7531;&#x4E00;&#x4E9B;&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;&#x7EC4;&#x5408;&#x800C;&#x6210;&#x3002; &#x4F8B;&#x5982;&#xFF1A;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F; <code>the</code>&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x89C4;&#x5219;&#xFF1A;&#x7531;&#x5B57;&#x6BCD;<code>t</code>&#x5F00;&#x59CB;&#xFF0C;&#x63A5;&#x7740;&#x662F;<code>h</code>&#xFF0C;&#x518D;&#x63A5;&#x7740;&#x662F;<code>e</code>&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;i am the first&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">the</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * [ &apos;the&apos;, index: 5, input: &apos;i am the first&apos;, groups: undefined ]
+ */</span>
+</code></pre>
+<h2 id="2-&#x5143;&#x5B57;&#x7B26;"><a name="2-&#x5143;&#x5B57;&#x7B26;" class="anchor-navigation-ex-anchor" href="#2-&#x5143;&#x5B57;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5143;&#x5B57;&#x7B26;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5143;&#x5B57;&#x7B26;</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td style="text-align:left">&#x53E5;&#x53F7;&#x5339;&#x914D;&#x4EFB;&#x610F;&#x5355;&#x4E2A;&#x5B57;&#x7B26;&#x9664;&#x4E86;&#x6362;&#x884C;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td>[ ]</td>
+<td style="text-align:left">&#x5B57;&#x7B26;&#x79CD;&#x7C7B;&#x3002;&#x5339;&#x914D;&#x65B9;&#x62EC;&#x53F7;&#x5185;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td><sup><a href="#fn_" id="reffn_ "> </a></sup></td>
+<td style="text-align:left">&#x5426;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x79CD;&#x7C7B;&#x3002;&#x5339;&#x914D;&#x9664;&#x4E86;&#x65B9;&#x62EC;&#x53F7;&#x91CC;&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;</td>
+</tr>
+<tr>
+<td>*</td>
+<td style="text-align:left">&#x5339;&#x914D;&gt;=0&#x4E2A;&#x91CD;&#x590D;&#x7684;&#x5728;*&#x53F7;&#x4E4B;&#x524D;&#x7684;&#x5B57;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td>+</td>
+<td style="text-align:left">&#x5339;&#x914D;&gt;=1&#x4E2A;&#x91CD;&#x590D;&#x7684;+&#x53F7;&#x524D;&#x7684;&#x5B57;&#x7B26;&#x3002;</td>
+</tr>
+<tr>
+<td>?</td>
+<td style="text-align:left">&#x6807;&#x8BB0;?&#x4E4B;&#x524D;&#x7684;&#x5B57;&#x7B26;&#x4E3A;&#x53EF;&#x9009;.</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td style="text-align:left">&#x5339;&#x914D;num&#x4E2A;&#x5927;&#x62EC;&#x53F7;&#x4E4B;&#x524D;&#x7684;&#x5B57;&#x7B26;&#x6216;&#x5B57;&#x7B26;&#x96C6; (n &lt;= num &lt;= m).</td>
+</tr>
+<tr>
+<td>(xyz)</td>
+<td style="text-align:left">&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x5339;&#x914D;&#x4E0E; xyz &#x5B8C;&#x5168;&#x76F8;&#x7B49;&#x7684;&#x5B57;&#x7B26;&#x4E32;.</td>
+</tr>
+<tr>
+<td>\</td>
+<td style="text-align:left"></td>
+<td>&#x6216;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x5339;&#x914D;&#x7B26;&#x53F7;&#x524D;&#x6216;&#x540E;&#x7684;&#x5B57;&#x7B26;.</td>
+</tr>
+<tr>
+<td>\</td>
+<td style="text-align:left">&#x8F6C;&#x4E49;&#x5B57;&#x7B26;,&#x7528;&#x4E8E;&#x5339;&#x914D;&#x4E00;&#x4E9B;&#x4FDD;&#x7559;&#x7684;&#x5B57;&#x7B26; `[ ] ( ) { } . * + ? ^ $ \</td>
+<td>`</td>
+</tr>
+<tr>
+<td>^</td>
+<td style="text-align:left">&#x4ECE;&#x5F00;&#x59CB;&#x884C;&#x5F00;&#x59CB;&#x5339;&#x914D;.</td>
+</tr>
+<tr>
+<td>$</td>
+<td style="text-align:left">&#x4ECE;&#x672B;&#x7AEF;&#x5F00;&#x59CB;&#x5339;&#x914D;.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-&#x70B9;&#x8FD0;&#x7B97;&#x7B26;-"><a name="21-&#x70B9;&#x8FD0;&#x7B97;&#x7B26;-" class="anchor-navigation-ex-anchor" href="#21-&#x70B9;&#x8FD0;&#x7B97;&#x7B26;-"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 &#x70B9;&#x8FD0;&#x7B97;&#x7B26; <code>.</code></h3>
+<p><code>.</code>&#x662F;&#x5143;&#x5B57;&#x7B26;&#x4E2D;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#x3002; <code>.</code>&#x5339;&#x914D;&#x4EFB;&#x610F;&#x5355;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x4F46;&#x4E0D;&#x5339;&#x914D;&#x6362;&#x884C;&#x7B26;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;<code>.ar</code>&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x540E;&#x9762;&#x8DDF;&#x7740;&#x662F;<code>a</code>&#x548C;<code>r</code>&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;far a way from home&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">.ar</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * [ &apos;far&apos;,
+  index: 0,
+  input: &apos;far a way from home&apos;,
+  groups: undefined ]
+ */</span>
+</code></pre>
+<h3 id="22-&#x5B57;&#x7B26;&#x96C6;-"><a name="22-&#x5B57;&#x7B26;&#x96C6;-" class="anchor-navigation-ex-anchor" href="#22-&#x5B57;&#x7B26;&#x96C6;-"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x5B57;&#x7B26;&#x96C6; <code>[]</code></h3>
+<p>&#x5B57;&#x7B26;&#x96C6;&#x4E5F;&#x53EB;&#x505A;&#x5B57;&#x7B26;&#x7C7B;&#x3002; &#x65B9;&#x62EC;&#x53F7;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x96C6;&#x3002; &#x5728;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#x4F7F;&#x7528;&#x8FDE;&#x5B57;&#x7B26;&#x6765;&#x6307;&#x5B9A;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x8303;&#x56F4;&#x3002; &#x5728;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x4E0D;&#x5173;&#x5FC3;&#x987A;&#x5E8F;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;<code>[rh]om</code> &#x5339;&#x914D; <code>rom</code> &#x548C; <code>hom</code>&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;far a way from home&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[rh]om</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;rom&apos;, &apos;hom&apos; ]
+ */</span>
+</code></pre>
+<blockquote>
+<p>&#x65B9;&#x62EC;&#x53F7;&#x7684;&#x53E5;&#x53F7;&#x5C31;&#x8868;&#x793A;&#x53E5;&#x53F7;&#x3002; &#x8868;&#x8FBE;&#x5F0F; <code>ar[.]</code> &#x5339;&#x914D; <code>ar.</code>&#x5B57;&#x7B26;&#x4E32;</p>
+</blockquote>
+<h4 id="221-&#x5426;&#x5B9A;&#x5B57;&#x7B26;&#x96C6;"><a name="221-&#x5426;&#x5B9A;&#x5B57;&#x7B26;&#x96C6;" class="anchor-navigation-ex-anchor" href="#221-&#x5426;&#x5B9A;&#x5B57;&#x7B26;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.1 &#x5426;&#x5B9A;&#x5B57;&#x7B26;&#x96C6;</h4>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4; <code>^</code> &#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F00;&#x5934;&#xFF0C;&#x4F46;&#x5B83;&#x7528;&#x5728;&#x4E00;&#x4E2A;&#x65B9;&#x62EC;&#x53F7;&#x7684;&#x5F00;&#x5934;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x96C6;&#x662F;&#x5426;&#x5B9A;&#x7684;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F;<code>[^h]om</code> &#x5339;&#x914D;&#x4E00;&#x4E2A;&#x540E;&#x9762;&#x8DDF;&#x7740;<code>om</code>&#x7684;&#x9664;&#x4E86;<code>h</code>&#x7684;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;far a way from home&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[^h]om</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;rom&apos; ]
+ */</span>
+</code></pre>
+<h3 id="23-&#x91CD;&#x590D;&#x6B21;&#x6570;"><a name="23-&#x91CD;&#x590D;&#x6B21;&#x6570;" class="anchor-navigation-ex-anchor" href="#23-&#x91CD;&#x590D;&#x6B21;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x91CD;&#x590D;&#x6B21;&#x6570;</h3>
+<p>&#x540E;&#x9762;&#x8DDF;&#x7740;&#x5143;&#x5B57;&#x7B26; <code>+</code>&#xFF0C;<code>*</code> or <code>?</code> &#x7684;&#xFF0C;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x5339;&#x914D;&#x5B50;&#x6A21;&#x5F0F;&#x7684;&#x6B21;&#x6570;&#x3002; &#x8FD9;&#x4E9B;&#x5143;&#x5B57;&#x7B26;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6709;&#x7740;&#x4E0D;&#x540C;&#x7684;&#x610F;&#x601D;&#x3002;</p>
+<h4 id="231--&#x53F7;"><a name="231--&#x53F7;" class="anchor-navigation-ex-anchor" href="#231--&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.1 <code>*</code> &#x53F7;</h4>
+<p><code>*</code>&#x53F7;&#x5339;&#x914D; &#x5728;<code>*</code>&#x4E4B;&#x524D;&#x7684;&#x5B57;&#x7B26;&#x51FA;&#x73B0;<code>&#x5927;&#x4E8E;&#x7B49;&#x4E8E;0</code>&#x6B21;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F; <code>a*</code> &#x5339;&#x914D;0&#x6216;&#x66F4;&#x591A;&#x4E2A;&#x4EE5;a&#x5F00;&#x5934;&#x7684;&#x5B57;&#x7B26;&#x3002;&#x8868;&#x8FBE;&#x5F0F;<code>[a-z]*</code> &#x5339;&#x914D;&#x4E00;&#x4E2A;&#x884C;&#x4E2D;&#x6240;&#x6709;&#x4EE5;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x5F00;&#x5934;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;ther is aaaaaabc&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">a*bc</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;aaaaaabc&apos;,
+  index: 8,
+  input: &apos;ther is aaaaaabc&apos;,
+  groups: undefined ]
+ */</span>
+</code></pre>
+<p><code>*</code>&#x5B57;&#x7B26;&#x548C;<code>.</code>&#x5B57;&#x7B26;&#x642D;&#x914D;&#x53EF;&#x4EE5;&#x5339;&#x914D;&#x6240;&#x6709;&#x7684;&#x5B57;&#x7B26;<code>.*</code>&#x3002;</p>
+<p> <code>*</code>&#x548C;&#x8868;&#x793A;&#x5339;&#x914D;&#x7A7A;&#x683C;&#x7684;&#x7B26;&#x53F7;<code>\s</code>&#x8FDE;&#x8D77;&#x6765;&#x7528;&#xFF0C;&#x5982;&#x8868;&#x8FBE;&#x5F0F;<code>\s*cat\s*</code>&#x5339;&#x914D;0&#x6216;&#x66F4;&#x591A;&#x4E2A;&#x7A7A;&#x683C;&#x5F00;&#x5934;&#x548C;0&#x6216;&#x66F4;&#x591A;&#x4E2A;&#x7A7A;&#x683C;&#x7ED3;&#x5C3E;&#x7684;cat&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat sat on the concatenation.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\s*cat\s*</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos; cat &apos;, &apos;cat&apos; ]
+ */</span>
+</code></pre>
+<h4 id="232--&#x53F7;"><a name="232--&#x53F7;" class="anchor-navigation-ex-anchor" href="#232--&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.2 <code>+</code> &#x53F7;</h4>
+<p><code>+</code>&#x53F7;&#x5339;&#x914D;<code>+</code>&#x53F7;&#x4E4B;&#x524D;&#x7684;&#x5B57;&#x7B26;&#x51FA;&#x73B0; &gt;=1 &#x6B21;&#x3002; &#x4F8B;&#x5982;&#x8868;&#x8FBE;&#x5F0F;<code>c.+t</code> &#x5339;&#x914D;&#x4EE5;&#x9996;&#x5B57;&#x6BCD;<code>c</code>&#x5F00;&#x5934;&#x4EE5;<code>t</code>&#x7ED3;&#x5C3E;&#xFF0C;&#x4E2D;&#x95F4;&#x8DDF;&#x7740;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;there is a caaaat&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">ca+t</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;caaaat&apos;,
+  index: 11,
+  input: &apos;there is a caaaat&apos;,
+  groups: undefined ]
+ */</span>
+</code></pre>
+<h4 id="233--&#x53F7;"><a name="233--&#x53F7;" class="anchor-navigation-ex-anchor" href="#233--&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.3 <code>?</code> &#x53F7;</h4>
+<p>&#x5728;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x5143;&#x5B57;&#x7B26; <code>?</code> &#x6807;&#x8BB0;&#x5728;&#x7B26;&#x53F7;&#x524D;&#x9762;&#x7684;&#x5B57;&#x7B26;&#x4E3A;&#x53EF;&#x9009;&#xFF0C;&#x5373;&#x51FA;&#x73B0; 0 &#x6216; 1 &#x6B21;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F; <code>[T]?he</code> &#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32; <code>he</code> &#x548C; <code>The</code>&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat sat on the mat.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[T]?he</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;The&apos;, &apos;he&apos; ]
+ */</span>
+</code></pre>
+<h3 id="24--&#x53F7;"><a name="24--&#x53F7;" class="anchor-navigation-ex-anchor" href="#24--&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 <code>{}</code> &#x53F7;</h3>
+<p>&#x5728;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D; <code>{}</code> &#x662F;&#x4E00;&#x4E2A;&#x91CF;&#x8BCD;&#xFF0C;&#x5E38;&#x7528;&#x6765;&#x9650;&#x5B9A;&#x4E00;&#x4E2A;&#x6216;&#x4E00;&#x7EC4;&#x5B57;&#x7B26;&#x53EF;&#x4EE5;&#x91CD;&#x590D;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;&#x3002; &#x4F8B;&#x5982;&#xFF0C; &#x8868;&#x8FBE;&#x5F0F; <code>[0-9]{2,3}</code> &#x5339;&#x914D;&#x6700;&#x5C11; 2 &#x4F4D;&#x6700;&#x591A; 3 &#x4F4D; 0~9 &#x7684;&#x6570;&#x5B57;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The number was 9.9997 but we rounded it off to 10.0.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[0-9]{2,3}</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;999&apos;, &apos;10&apos; ]
+ */</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x3002; &#x4F8B;&#x5982;&#xFF0C;<code>[0-9]{2,}</code> &#x5339;&#x914D;&#x81F3;&#x5C11;&#x4E24;&#x4F4D; 0~9 &#x7684;&#x6570;&#x5B57;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The number was 9.9997 but we rounded it off to 10.0.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[0-9]{2,}</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;9997&apos;, &apos;10&apos; ]
+ */</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x9017;&#x53F7;&#x4E5F;&#x7701;&#x7565;&#x6389;&#x5219;&#x8868;&#x793A;&#x91CD;&#x590D;&#x56FA;&#x5B9A;&#x7684;&#x6B21;&#x6570;&#x3002; &#x4F8B;&#x5982;&#xFF0C;<code>[0-9]{3}</code> &#x5339;&#x914D;3&#x4F4D;&#x6570;&#x5B57;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The number was 9.9997 but we rounded it off to 10.0.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[0-9]{3}</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;999&apos; ]
+ */</span>
+</code></pre>
+<h3 id="25--&#x7279;&#x5F81;&#x6807;&#x7FA4;"><a name="25--&#x7279;&#x5F81;&#x6807;&#x7FA4;" class="anchor-navigation-ex-anchor" href="#25--&#x7279;&#x5F81;&#x6807;&#x7FA4;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5 <code>(...)</code> &#x7279;&#x5F81;&#x6807;&#x7FA4;</h3>
+<p>&#x7279;&#x5F81;&#x6807;&#x7FA4;&#x662F;&#x4E00;&#x7EC4;&#x5199;&#x5728; <code>(...)</code> &#x4E2D;&#x7684;&#x5B50;&#x6A21;&#x5F0F;&#x3002;<code>(...)</code> &#x4E2D;&#x5305;&#x542B;&#x7684;&#x5185;&#x5BB9;&#x5C06;&#x4F1A;&#x88AB;&#x770B;&#x6210;&#x4E00;&#x4E2A;&#x6574;&#x4F53;&#xFF0C;&#x548C;&#x6570;&#x5B66;&#x4E2D;&#x5C0F;&#x62EC;&#x53F7;&#xFF08; &#xFF09;&#x7684;&#x4F5C;&#x7528;&#x76F8;&#x540C;&#x3002;&#x4F8B;&#x5982;, &#x8868;&#x8FBE;&#x5F0F; <code>(ab)*</code> &#x5339;&#x914D;&#x8FDE;&#x7EED;&#x51FA;&#x73B0; 0 &#x6216;&#x66F4;&#x591A;&#x4E2A; <code>ab</code>&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4F7F;&#x7528; <code>(...)</code> &#xFF0C;&#x90A3;&#x4E48;&#x8868;&#x8FBE;&#x5F0F; <code>ab*</code> &#x5C06;&#x5339;&#x914D;&#x8FDE;&#x7EED;&#x51FA;&#x73B0; 0 &#x6216;&#x66F4;&#x591A;&#x4E2A; <code>b</code> &#x3002;&#x518D;&#x6BD4;&#x5982;&#x4E4B;&#x524D;&#x8BF4;&#x7684; <code>{}</code> &#x662F;&#x7528;&#x6765;&#x8868;&#x793A;&#x524D;&#x9762;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x51FA;&#x73B0;&#x6307;&#x5B9A;&#x6B21;&#x6570;&#x3002;&#x4F46;&#x5982;&#x679C;&#x5728; <code>{}</code> &#x524D;&#x52A0;&#x4E0A;&#x7279;&#x5F81;&#x6807;&#x7FA4; <code>(...)</code> &#x5219;&#x8868;&#x793A;&#x6574;&#x4E2A;&#x6807;&#x7FA4;&#x5185;&#x7684;&#x5B57;&#x7B26;&#x91CD;&#x590D; N &#x6B21;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x5728; <code>()</code> &#x4E2D;&#x7528;&#x6216;&#x5B57;&#x7B26; <code>|</code> &#x8868;&#x793A;&#x6216;&#x3002;&#x4F8B;&#x5982;&#xFF0C;<code>(c|g|p)ar</code> &#x5339;&#x914D; <code>car</code> &#x6216; <code>gar</code> &#x6216; <code>par</code>.</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The number was 9.9997 but we rounded it off to 10.0.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">n(um)?</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;num&apos;, &apos;n&apos; ]
+ */</span>
+
+<span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The number was 9.9997 but we rounded it off to 10.0.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">o(u|f)</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;ou&apos;, &apos;of&apos; ]
+ */</span>
+</code></pre>
+<h3 id="26--&#x6216;&#x8FD0;&#x7B97;&#x7B26;"><a name="26--&#x6216;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#26--&#x6216;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>2.6 <code>|</code> &#x6216;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<p>&#x6216;&#x8FD0;&#x7B97;&#x7B26;&#x5C31;&#x8868;&#x793A;&#x6216;&#xFF0C;&#x7528;&#x4F5C;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x3002;</p>
+<p>&#x4F8B;&#x5982; <code>(T|t)he|car</code> &#x5339;&#x914D; <code>(T|t)he</code> &#x6216; <code>car</code>&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The car is parked in the garage.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[T|t]he|car</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;The&apos;, &apos;car&apos;, &apos;the&apos; ]
+ */</span>
+</code></pre>
+<h3 id="27-&#x8F6C;&#x7801;&#x7279;&#x6B8A;&#x5B57;&#x7B26;"><a name="27-&#x8F6C;&#x7801;&#x7279;&#x6B8A;&#x5B57;&#x7B26;" class="anchor-navigation-ex-anchor" href="#27-&#x8F6C;&#x7801;&#x7279;&#x6B8A;&#x5B57;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>2.7 &#x8F6C;&#x7801;&#x7279;&#x6B8A;&#x5B57;&#x7B26;</h3>
+<p>&#x53CD;&#x659C;&#x7EBF; <code>\</code> &#x5728;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x7528;&#x4E8E;&#x8F6C;&#x7801;&#x7D27;&#x8DDF;&#x5176;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x3002;&#x7528;&#x4E8E;&#x6307;&#x5B9A; <code>{ } [ ] / \ + * . $ ^ | ?</code> &#x8FD9;&#x4E9B;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5339;&#x914D;&#x8FD9;&#x4E9B;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x5219;&#x8981;&#x5728;&#x5176;&#x524D;&#x9762;&#x52A0;&#x4E0A;&#x53CD;&#x659C;&#x7EBF; <code>\</code>&#x3002;</p>
+<p>&#x4F8B;&#x5982; <code>.</code> &#x662F;&#x7528;&#x6765;&#x5339;&#x914D;&#x9664;&#x6362;&#x884C;&#x7B26;&#x5916;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x7684;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5339;&#x914D;&#x53E5;&#x5B50;&#x4E2D;&#x7684; <code>.</code> &#x5219;&#x8981;&#x5199;&#x6210; <code>\.</code> &#x4EE5;&#x4E0B;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50; <code>\.?</code>&#x662F;&#x9009;&#x62E9;&#x6027;&#x5339;&#x914D;<code>.</code></p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat sat on the mat.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(f|c|m)at\.</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;mat.&apos; ]
+ */</span>
+</code></pre>
+<h3 id="28-&#x951A;&#x70B9;"><a name="28-&#x951A;&#x70B9;" class="anchor-navigation-ex-anchor" href="#28-&#x951A;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>2.8 &#x951A;&#x70B9;</h3>
+<p>&#x5728;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#xFF0C;&#x60F3;&#x8981;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x5F00;&#x5934;&#x6216;&#x7ED3;&#x5C3E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5C31;&#x8981;&#x4F7F;&#x7528;&#x5230;&#x951A;&#x70B9;&#x3002;<code>^</code> &#x6307;&#x5B9A;&#x5F00;&#x5934;&#xFF0C;<code>$</code> &#x6307;&#x5B9A;&#x7ED3;&#x5C3E;&#x3002;</p>
+<h4 id="281--&#x53F7;"><a name="281--&#x53F7;" class="anchor-navigation-ex-anchor" href="#281--&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>2.8.1 <code>^</code> &#x53F7;</h4>
+<p><code>^</code> &#x7528;&#x6765;&#x68C0;&#x67E5;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5728;&#x6240;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F00;&#x5934;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5728; <code>abc</code> &#x4E2D;&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F; <code>^a</code> &#x4F1A;&#x5F97;&#x5230;&#x7ED3;&#x679C; <code>a</code>&#x3002;&#x4F46;&#x5982;&#x679C;&#x4F7F;&#x7528; <code>^b</code> &#x5C06;&#x5339;&#x914D;&#x4E0D;&#x5230;&#x4EFB;&#x4F55;&#x7ED3;&#x679C;&#x3002;&#x56E0;&#x4E3A;&#x5728;&#x5B57;&#x7B26;&#x4E32; <code>abc</code> &#x4E2D;&#x5E76;&#x4E0D;&#x662F;&#x4EE5; <code>b</code> &#x5F00;&#x5934;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;<code>^(T|t)he</code> &#x5339;&#x914D;&#x4EE5; <code>The</code> &#x6216; <code>the</code> &#x5F00;&#x5934;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The car is parked in the garage.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(T|t)he</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;The&apos;, &apos;the&apos; ]
+ */</span>
+
+<span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The car is parked in the garage.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^(T|t)he</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;The&apos; ]
+ */</span>
+</code></pre>
+<h4 id="282--&#x53F7;"><a name="282--&#x53F7;" class="anchor-navigation-ex-anchor" href="#282--&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>2.8.2 <code>$</code> &#x53F7;</h4>
+<p>&#x540C;&#x7406;&#x4E8E; <code>^</code> &#x53F7;&#xFF0C;<code>$</code> &#x53F7;&#x7528;&#x6765;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x662F;&#x5426;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;<code>(at\.)$</code> &#x5339;&#x914D;&#x4EE5; <code>at.</code> &#x7ED3;&#x5C3E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat. sat. on the mat.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">at\.</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;at.&apos;, &apos;at.&apos;, &apos;at.&apos; ]
+ */</span>
+
+<span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat. sat. on the mat.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">at\.$</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;at.&apos; ]
+ */</span>
+</code></pre>
+<h2 id="3-&#x7B80;&#x5199;&#x5B57;&#x7B26;&#x96C6;"><a name="3-&#x7B80;&#x5199;&#x5B57;&#x7B26;&#x96C6;" class="anchor-navigation-ex-anchor" href="#3-&#x7B80;&#x5199;&#x5B57;&#x7B26;&#x96C6;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x7B80;&#x5199;&#x5B57;&#x7B26;&#x96C6;</h2>
+<p>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x63D0;&#x4F9B;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x7684;&#x5B57;&#x7B26;&#x96C6;&#x7B80;&#x5199;&#x3002;&#x5982;&#x4E0B;:</p>
+<table>
+<thead>
+<tr>
+<th>&#x7B80;&#x5199;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>&#x9664;&#x6362;&#x884C;&#x7B26;&#x5916;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>&#x5339;&#x914D;&#x6240;&#x6709;&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#xFF0C;&#x7B49;&#x540C;&#x4E8E; <code>[a-zA-Z0-9_]</code></td>
+</tr>
+<tr>
+<td>\W</td>
+<td>&#x5339;&#x914D;&#x6240;&#x6709;&#x975E;&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#xFF0C;&#x5373;&#x7B26;&#x53F7;&#xFF0C;&#x7B49;&#x540C;&#x4E8E;&#xFF1A; <code>[^\w]</code></td>
+</tr>
+<tr>
+<td>\d</td>
+<td>&#x5339;&#x914D;&#x6570;&#x5B57;&#xFF1A; <code>[0-9]</code></td>
+</tr>
+<tr>
+<td>\D</td>
+<td>&#x5339;&#x914D;&#x975E;&#x6570;&#x5B57;&#xFF1A; <code>[^\d]</code></td>
+</tr>
+<tr>
+<td>\s</td>
+<td>&#x5339;&#x914D;&#x6240;&#x6709;&#x7A7A;&#x683C;&#x5B57;&#x7B26;&#xFF0C;&#x7B49;&#x540C;&#x4E8E;&#xFF1A; <code>[\t\n\f\r\p{Z}]</code></td>
+</tr>
+<tr>
+<td>\S</td>
+<td>&#x5339;&#x914D;&#x6240;&#x6709;&#x975E;&#x7A7A;&#x683C;&#x5B57;&#x7B26;&#xFF1A; <code>[^\s]</code></td>
+</tr>
+<tr>
+<td>\f</td>
+<td>&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x6362;&#x9875;&#x7B26;</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x6362;&#x884C;&#x7B26;</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x56DE;&#x8F66;&#x7B26;</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x5236;&#x8868;&#x7B26;</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x5782;&#x76F4;&#x5236;&#x8868;&#x7B26;</td>
+</tr>
+<tr>
+<td>\p</td>
+<td>&#x5339;&#x914D; CR/LF&#xFF08;&#x7B49;&#x540C;&#x4E8E; <code>\r\n</code>&#xFF09;&#xFF0C;&#x7528;&#x6765;&#x5339;&#x914D; DOS &#x884C;&#x7EC8;&#x6B62;&#x7B26;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-&#x96F6;&#x5BBD;&#x5EA6;&#x65AD;&#x8A00;&#xFF08;&#x524D;&#x540E;&#x9884;&#x67E5;&#xFF09;"><a name="4-&#x96F6;&#x5BBD;&#x5EA6;&#x65AD;&#x8A00;&#xFF08;&#x524D;&#x540E;&#x9884;&#x67E5;&#xFF09;" class="anchor-navigation-ex-anchor" href="#4-&#x96F6;&#x5BBD;&#x5EA6;&#x65AD;&#x8A00;&#xFF08;&#x524D;&#x540E;&#x9884;&#x67E5;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x96F6;&#x5BBD;&#x5EA6;&#x65AD;&#x8A00;&#xFF08;&#x524D;&#x540E;&#x9884;&#x67E5;&#xFF09;</h2>
+<blockquote>
+<p>&#x6CE8;&#xFF1A;&#x5728;shell&#x4E0A;&#x6D4B;&#x8BD5;&#x4E0D;&#x652F;&#x6301;&#xFF0C;&#x540E;&#x7EED;&#x770B;&#x4E0B;&#x4E3A;&#x5565;</p>
+</blockquote>
+<p>&#x5148;&#x884C;&#x65AD;&#x8A00;&#x548C;&#x540E;&#x53D1;&#x65AD;&#x8A00;&#x90FD;&#x5C5E;&#x4E8E;<strong>&#x975E;&#x6355;&#x83B7;&#x7C07;</strong>&#xFF08;&#x4E0D;&#x6355;&#x83B7;&#x6587;&#x672C; &#xFF0C;&#x4E5F;&#x4E0D;&#x9488;&#x5BF9;&#x7EC4;&#x5408;&#x8BA1;&#x8FDB;&#x884C;&#x8BA1;&#x6570;&#xFF09;&#x3002; &#x5148;&#x884C;&#x65AD;&#x8A00;&#x7528;&#x4E8E;&#x5224;&#x65AD;&#x6240;&#x5339;&#x914D;&#x7684;&#x683C;&#x5F0F;&#x662F;&#x5426;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x786E;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#x4E4B;&#x524D;&#xFF0C;&#x5339;&#x914D;&#x7ED3;&#x679C;&#x4E0D;&#x5305;&#x542B;&#x8BE5;&#x786E;&#x5B9A;&#x683C;&#x5F0F;&#xFF08;&#x4EC5;&#x4F5C;&#x4E3A;&#x7EA6;&#x675F;&#xFF09;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x83B7;&#x5F97;&#x6240;&#x6709;&#x8DDF;&#x5728; <code>$</code> &#x7B26;&#x53F7;&#x540E;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6B63;&#x540E;&#x53D1;&#x65AD;&#x8A00; <code>(?&lt;=\$)[0-9\.]*</code>&#x3002; &#x8FD9;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D; <code>$</code> &#x5F00;&#x5934;&#xFF0C;&#x4E4B;&#x540E;&#x8DDF;&#x7740; <code>0,1,2,3,4,5,6,7,8,9,.</code> &#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x53EF;&#x4EE5;&#x51FA;&#x73B0;&#x5927;&#x4E8E;&#x7B49;&#x4E8E; 0 &#x6B21;&#x3002;</p>
+<p>&#x96F6;&#x5BBD;&#x5EA6;&#x65AD;&#x8A00;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?=</td>
+<td>&#x6B63;&#x5148;&#x884C;&#x65AD;&#x8A00;-&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>?!</td>
+<td>&#x8D1F;&#x5148;&#x884C;&#x65AD;&#x8A00;-&#x6392;&#x9664;</td>
+</tr>
+<tr>
+<td>?&lt;=</td>
+<td>&#x6B63;&#x540E;&#x53D1;&#x65AD;&#x8A00;-&#x5B58;&#x5728;</td>
+</tr>
+<tr>
+<td>?&lt;!</td>
+<td>&#x8D1F;&#x540E;&#x53D1;&#x65AD;&#x8A00;-&#x6392;&#x9664;</td>
+</tr>
+</tbody>
+</table>
+<p><img src="reg.assets/image-20210131214354306.png" alt="image-20210131214354306"></p>
+<h3 id="41--&#x6B63;&#x5148;&#x884C;&#x65AD;&#x8A00;"><a name="41--&#x6B63;&#x5148;&#x884C;&#x65AD;&#x8A00;" class="anchor-navigation-ex-anchor" href="#41--&#x6B63;&#x5148;&#x884C;&#x65AD;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1 <code>?=...</code> &#x6B63;&#x5148;&#x884C;&#x65AD;&#x8A00;</h3>
+<p><code>?=...</code> &#x6B63;&#x5148;&#x884C;&#x65AD;&#x8A00;&#xFF0C;&#x8868;&#x793A;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x8868;&#x8FBE;&#x5F0F;&#x4E4B;&#x540E;&#x5FC5;&#x987B;&#x8DDF;&#x7740; <code>?=...</code>&#x5B9A;&#x4E49;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x53EA;&#x5305;&#x542B;&#x6EE1;&#x8DB3;&#x5339;&#x914D;&#x6761;&#x4EF6;&#x7684;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x8868;&#x8FBE;&#x5F0F;&#x3002; &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6B63;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x8981;&#x4F7F;&#x7528; <code>()</code>&#x3002;&#x5728;&#x62EC;&#x53F7;&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x95EE;&#x53F7;&#x548C;&#x7B49;&#x53F7;&#xFF1A; <code>(?=...)</code>&#x3002;</p>
+<p>&#x6B63;&#x5148;&#x884C;&#x65AD;&#x8A00;&#x7684;&#x5185;&#x5BB9;&#x5199;&#x5728;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x7B49;&#x53F7;&#x540E;&#x9762;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F; <code>(T|t)he(?=\sfat)</code> &#x5339;&#x914D; <code>The</code> &#x548C; <code>the</code>&#xFF0C;&#x5728;&#x62EC;&#x53F7;&#x4E2D;&#x6211;&#x4EEC;&#x53C8;&#x5B9A;&#x4E49;&#x4E86;&#x6B63;&#x5148;&#x884C;&#x65AD;&#x8A00; <code>(?=\sfat)</code> &#xFF0C;&#x5373; <code>The</code> &#x548C; <code>the</code> &#x540E;&#x9762;&#x7D27;&#x8DDF;&#x7740; <code>(&#x7A7A;&#x683C;)fat</code>&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat. sat. on the mat.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[T|t]he(?=\sfat)</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;The&apos; ]
+ */</span>
+</code></pre>
+<h3 id="42--&#x8D1F;&#x5148;&#x884C;&#x65AD;&#x8A00;"><a name="42--&#x8D1F;&#x5148;&#x884C;&#x65AD;&#x8A00;" class="anchor-navigation-ex-anchor" href="#42--&#x8D1F;&#x5148;&#x884C;&#x65AD;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2 <code>?!...</code> &#x8D1F;&#x5148;&#x884C;&#x65AD;&#x8A00;</h3>
+<p>&#x8D1F;&#x5148;&#x884C;&#x65AD;&#x8A00; <code>?!</code> &#x7528;&#x4E8E;&#x7B5B;&#x9009;&#x6240;&#x6709;&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF0C;&#x7B5B;&#x9009;&#x6761;&#x4EF6;&#x4E3A; &#x5176;&#x540E;&#x4E0D;&#x8DDF;&#x968F;&#x7740;&#x65AD;&#x8A00;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x683C;&#x5F0F;&#x3002; <code>&#x6B63;&#x5148;&#x884C;&#x65AD;&#x8A00;</code> &#x5B9A;&#x4E49;&#x548C; <code>&#x8D1F;&#x5148;&#x884C;&#x65AD;&#x8A00;</code> &#x4E00;&#x6837;&#xFF0C;&#x533A;&#x522B;&#x5C31;&#x662F; <code>=</code> &#x66FF;&#x6362;&#x6210; <code>!</code> &#x4E5F;&#x5C31;&#x662F; <code>(?!...)</code>&#x3002;</p>
+<p>&#x8868;&#x8FBE;&#x5F0F; <code>(T|t)he(?!\sfat)</code> &#x5339;&#x914D; <code>The</code> &#x548C; <code>the</code>&#xFF0C;&#x4E14;&#x5176;&#x540E;&#x4E0D;&#x8DDF;&#x7740; <code>(&#x7A7A;&#x683C;)fat</code>&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat. sat. on the mat.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[T|t]he(?!\sfat)</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;the&apos; ]
+ */</span>
+</code></pre>
+<h3 id="43---&#x6B63;&#x540E;&#x53D1;&#x65AD;&#x8A00;"><a name="43---&#x6B63;&#x540E;&#x53D1;&#x65AD;&#x8A00;" class="anchor-navigation-ex-anchor" href="#43---&#x6B63;&#x540E;&#x53D1;&#x65AD;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3 <code>?&lt;= ...</code> &#x6B63;&#x540E;&#x53D1;&#x65AD;&#x8A00;</h3>
+<p>&#x6B63;&#x540E;&#x53D1;&#x65AD;&#x8A00; &#x8BB0;&#x4F5C;<code>(?&lt;=...)</code> &#x7528;&#x4E8E;&#x7B5B;&#x9009;&#x6240;&#x6709;&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF0C;&#x7B5B;&#x9009;&#x6761;&#x4EF6;&#x4E3A; &#x5176;&#x524D;&#x8DDF;&#x968F;&#x7740;&#x65AD;&#x8A00;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x683C;&#x5F0F;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F; <code>(?&lt;=(T|t)he\s)(fat|mat)</code> &#x5339;&#x914D; <code>fat</code> &#x548C; <code>mat</code>&#xFF0C;&#x4E14;&#x5176;&#x524D;&#x8DDF;&#x7740; <code>The</code> &#x6216; <code>the</code>&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat. sat. on the mat.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;=\sf)at.</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * index = 5
+[ &apos;at&apos; ]
+ */</span>
+</code></pre>
+<h3 id="44--&#x8D1F;&#x540E;&#x53D1;&#x65AD;&#x8A00;"><a name="44--&#x8D1F;&#x540E;&#x53D1;&#x65AD;&#x8A00;" class="anchor-navigation-ex-anchor" href="#44--&#x8D1F;&#x540E;&#x53D1;&#x65AD;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>4.4 <code>?&lt;!...</code> &#x8D1F;&#x540E;&#x53D1;&#x65AD;&#x8A00;</h3>
+<p>&#x8D1F;&#x540E;&#x53D1;&#x65AD;&#x8A00; &#x8BB0;&#x4F5C; <code>(?&lt;!...)</code> &#x7528;&#x4E8E;&#x7B5B;&#x9009;&#x6240;&#x6709;&#x5339;&#x914D;&#x7ED3;&#x679C;&#xFF0C;&#x7B5B;&#x9009;&#x6761;&#x4EF6;&#x4E3A; &#x5176;&#x524D;&#x4E0D;&#x8DDF;&#x968F;&#x7740;&#x65AD;&#x8A00;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x683C;&#x5F0F;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F; <code>(?&lt;!(T|t)he\s)(cat)</code> &#x5339;&#x914D; <code>cat</code>&#xFF0C;&#x4E14;&#x5176;&#x524D;&#x4E0D;&#x8DDF;&#x7740; <code>The</code> &#x6216; <code>the</code>&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat. sat. on the mat.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;!\sf)at.</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * cat. sat. mat.
+[ &apos;at.&apos;, &apos;at.&apos;, &apos;at.&apos; ]
+ */</span>
+</code></pre>
+<h2 id="5-&#x6807;&#x5FD7;"><a name="5-&#x6807;&#x5FD7;" class="anchor-navigation-ex-anchor" href="#5-&#x6807;&#x5FD7;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x6807;&#x5FD7;</h2>
+<p>&#x6807;&#x5FD7;&#x4E5F;&#x53EB;&#x6A21;&#x5F0F;&#x4FEE;&#x6B63;&#x7B26;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x4FEE;&#x6539;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x641C;&#x7D22;&#x7ED3;&#x679C;&#x3002; &#x8FD9;&#x4E9B;&#x6807;&#x5FD7;&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x7684;&#x7EC4;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x5B83;&#x4E5F;&#x662F;&#x6574;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6807;&#x5FD7;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i</td>
+<td>&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#x3002;</td>
+</tr>
+<tr>
+<td>g</td>
+<td>&#x5168;&#x5C40;&#x641C;&#x7D22;&#x3002;</td>
+</tr>
+<tr>
+<td>m</td>
+<td>&#x591A;&#x884C;&#x4FEE;&#x9970;&#x7B26;&#xFF1A;&#x951A;&#x70B9;&#x5143;&#x5B57;&#x7B26; <code>^</code> <code>$</code> &#x5DE5;&#x4F5C;&#x8303;&#x56F4;&#x5728;&#x6BCF;&#x884C;&#x7684;&#x8D77;&#x59CB;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="51-&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;-case-insensitive"><a name="51-&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;-case-insensitive" class="anchor-navigation-ex-anchor" href="#51-&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;-case-insensitive"><i class="fa fa-link" aria-hidden="true"></i></a>5.1 &#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199; (Case Insensitive)</h3>
+<p>&#x4FEE;&#x9970;&#x8BED; <code>i</code> &#x7528;&#x4E8E;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F; <code>/The/gi</code> &#x8868;&#x793A;&#x5728;&#x5168;&#x5C40;&#x641C;&#x7D22; <code>The</code>&#xFF0C;&#x5728;&#x540E;&#x9762;&#x7684; <code>i</code> &#x5C06;&#x5176;&#x6761;&#x4EF6;&#x4FEE;&#x6539;&#x4E3A;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x5219;&#x53D8;&#x6210;&#x641C;&#x7D22; <code>the</code> &#x548C; <code>The</code>&#xFF0C;<code>g</code> &#x8868;&#x793A;&#x5168;&#x5C40;&#x641C;&#x7D22;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat. sat. on the mat.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">The</span><span class="token regex-delimiter">/</span><span class="token regex-flags">ig</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 
+[ &apos;The&apos;, &apos;the&apos; ]
+ */</span>
+</code></pre>
+<h3 id="52-&#x5168;&#x5C40;&#x641C;&#x7D22;-global-search"><a name="52-&#x5168;&#x5C40;&#x641C;&#x7D22;-global-search" class="anchor-navigation-ex-anchor" href="#52-&#x5168;&#x5C40;&#x641C;&#x7D22;-global-search"><i class="fa fa-link" aria-hidden="true"></i></a>5.2 &#x5168;&#x5C40;&#x641C;&#x7D22; (Global search)</h3>
+<p>&#x4FEE;&#x9970;&#x7B26; <code>g</code> &#x5E38;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x641C;&#x7D22;&#x5339;&#x914D;&#xFF0C;&#x5373;&#xFF08;&#x4E0D;&#x4EC5;&#x4EC5;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7684;&#xFF0C;&#x800C;&#x662F;&#x8FD4;&#x56DE;&#x5168;&#x90E8;&#xFF09;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F; <code>/.(at)/g</code> &#x8868;&#x793A;&#x641C;&#x7D22; &#x4EFB;&#x610F;&#x5B57;&#x7B26;&#xFF08;&#x9664;&#x4E86;&#x6362;&#x884C;&#xFF09;+ <code>at</code>&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x5168;&#x90E8;&#x7ED3;&#x679C;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat. sat. on the mat.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">The</span><span class="token regex-delimiter">/</span><span class="token regex-flags">ig</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 
+[ &apos;The&apos;, &apos;the&apos; ]
+ */</span>
+</code></pre>
+<h3 id="53-&#x591A;&#x884C;&#x4FEE;&#x9970;&#x7B26;-multiline"><a name="53-&#x591A;&#x884C;&#x4FEE;&#x9970;&#x7B26;-multiline" class="anchor-navigation-ex-anchor" href="#53-&#x591A;&#x884C;&#x4FEE;&#x9970;&#x7B26;-multiline"><i class="fa fa-link" aria-hidden="true"></i></a>5.3 &#x591A;&#x884C;&#x4FEE;&#x9970;&#x7B26; (Multiline)</h3>
+<p>&#x591A;&#x884C;&#x4FEE;&#x9970;&#x7B26; <code>m</code> &#x5E38;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x591A;&#x884C;&#x5339;&#x914D;&#x3002;</p>
+<p>&#x50CF;&#x4E4B;&#x524D;&#x4ECB;&#x7ECD;&#x7684; <code>(^,$)</code> &#x7528;&#x4E8E;&#x68C0;&#x67E5;&#x683C;&#x5F0F;&#x662F;&#x5426;&#x662F;&#x5728;&#x5F85;&#x68C0;&#x6D4B;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F00;&#x5934;&#x6216;&#x7ED3;&#x5C3E;&#x3002;&#x4F46;&#x6211;&#x4EEC;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5B83;&#x5728;&#x6BCF;&#x884C;&#x7684;&#x5F00;&#x5934;&#x548C;&#x7ED3;&#x5C3E;&#x751F;&#x6548;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;&#x5230;&#x591A;&#x884C;&#x4FEE;&#x9970;&#x7B26; <code>m</code>&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x8868;&#x8FBE;&#x5F0F; <code>/at(.)?$/gm</code> &#x8868;&#x793A;&#x5C0F;&#x5199;&#x5B57;&#x7B26; <code>a</code> &#x540E;&#x8DDF;&#x5C0F;&#x5199;&#x5B57;&#x7B26; <code>t</code> &#xFF0C;&#x672B;&#x5C3E;&#x53EF;&#x9009;&#x9664;&#x6362;&#x884C;&#x7B26;&#x5916;&#x4EFB;&#x610F;&#x5B57;&#x7B26;&#x3002;&#x6839;&#x636E; <code>m</code> &#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x73B0;&#x5728;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x6BCF;&#x884C;&#x7684;&#x7ED3;&#x5C3E;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat\ncat.\nsat.\non the mat.\n&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">at[.]?$</span><span class="token regex-delimiter">/</span><span class="token regex-flags">ig</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 
+null
+ */</span>
+
+ <span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat\ncat.\nsat.\non the mat.\n&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">at[.]?$</span><span class="token regex-delimiter">/</span><span class="token regex-flags">igm</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 
+[ &apos;at&apos;, &apos;at.&apos;, &apos;at.&apos;, &apos;at.&apos; ]
+ */</span>
+
+<span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">1st place: Winnie
+2nd place: Piglet
+33rd place: Eeyore</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\w+\n</span><span class="token regex-delimiter">/</span><span class="token regex-flags">gim</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 
+[ &apos;Winnie\n&apos;, &apos;Piglet\n&apos; ]
+ */</span>
+</code></pre>
+<h2 id="6-&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x4E0E;&#x60F0;&#x6027;&#x5339;&#x914D;-greedy-vs-lazy-matching"><a name="6-&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x4E0E;&#x60F0;&#x6027;&#x5339;&#x914D;-greedy-vs-lazy-matching" class="anchor-navigation-ex-anchor" href="#6-&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x4E0E;&#x60F0;&#x6027;&#x5339;&#x914D;-greedy-vs-lazy-matching"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x4E0E;&#x60F0;&#x6027;&#x5339;&#x914D; (Greedy vs lazy matching)</h2>
+<p>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x9ED8;&#x8BA4;&#x91C7;&#x7528;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x8BE5;&#x6A21;&#x5F0F;&#x4E0B;&#x610F;&#x5473;&#x7740;&#x4F1A;&#x5339;&#x914D;&#x5C3D;&#x53EF;&#x80FD;&#x957F;&#x7684;&#x5B50;&#x4E32;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>?</code> &#x5C06;&#x8D2A;&#x5A6A;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x8F6C;&#x5316;&#x4E3A;&#x60F0;&#x6027;&#x5339;&#x914D;&#x6A21;&#x5F0F;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat sat on the mat.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">.*at</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 
+[ &apos;The fat&apos;,
+  index: 0,
+  input: &apos;The fat cat sat on the mat.&apos;,
+  groups: undefined ]
+ */</span>
+
+<span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;The fat cat sat on the mat.&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">.*?at</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 
+[ &apos;The fat&apos;,
+  index: 0,
+  input: &apos;The fat cat sat on the mat.&apos;,
+  groups: undefined ]
+ */</span>
+</code></pre>
+<h2 id="7-&#x6355;&#x83B7;&#x7EC4;"><a name="7-&#x6355;&#x83B7;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#7-&#x6355;&#x83B7;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>7. &#x6355;&#x83B7;&#x7EC4;</h2>
+<p>&#x6355;&#x83B7;&#x7EC4;&#x5C31;&#x662F;&#x628A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4FDD;&#x5B58;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#x4EE5;&#x6570;&#x5B57;&#x7F16;&#x53F7;&#x6216;&#x663E;&#x5F0F;&#x547D;&#x540D;&#x7684;&#x7EC4;&#x91CC;&#xFF0C;&#x65B9;&#x4FBF;&#x540E;&#x9762;&#x5F15;&#x7528;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x79CD;&#x5F15;&#x7528;&#x65E2;&#x53EF;&#x4EE5;&#x662F;&#x5728;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5185;&#x90E8;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5728;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5916;&#x90E8;&#x3002;</p>
+<p>&#x6355;&#x83B7;&#x7EC4;&#x6709;&#x4E24;&#x79CD;&#x5F62;&#x5F0F;&#xFF0C;&#x4E00;&#x79CD;&#x662F;&#x666E;&#x901A;&#x6355;&#x83B7;&#x7EC4;&#xFF0C;&#x53E6;&#x4E00;&#x79CD;&#x662F;&#x547D;&#x540D;&#x6355;&#x83B7;&#x7EC4;&#xFF0C;&#x901A;&#x5E38;&#x6240;&#x8BF4;&#x7684;&#x6355;&#x83B7;&#x7EC4;&#x6307;&#x7684;&#x662F;&#x666E;&#x901A;&#x6355;&#x83B7;&#x7EC4;&#x3002;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x666E;&#x901A;&#x6355;&#x83B7;&#x7EC4;&#xFF1A;(Expression)</p>
+<p>&#x547D;&#x540D;&#x6355;&#x83B7;&#x7EC4;&#xFF1A;(?<name>Expression)</name></p>
+<h3 id="71-&#x666E;&#x901A;&#x6355;&#x83B7;&#x7EC4;"><a name="71-&#x666E;&#x901A;&#x6355;&#x83B7;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#71-&#x666E;&#x901A;&#x6355;&#x83B7;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>7.1 &#x666E;&#x901A;&#x6355;&#x83B7;&#x7EC4;</h3>
+<p>&#x7F16;&#x53F7;&#x89C4;&#x5219;&#xFF1A;&#x7F16;&#x53F7;&#x4E3A;0&#x7684;&#x6355;&#x83B7;&#x7EC4;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6574;&#x4F53;&#xFF0C;&#x5176;&#x4ED6;&#x6355;&#x83B7;&#x7EC4;&#x7684;&#x7F16;&#x53F7;&#x662F;&#x6309;&#x7167;&#x201C;(&#x201D;&#x51FA;&#x73B0;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#xFF0C;&#x4ECE;1&#x5F00;&#x59CB;&#x8FDB;&#x884C;&#x7F16;&#x53F7;&#x7684;&#x3002;</p>
+<pre class="language-"><code class="lang-javascript"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;12345-23-23-234234234&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(\d{4})-(\d{2}-(\d\d))</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/*
+[ &apos;2345-23-23&apos;,
+  &apos;2345&apos;,
+  &apos;23-23&apos;,
+  &apos;23&apos;,
+  index: 1,
+  input: &apos;12345-23-23-234234234&apos;,
+  groups: undefined ]
+*/</span>
+
+<span class="token keyword">let</span> match <span class="token operator">=</span> <span class="token string">&apos;a&apos;</span><span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">a(z)?(c)?</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>match<span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;a&apos;,
+  undefined,
+  undefined,
+  index: 0,
+  input: &apos;a&apos;,
+  groups: undefined ]
+  */</span>
+
+<span class="token keyword">let</span> match <span class="token operator">=</span> <span class="token string">&apos;ac&apos;</span><span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">a(z)?(c)?</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>match<span class="token punctuation">)</span>
+<span class="token comment">/**
+[ &apos;ac&apos;, undefined, &apos;c&apos;, index: 0, input: &apos;ac&apos;, groups: undefined ]
+*/</span>
+</code></pre>
+<h3 id="72-&#x547D;&#x540D;&#x6355;&#x83B7;&#x7EC4;"><a name="72-&#x547D;&#x540D;&#x6355;&#x83B7;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#72-&#x547D;&#x540D;&#x6355;&#x83B7;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>7.2 &#x547D;&#x540D;&#x6355;&#x83B7;&#x7EC4;</h3>
+<p>&#x547D;&#x540D;&#x6355;&#x83B7;&#x7EC4;&#x901A;&#x8FC7;&#x663E;&#x5F0F;&#x547D;&#x540D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7EC4;&#x540D;&#x65B9;&#x4FBF;&#x7684;&#x8BBF;&#x95EE;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x7EC4;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x53BB;&#x4E00;&#x4E2A;&#x4E2A;&#x7684;&#x6570;&#x7F16;&#x53F7;&#xFF0C;&#x540C;&#x65F6;&#x907F;&#x514D;&#x4E86;&#x5728;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x6269;&#x5C55;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6355;&#x83B7;&#x7EC4;&#x7684;&#x589E;&#x52A0;&#x6216;&#x51CF;&#x5C11;&#x5BF9;&#x5F15;&#x7528;&#x7ED3;&#x679C;&#x5BFC;&#x81F4;&#x7684;&#x4E0D;&#x53EF;&#x63A7;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;12345-23-23-234234234&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;year&gt;\d{4})-(?&lt;date&gt;\d{2}-(?&lt;day&gt;\d\d))</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/*
+[ &apos;2345-23-23&apos;,
+  &apos;2345&apos;,
+  &apos;23-23&apos;,
+  &apos;23&apos;,
+  index: 1,
+  input: &apos;12345-23-23-234234234&apos;,
+  groups: { year: &apos;2345&apos;, day: &apos;23&apos;, date: &apos;23-23&apos; } ]
+*/</span>
+</code></pre>
+<h3 id="73-&#x6355;&#x83B7;&#x7EC4;&#x7684;&#x5F15;&#x7528;"><a name="73-&#x6355;&#x83B7;&#x7EC4;&#x7684;&#x5F15;&#x7528;" class="anchor-navigation-ex-anchor" href="#73-&#x6355;&#x83B7;&#x7EC4;&#x7684;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>7.3 &#x6355;&#x83B7;&#x7EC4;&#x7684;&#x5F15;&#x7528;</h3>
+<p>&#x5BF9;&#x6355;&#x83B7;&#x7EC4;&#x7684;&#x5F15;&#x7528;&#x4E00;&#x822C;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
+<h4 id="731-&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x5F15;&#x7528;"><a name="731-&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x5F15;&#x7528;" class="anchor-navigation-ex-anchor" href="#731-&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>7.3.1 &#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x5F15;&#x7528;</h4>
+<p>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#xFF0C;&#x5BF9;&#x524D;&#x9762;&#x6355;&#x83B7;&#x7EC4;&#x6355;&#x83B7;&#x7684;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x5F15;&#x7528;&#xFF0C;&#x79F0;&#x4E3A;&#x53CD;&#x5411;&#x5F15;&#x7528;&#xFF1B;</p>
+<p>&#x6211;&#x4EEC;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x5728;&#x7ED3;&#x679C;&#x6216;&#x66FF;&#x6362;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x4F7F;&#x7528;&#x6355;&#x83B7;&#x7EC4; <code>(...)</code> &#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;&#x6A21;&#x5F0F;&#x672C;&#x8EAB;&#x4E2D;&#x4F7F;&#x7528;&#x5B83;&#x4EEC;&#x3002;</p>
+<ul>
+<li>&#x6309;&#x7F16;&#x53F7;&#x53CD;&#x5411;&#x5F15;&#x7528;&#xFF1A;\N</li>
+</ul>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>\N</code> &#x5728;&#x6A21;&#x5F0F;&#x4E2D;&#x5F15;&#x7528;&#x4E00;&#x4E2A;&#x7EC4;&#xFF0C;&#x5176;&#x4E2D; <code>N</code> &#x662F;&#x7EC4;&#x53F7;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x5F04;&#x6E05;&#x90A3;&#x4E3A;&#x4EC0;&#x4E48;&#x6709;&#x5E2E;&#x52A9;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x8003;&#x8651;&#x4E00;&#x9879;&#x4EFB;&#x52A1;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x627E;&#x5230;&#x5E26;&#x5F15;&#x53F7;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;&#x5355;&#x5F15;&#x53F7; <code>&apos;...&apos;</code> &#x6216;&#x53CC;&#x5F15;&#x53F7; <code>&quot;...&quot;</code>&#x2013; &#x5E94;&#x5339;&#x914D;&#x4E24;&#x79CD;&#x53D8;&#x4F53;&#x3002;</p>
+<p>&#x5982;&#x4F55;&#x627E;&#x5230;&#x5B83;&#x4EEC;&#xFF1F;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x4E24;&#x79CD;&#x5F15;&#x53F7;&#x653E;&#x5728;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#xFF1A;<code>[&apos;&quot;](.*?)[&apos;&quot;]</code>&#xFF0C;&#x4F46;&#x5B83;&#x4F1A;&#x627E;&#x5230;&#x5E26;&#x6709;&#x6DF7;&#x5408;&#x5F15;&#x53F7;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4F8B;&#x5982; <code>&quot;...&apos;</code> &#x548C; <code>&apos;...&quot;</code>&#x3002;&#x5F53;&#x4E00;&#x79CD;&#x5F15;&#x53F7;&#x51FA;&#x73B0;&#x5728;&#x53E6;&#x4E00;&#x79CD;&#x5F15;&#x53F7;&#x5185;&#xFF0C;&#x6BD4;&#x5982;&#x5728;&#x5B57;&#x7B26;&#x4E32; <code>&quot;She&apos;s the one!&quot;</code> &#x4E2D;&#x65F6;&#xFF0C;&#x4FBF;&#x4F1A;&#x5BFC;&#x81F4;&#x4E0D;&#x6B63;&#x786E;&#x7684;&#x5339;&#x914D;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">He said: &quot;She&apos;s the one!&quot;.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> regexp <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">[&apos;&quot;](.*?)[&apos;&quot;]</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x7ED3;&#x679C;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span> str<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regexp<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;She&apos;</span>
+</code></pre>
+<p>&#x5982;&#x6211;&#x4EEC;&#x6240;&#x89C1;&#xFF0C;&#x8BE5;&#x6A21;&#x5F0F;&#x627E;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x5F00;&#x5934;&#x7684;&#x5F15;&#x53F7; <code>&quot;</code>&#xFF0C;&#x7136;&#x540E;&#x6587;&#x672C;&#x88AB;&#x5339;&#x914D;&#xFF0C;&#x76F4;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x5F15;&#x53F7; <code>&apos;</code>&#xFF0C;&#x8BE5;&#x5339;&#x914D;&#x7ED3;&#x675F;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x6A21;&#x5F0F;&#x67E5;&#x627E;&#x7684;&#x7ED3;&#x675F;&#x5F15;&#x53F7;&#x4E0E;&#x5F00;&#x59CB;&#x7684;&#x5F15;&#x53F7;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x5305;&#x88C5;&#x5230;&#x6355;&#x83B7;&#x7EC4;&#x4E2D;&#x5E76;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x53CD;&#x5411;&#x5F15;&#x7528;&#xFF1A;<code>([&apos;&quot;])(.*?)\1</code>&#x3002;</p>
+<p>&#x8FD9;&#x662F;&#x6B63;&#x786E;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">He said: &quot;She&apos;s the one!&quot;.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> regexp <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">([&apos;&quot;])(.*?)\1</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+
+<span class="token function">alert</span><span class="token punctuation">(</span> str<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regexp<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;She&apos;s the one!&quot;</span>
+</code></pre>
+<p>&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x4E86;&#xFF01;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5F15;&#x64CE;&#x4F1A;&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5F15;&#x53F7; <code>([&apos;&quot;])</code> &#x5E76;&#x8BB0;&#x4F4F;&#x5176;&#x5185;&#x5BB9;&#x3002;&#x90A3;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x6355;&#x83B7;&#x7EC4;&#x3002;</p>
+<p><code>\1</code> &#x5728;&#x6A21;&#x5F0F;&#x4E2D;&#x8FDB;&#x4E00;&#x6B65;&#x7684;&#x542B;&#x4E49;&#x662F;&#x201C;&#x67E5;&#x627E;&#x4E0E;&#x7B2C;&#x4E00;&#xFF08;&#x6355;&#x83B7;&#xFF09;&#x5206;&#x7EC4;&#x76F8;&#x540C;&#x7684;&#x6587;&#x672C;&#x201D;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#x4E3A;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#x5F15;&#x53F7;&#x3002;</p>
+<p>&#x4E0E;&#x6B64;&#x7C7B;&#x4F3C;&#xFF0C;<code>\2</code> &#x8868;&#x793A;&#x7B2C;&#x4E8C;&#xFF08;&#x6355;&#x83B7;&#xFF09;&#x5206;&#x7EC4;&#x7684;&#x5185;&#x5BB9;&#xFF0C;<code>\3</code> &#x2013; &#x7B2C;&#x4E09;&#x5206;&#x7EC4;&#xFF0C;&#x4F9D;&#x6B64;&#x7C7B;&#x63A8;&#x3002;</p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5728;&#x7EC4;&#x4E2D;&#x4F7F;&#x7528; <code>?:</code>&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C06;&#x65E0;&#x6CD5;&#x5F15;&#x7528;&#x5B83;&#x3002;&#x7528; <code>(?:...)</code> &#x6355;&#x83B7;&#x7684;&#x7EC4;&#x88AB;&#x6392;&#x9664;&#xFF0C;&#x5F15;&#x64CE;&#x4E0D;&#x4F1A;&#x5B58;&#x50A8;&#x3002;</p>
+<p><strong>&#x4E0D;&#x8981;&#x641E;&#x6DF7;&#x4E86;&#xFF1A; &#x5728;&#x6A21;&#x5F0F;&#x4E2D;&#x7528;</strong> <code>\1</code><strong>&#xFF0C;&#x5728;&#x66FF;&#x6362;&#x9879;&#x4E2D;&#x7528;&#xFF1A;</strong><code>$1</code></p>
+<p>&#x5728;&#x66FF;&#x6362;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7F8E;&#x5143;&#x7B26;&#x53F7;&#xFF1A;<code>$1</code>&#xFF0C;&#x800C;&#x5728;&#x6A21;&#x5F0F;&#x4E2D; &#x2013; &#x4F7F;&#x7528;&#x53CD;&#x659C;&#x6760; <code>\1</code>&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x6309;&#x547D;&#x540D;&#x53CD;&#x5411;&#x5F15;&#x7528;&#xFF1A;<code>\k</code>\</li>
+</ul>
+<p>&#x5982;&#x679C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#x6709;&#x5F88;&#x591A;&#x62EC;&#x53F7;&#x5BF9;&#xFF08;&#x6CE8;&#xFF1A;&#x6355;&#x83B7;&#x7EC4;&#xFF09;&#xFF0C;&#x7ED9;&#x5B83;&#x4EEC;&#x8D77;&#x4E2A;&#x540D;&#x5B57;&#x65B9;&#x4FBF;&#x5F15;&#x7528;&#x3002;</p>
+<p>&#x8981;&#x5F15;&#x7528;&#x547D;&#x540D;&#x7EC4;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF1A;<code>\k<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span></code>&#x3002;</p>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#x5F15;&#x53F7;&#x7EC4;&#x547D;&#x540D;&#x4E3A; <code>?<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>quote</span><span class="token punctuation">&gt;</span></span></code>&#xFF0C;&#x56E0;&#x6B64;&#x53CD;&#x5411;&#x5F15;&#x7528;&#x4E3A; <code>\k<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>quote</span><span class="token punctuation">&gt;</span></span></code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">He said: &quot;She&apos;s the one!&quot;.</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> regexp <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;quote&gt;[&apos;&quot;])(.*?)\k&lt;quote&gt;</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+
+<span class="token function">alert</span><span class="token punctuation">(</span> str<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regexp<span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;She&apos;s the one!&quot;</span>
+</code></pre>
+<h4 id="732-&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x7ED3;&#x6784;"><a name="732-&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#732-&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>7.3.2 &#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x7ED3;&#x6784;</h4>
+<p>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#xFF0C;(?(name)yes|no)&#x7684;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x7ED3;&#x6784;&#xFF1B;</p>
+<h4 id="733-&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x5F15;&#x7528;"><a name="733-&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x5F15;&#x7528;" class="anchor-navigation-ex-anchor" href="#733-&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>7.3.3 &#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x5F15;&#x7528;</h4>
+<p>&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x5BF9;&#x6355;&#x83B7;&#x7EC4;&#x6355;&#x83B7;&#x5185;&#x5BB9;&#x7684;&#x5F15;&#x7528;&#x3002;</p>
+<p>&#x65B9;&#x6CD5; <code>str.replace(regexp, replacement)</code> &#x7528; <code>replacement</code> &#x66FF;&#x6362; <code>str</code> &#x4E2D;&#x5339;&#x914D; <code>regexp</code> &#x7684;&#x6240;&#x6709;&#x6355;&#x83B7;&#x7EC4;&#x3002;&#x8FD9;&#x4F7F;&#x7528; <code>$n</code> &#x6765;&#x5B8C;&#x6210;&#xFF0C;&#x5176;&#x4E2D; <code>n</code> &#x662F;&#x7EC4;&#x53F7;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">&quot;John Bull&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regexp <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(\w+) (\w+)</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+<span class="token comment">// &#x7528;$n&#x83B7;&#x53D6;&#x6355;&#x83B7;&#x7EC4;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x7136;&#x540E;&#x751F;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#x66FF;&#x6362;</span>
+<span class="token keyword">let</span> result <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regexp<span class="token punctuation">,</span><span class="token string">&apos;$2,$1&apos;</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token comment">/**
+ * Bull,John
+ */</span>
+
+<span class="token comment">//&#x5BF9;&#x4E8E;&#x547D;&#x540D;&#x62EC;&#x53F7;&#xFF0C;&#x5F15;&#x7528;&#x4E3A; $&lt;name&gt;&#x3002;</span>
+<span class="token comment">//&#x4F8B;&#x5982;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5C06;&#x65E5;&#x671F;&#x683C;&#x5F0F;&#x4ECE; &#x201C;year-month-day&#x201D; &#x66F4;&#x6539;&#x4E3A; &#x201C;day.month.year&#x201D;&#xFF1A;</span>
+<span class="token keyword">let</span> regexp <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(?&lt;year&gt;[0-9]{4})-(?&lt;month&gt;[0-9]{2})-(?&lt;day&gt;[0-9]{2})</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">&quot;2019-10-30, 2020-01-01&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x6709;&#x6570;&#x7EC4;&#x7684;&#x8BDD;&#xFF0C;&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x9879;&#x90FD;&#x8FDB;&#x884C;&#x66FF;&#x6362;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>regexp<span class="token punctuation">,</span> <span class="token string">&apos;$&lt;day&gt;.$&lt;month&gt;.$&lt;year&gt;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 30.10.2019, 01.01.2020
+ */</span>
+</code></pre>
+<h3 id="74-&#x975E;&#x6355;&#x83B7;&#x7EC4;"><a name="74-&#x975E;&#x6355;&#x83B7;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#74-&#x975E;&#x6355;&#x83B7;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>7.4 &#x975E;&#x6355;&#x83B7;&#x7EC4;(?:)</h3>
+<p>&#x4E0D;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x6355;&#x83B7;&#x529F;&#x80FD;&#x662F;&#xFF0C;&#x5C3D;&#x91CF;&#x4F7F;&#x7528;&#x975E;&#x6355;&#x83B7;&#x7EC4;</p>
+<pre class="language-"><code class="lang-js"><span class="token comment">// &#x6355;&#x83B7;&#x7EC4;&#x4E0E;&#x975E;&#x6355;&#x83B7;&#x7EC4;</span>
+<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token operator">?</span><span class="token operator">:</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="8-unicode-&#x5C5E;&#x6027;&#xFF08;unicode-properties&#xFF09;p"><a name="8-unicode-&#x5C5E;&#x6027;&#xFF08;unicode-properties&#xFF09;p" class="anchor-navigation-ex-anchor" href="#8-unicode-&#x5C5E;&#x6027;&#xFF08;unicode-properties&#xFF09;p"><i class="fa fa-link" aria-hidden="true"></i></a>8. Unicode &#x5C5E;&#x6027;&#xFF08;Unicode properties&#xFF09;\p{&#x2026;}</h2>
+<p>Unicode &#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x90FD;&#x5177;&#x6709;&#x5F88;&#x591A;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x5B83;&#x4EEC;&#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5C5E;&#x4E8E;&#x54EA;&#x4E2A;&#x201C;&#x7C7B;&#x522B;&#x201D;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x5404;&#x79CD;&#x5173;&#x4E8E;&#x5B57;&#x7B26;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5177;&#x6709; <code>Letter</code> &#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x5F52;&#x5C5E;&#x4E8E;&#xFF08;&#x4EFB;&#x610F;&#x8BED;&#x8A00;&#x7684;&#xFF09;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#x8868;&#x3002;&#x800C; <code>Number</code> &#x5C5E;&#x6027;&#x5219;&#x8868;&#x793A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF1A;&#x4E5F;&#x8BB8;&#x662F;&#x963F;&#x62C9;&#x4F2F;&#x8BED;&#xFF0C;&#x4EA6;&#x6216;&#x8005;&#x662F;&#x4E2D;&#x6587;&#xFF0C;&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x67E5;&#x627E;&#x5177;&#x6709;&#x67D0;&#x79CD;&#x5C5E;&#x6027;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x5199;&#x4F5C; <code>\p{&#x2026;}</code>&#x3002;&#x4E3A;&#x4E86;&#x987A;&#x5229;&#x4F7F;&#x7528; <code>\p{&#x2026;}</code>&#xFF0C;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x4FEE;&#x9970;&#x7B26; <code>u</code>&#x3002;</p>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;<code>\p{Letter}</code> &#x8868;&#x793A;&#x4EFB;&#x4F55;&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#x3002;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>\p{L}</code>&#xFF0C;&#x56E0;&#x4E3A; <code>L</code> &#x662F; <code>Letter</code> &#x7684;&#x4E00;&#x4E2A;&#x522B;&#x540D;&#xFF08;alias&#xFF09;&#x3002;&#x5BF9;&#x4E8E;&#x6BCF;&#x79CD;&#x5C5E;&#x6027;&#x800C;&#x8A00;&#xFF0C;&#x51E0;&#x4E4E;&#x90FD;&#x5B58;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x7F29;&#x5199;&#x522B;&#x540D;&#x3002;</p>
+<p>&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D; 3 &#x79CD;&#x5B57;&#x6BCD;&#x5C06;&#x4F1A;&#x88AB;&#x67E5;&#x627E;&#x51FA;&#xFF1A;&#x82F1;&#x8BED;&#x3001;&#x683C;&#x9C81;&#x5409;&#x4E9A;&#x8BED;&#x548C;&#x97E9;&#x8BED;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">&quot;A &#x10D1; &#x3131;&quot;</span><span class="token punctuation">;</span>
+
+<span class="token function">alert</span><span class="token punctuation">(</span> str<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\p{L}</span><span class="token regex-delimiter">/</span><span class="token regex-flags">gu</span></span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// A,&#x10D1;,&#x3131;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span> str<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\p{L}</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// null&#xFF08;&#x6CA1;&#x6709;&#x5339;&#x914D;&#x7684;&#x6587;&#x672C;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x4FEE;&#x9970;&#x7B26;&#x201C;u&#x201D;&#xFF09;</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E3B;&#x8981;&#x7684;&#x5B57;&#x7B26;&#x7C7B;&#x522B;&#x548C;&#x5B83;&#x4EEC;&#x5BF9;&#x5E94;&#x7684;&#x5B50;&#x7C7B;&#x522B;&#xFF1A;</p>
+<ul>
+<li>&#x5B57;&#x6BCD;&#xFF08;Letter&#xFF09;<code>L</code>:<ul>
+<li>&#x5C0F;&#x5199;&#xFF08;lowercase&#xFF09; <code>Ll</code></li>
+<li>&#x4FEE;&#x9970;&#xFF08;modifier&#xFF09; <code>Lm</code>,</li>
+<li>&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#xFF08;titlecase&#xFF09; <code>Lt</code>,</li>
+<li>&#x5927;&#x5199;&#xFF08;uppercase&#xFF09; <code>Lu</code>,</li>
+<li>&#x5176;&#x5B83;&#xFF08;other&#xFF09; <code>Lo</code>&#x3002;</li>
+</ul>
+</li>
+<li>&#x6570;&#x5B57;&#xFF08;Number&#xFF09;<code>N</code>:<ul>
+<li>&#x5341;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#xFF08;decimal digit&#xFF09; <code>Nd</code>,</li>
+<li>&#x5B57;&#x6BCD;&#x6570;&#x5B57;&#xFF08;letter number&#xFF09; <code>Nl</code>,</li>
+<li>&#x5176;&#x5B83;&#xFF08;other&#xFF09; <code>No</code>&#x3002;</li>
+</ul>
+</li>
+<li>&#x6807;&#x70B9;&#x7B26;&#x53F7;&#xFF08;Punctuation&#xFF09;<code>P</code>:<ul>
+<li>&#x94FE;&#x63A5;&#x7B26;&#xFF08;connector&#xFF09; <code>Pc</code>,</li>
+<li>&#x6A2A;&#x6760;&#xFF08;dash&#xFF09; <code>Pd</code>,</li>
+<li>&#x8D77;&#x59CB;&#x5F15;&#x7528;&#x53F7;&#xFF08;initial quote&#xFF09; <code>Pi</code>,</li>
+<li>&#x7ED3;&#x675F;&#x5F15;&#x7528;&#x53F7;&#xFF08;final quote&#xFF09; <code>Pf</code>,</li>
+<li>&#x5F00;&#xFF08;open&#xFF09; <code>Ps</code>,</li>
+<li>&#x95ED;&#xFF08;close&#xFF09; <code>Pe</code>,</li>
+<li>&#x5176;&#x5B83;&#xFF08;other&#xFF09; <code>Po</code>&#x3002;</li>
+</ul>
+</li>
+<li>&#x6807;&#x8BB0;&#xFF08;Mark&#xFF09;<code>M</code>(accents etc):<ul>
+<li>&#x95F4;&#x9694;&#x5408;&#x5E76;&#xFF08;spacing combining&#xFF09; <code>Mc</code>,</li>
+<li>&#x5C01;&#x95ED;&#xFF08;enclosing&#xFF09; <code>Me</code>,</li>
+<li>&#x975E;&#x95F4;&#x9694;&#xFF08;non-spacing&#xFF09; <code>Mn</code>&#x3002;</li>
+</ul>
+</li>
+<li>&#x7B26;&#x53F7;&#xFF08;Symbol&#xFF09;<code>S</code>:<ul>
+<li>&#x8D27;&#x5E01;&#xFF08;currency&#xFF09; <code>Sc</code>,</li>
+<li>&#x4FEE;&#x9970;&#xFF08;modifier&#xFF09; <code>Sk</code>,</li>
+<li>&#x6570;&#x5B66;&#xFF08;math&#xFF09; <code>Sm</code>,</li>
+<li>&#x5176;&#x5B83;&#xFF08;other&#xFF09; <code>So</code>&#x3002;</li>
+</ul>
+</li>
+<li>&#x5206;&#x9694;&#x7B26;&#xFF08;Separator&#xFF09;<code>Z</code>:<ul>
+<li>&#x884C;&#xFF08;line&#xFF09; <code>Zl</code>,</li>
+<li>&#x6BB5;&#x843D;&#xFF08;paragraph&#xFF09; <code>Zp</code>,</li>
+<li>&#x7A7A;&#x683C;&#xFF08;space&#xFF09; <code>Zs</code>&#x3002;</li>
+</ul>
+</li>
+<li>&#x5176;&#x5B83;&#xFF08;Other&#xFF09;<code>C</code>:<ul>
+<li>&#x63A7;&#x5236;&#x7B26;&#xFF08;control&#xFF09; <code>Cc</code>,</li>
+<li>&#x683C;&#x5F0F;&#xFF08;format&#xFF09; <code>Cf</code>,</li>
+<li>&#x672A;&#x5206;&#x914D;&#xFF08;not assigned&#xFF09; <code>Cn</code>,</li>
+<li>&#x79C1;&#x6709;&#xFF08;private use&#xFF09; <code>Co</code>,</li>
+<li>&#x4EE3;&#x7406;&#x4F2A;&#x5B57;&#x7B26;&#xFF08;surrogate&#xFF09; <code>Cs</code>&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C0F;&#x5199;&#x7684;&#x5B57;&#x6BCD;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5199;&#x6210; <code>\p{Ll}</code>&#xFF0C;&#x6807;&#x70B9;&#x7B26;&#x53F7;&#x5199;&#x4F5C; <code>\p{P}</code> &#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x4E5F;&#x6709;&#x5176;&#x5B83;&#x6D3E;&#x751F;&#x7684;&#x7C7B;&#x522B;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<ul>
+<li><code>Alphabetic</code> (<code>Alpha</code>), &#x5305;&#x542B;&#x4E86;&#x5B57;&#x6BCD; <code>L</code>, &#x52A0;&#x4E0A;&#x5B57;&#x6BCD;&#x6570;&#x5B57; <code>Nl</code> &#xFF08;&#x4F8B;&#x5982; &#x216B; &#x2013; &#x7F57;&#x9A6C;&#x6570;&#x5B57; 12&#xFF09;&#xFF0C;&#x52A0;&#x4E0A;&#x4E00;&#x4E9B;&#x5176;&#x5B83;&#x7B26;&#x53F7; <code>Other_Alphabetic</code> (<code>OAlpha</code>)&#x3002;</li>
+<li><code>Hex_Digit</code> &#x5305;&#x62EC; 16 &#x8FDB;&#x5236;&#x6570;&#x5B57; <code>0-9</code>&#xFF0C;<code>a-f</code>&#x3002;</li>
+<li>&#x2026;&#x7B49;&#x7B49;</li>
+</ul>
+<p>Unicode &#x652F;&#x6301;&#x76F8;&#x5F53;&#x6570;&#x91CF;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5217;&#x51FA;&#x6574;&#x4E2A;&#x6E05;&#x5355;&#x9700;&#x8981;&#x5360;&#x7528;&#x5927;&#x91CF;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x8FD9;&#x91CC;&#x5217;&#x51FA;&#x76F8;&#x5173;&#x7684;&#x94FE;&#x63A5;&#xFF1A;</p>
+<ul>
+<li>&#x5217;&#x51FA;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027; <a href="https://unicode.org/cldr/utility/character.jsp" target="_blank">https://unicode.org/cldr/utility/character.jsp</a>.</li>
+<li>&#x6309;&#x7167;&#x5C5E;&#x6027;&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x5B57;&#x7B26; <a href="https://unicode.org/cldr/utility/list-unicodeset.jsp" target="_blank">https://unicode.org/cldr/utility/list-unicodeset.jsp</a>.</li>
+<li>&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x5E94;&#x7F29;&#x5199;&#x5F62;&#x5F0F;&#xFF1A;<a href="https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt" target="_blank">https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt</a>.</li>
+<li>&#x4EE5;&#x6587;&#x672C;&#x683C;&#x5F0F;&#x6574;&#x7406;&#x7684;&#x6240;&#x6709; Unicode &#x5B57;&#x7B26;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x6240;&#x6709;&#x7684;&#x5C5E;&#x6027;&#xFF1A;<a href="https://www.unicode.org/Public/UCD/latest/ucd/" target="_blank">https://www.unicode.org/Public/UCD/latest/ucd/</a>.</li>
+</ul>
+<h3 id="&#x5B9E;&#x4F8B;&#xFF1A;16-&#x8FDB;&#x5236;&#x6570;&#x5B57;"><a name="&#x5B9E;&#x4F8B;&#xFF1A;16-&#x8FDB;&#x5236;&#x6570;&#x5B57;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;&#xFF1A;16-&#x8FDB;&#x5236;&#x6570;&#x5B57;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x4F8B;&#xFF1A;16 &#x8FDB;&#x5236;&#x6570;&#x5B57;</h3>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x67E5;&#x627E; 16 &#x8FDB;&#x5236;&#x6570;&#x5B57;&#xFF0C;&#x5199;&#x4F5C; <code>xFF</code> &#x5176;&#x4E2D; <code>F</code> &#x662F;&#x4E00;&#x4E2A; 16 &#x8FDB;&#x5236;&#x7684;&#x6570;&#x5B57;&#xFF08;0&#x2026;1 &#x6216;&#x8005; A&#x2026;F&#xFF09;&#x3002;</p>
+<p>&#x4E00;&#x4E2A; 16 &#x8FDB;&#x5236;&#x6570;&#x5B57;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A; <code>\p{Hex_Digit}</code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;there:0xAA &#x54C8;&#x54C8;&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">x\p{Hex_Digit}\p{Hex_Digit}</span><span class="token regex-delimiter">/</span><span class="token regex-flags">u</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 
+[ &apos;xAA&apos;, index: 7, input: &apos;there:0xAA &#x54C8;&#x54C8;&apos;, groups: undefined ]
+ */</span>
+</code></pre>
+<h3 id="&#x5B9E;&#x4F8B;&#xFF1A;&#x4E2D;&#x6587;&#x5B57;&#x7B26;"><a name="&#x5B9E;&#x4F8B;&#xFF1A;&#x4E2D;&#x6587;&#x5B57;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;&#xFF1A;&#x4E2D;&#x6587;&#x5B57;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x4F8B;&#xFF1A;&#x4E2D;&#x6587;&#x5B57;&#x7B26;</h3>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x518D;&#x6765;&#x8003;&#x8651;&#x4E2D;&#x6587;&#x5B57;&#x7B26;&#x3002;</p>
+<p>&#x6709;&#x4E00;&#x4E2A; unicode &#x5C5E;&#x6027; <code>Script</code> &#xFF08;&#x4E00;&#x4E2A;&#x4E66;&#x5199;&#x7CFB;&#x7EDF;&#xFF09;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x6709;&#x4E00;&#x4E2A;&#x503C;&#xFF1A;<code>Cyrillic</code>&#xFF0C;<code>Greek</code>&#xFF0C;<code>Arabic</code>&#xFF0C;<code>Han</code> &#xFF08;&#x4E2D;&#x6587;&#xFF09;&#x7B49;&#x7B49;&#xFF0C;<a href="https://en.wikipedia.org/wiki/Script_(Unicode" target="_blank">&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x5217;&#x8868;</a>)&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x67E5;&#x627E;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x4E66;&#x5199;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>Script=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span></code>&#xFF0C;&#x4F8B;&#x5982;&#x5BF9;&#x4E8E;&#x897F;&#x91CC;&#x5C14;&#x5B57;&#x7B26;&#xFF1A;<code>\p{sc=Cyrillic}</code>, &#x4E2D;&#x6587;&#x5B57;&#x7B26;&#xFF1A;<code>\p{sc=Han}</code>&#xFF0C;&#x7B49;&#x7B49;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token string">&quot;there:0xAA &#x54C8;&#x54C8;&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\p{sc=Han}</span><span class="token regex-delimiter">/</span><span class="token regex-flags">gu</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 
+[ &apos;&#x54C8;&apos;, &apos;&#x54C8;&apos; ]
+ */</span>
+</code></pre>
+<h2 id="9-&#x8BCD;&#x8FB9;&#x754C;-b"><a name="9-&#x8BCD;&#x8FB9;&#x754C;-b" class="anchor-navigation-ex-anchor" href="#9-&#x8BCD;&#x8FB9;&#x754C;-b"><i class="fa fa-link" aria-hidden="true"></i></a>9. &#x8BCD;&#x8FB9;&#x754C; \b</h2>
+<p>&#x8BCD;&#x8FB9;&#x754C; <code>\b</code> &#x662F;&#x4E00;&#x79CD;&#x68C0;&#x67E5;&#xFF0C;&#x5C31;&#x50CF; <code>^</code> &#x548C; <code>$</code> &#x4E00;&#x6837;&#x3002;</p>
+<p>&#x5F53;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5F15;&#x64CE;&#xFF08;&#x5B9E;&#x73B0;&#x641C;&#x7D22;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x7A0B;&#x5E8F;&#x6A21;&#x5757;&#xFF09;&#x9047;&#x5230; <code>\b</code> &#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x68C0;&#x67E5;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x5426;&#x662F;&#x8BCD;&#x8FB9;&#x754C;&#x3002;</p>
+<p>&#x6709;&#x4E09;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x4F4D;&#x7F6E;&#x53EF;&#x4F5C;&#x4E3A;&#x8BCD;&#x8FB9;&#x754C;&#xFF1A;</p>
+<ul>
+<li>&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x5F00;&#x5934;&#xFF0C;&#x5982;&#x679C;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x662F;&#x5355;&#x8BCD;&#x5B57;&#x7B26; <code>\w</code>&#x3002;</li>
+<li>&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E4B;&#x95F4;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x662F;&#x5355;&#x8BCD;&#x5B57;&#x7B26; <code>\w</code>&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x4E0D;&#x662F;&#x3002;</li>
+<li>&#x5728;&#x5B57;&#x7B26;&#x4E32;&#x672B;&#x5C3E;&#xFF0C;&#x5982;&#x679C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x662F;&#x5355;&#x8BCD;&#x5B57;&#x7B26; <code>\w</code>&#x3002;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; <code>Hello, Java!</code> &#x4E2D;&#x627E;&#x5230;&#x5339;&#x914D; <code>\bJava\b</code> &#x7684;&#x5355;&#x8BCD;&#xFF0C;&#x5176;&#x4E2D; <code>Java</code> &#x662F;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x5355;&#x8BCD;&#xFF0C;&#x800C;&#x5728; <code>Hello, JavaScript!</code> &#x4E2D;&#x5219;&#x4E0D;&#x884C;&#x3002;</p>
+<pre class="language-"><code class="lang-js"><span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hello Java!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\bJava\b</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 
+[ &apos;Java&apos;, index: 6, input: &apos;Hello Java!&apos;, groups: undefined ]
+ */</span>
+
+<span class="token keyword">let</span> string <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hello JavaScript!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> regex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\bJava\b</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>string<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">/**
+ * 
+null
+*/</span>
+</code></pre>
+<p>&#x5728;&#x5B57;&#x7B26;&#x4E32; <code>Hello, Java!</code> &#x4E2D;&#xFF0C;&#x4EE5;&#x4E0B;&#x4F4D;&#x7F6E;&#x5BF9;&#x5E94;&#x4E8E; <code>\b</code>&#xFF1A;</p>
+<p><img src="reg.assets/image-20210130232529374.png" alt="image-20210130232529374"></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; lifeasy.top 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-02-01 10:59:54
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Js中的正则表达式","level":"7.1.4.1","depth":3,"previous":{"title":"正则表达式","level":"7.1.4","depth":2,"ref":"","articles":[{"title":"Js中的正则表达式","level":"7.1.4.1","depth":3,"path":"articles/tool/reg/reg.md","ref":"articles/tool/reg/reg.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github","github-buttons","donate","tbfed-pagefooter","anchor-navigation-ex"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy lifeasy.top 2020","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shel":"bash","shell":"bash","objective-c":"objectivec","swi":"swift","swif":"swift","c++":"cpp"}},"github":{"url":"https://github.com/lifeasy"},"splitter":{},"search-pro":{},"donate":{"alipay":"https://www.liangqili.com/hexo/images/alipay.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://www.liangqili.com/hexo/images/wechatpay.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"lifeasy","repo":"mybook","type":"star","count":true,"size":"small"},{"user":"lifeasy","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Liang_QL","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"lifeasy 的文档库","language":"zh-hans","links":{"sidebar":{"我的小站":"https://www.liangqili.com"}},"gitbook":"*","description":"随便写写"},"file":{"path":"articles/tool/reg/reg.md","mtime":"2021-02-01T02:59:54.794Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-15T03:50:32.577Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
