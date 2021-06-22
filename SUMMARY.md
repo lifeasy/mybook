@@ -29,7 +29,8 @@
     * [Jenkins](articles/iOS/ci/jenkins.md)
   * [iOS底层原理](articles/iOS/underlying/index.md)
     * [前奏_Runtime](articles/iOS/underlying/pre_runtime.md)
-    * [01_OC对象原理](articles/iOS/underlying/01_object.md)
+    * [01_OC对象](articles/iOS/underlying/01_object.md)
+    * [02_类](articles/iOS/underlying/02_class.md)
   * iOS逆向
     * [iOS逆向常用命令](articles/iOS/iosre/command_iosre.md)
     * [iOS逆向简介](articles/iOS/iosre/iosre.md)
