@@ -1,5 +1,7 @@
 # 类
 
+## isa流程
+
 对象-isa->类-isa->元类-isa->根NSObject元类
 
 类对象的地址在编译时就确定了，使用MachOView分析，可以直接在Section64(\_DATA,\_Objc_classrefs)和Section64(\_DATA,\_objc_classlist)中可以看到地址
@@ -14,11 +16,15 @@ superclass流程 objc_getSuperclass
 
 
 
+## 类的结构
+
 对象的结构：isa，实例变量
 
 类似的结构：isa （8）、superclass（8）、cache（16）、bits
 
 cache类型：cache_t，类型大小16字节
+
+### bits
 
 通过类地址平移0x20获得bits
 
@@ -67,8 +73,8 @@ cache类型：cache_t，类型大小16字节
 (method_list_t) $10 = {
   entsize_list_tt<method_t, method_list_t, 4294901763, method_t::pointer_modifier> = (entsizeAndFlags = 27, count = 13)
 }
-# 从method_list_t中获取method_t
-(lldb) p $10.get(0).big()
+# 从method_list_t中获取method_t 
+(lldb) p $10.get(0).big() #底层没有description方法，需要big方法进行打印显示
 (method_t::big) $11 = {
   name = "bycycle"
   types = 0x0000000100003f75 "s16@0:8"
@@ -101,7 +107,44 @@ cache类型：cache_t，类型大小16字节
 
 ```
 
+#### ro & rw & ext
+
+dirty_memory、clean_memory：分类加载，修改了类的内容
+
+### set原理
+
+objc_setProperty
+
+通过ivars，sel->imp,imp是未实现的，指向setProperty。编译时期，llvm生成
+
+？什么时候使用setProperty，什么时候是内存平移找到ivar后之后赋值
+
+llvm
+
+if (IsCopy) {
+
+​	Kind = GetSetProperty;
+
+​	return;
+
+}
+
+setProperty底层进行copy操作
 
 
 
+### 类方法存储在元类
 
+class_getClassMethod方法，底层调用的是，获取元类的对象方法
+
+class_getInstanceMethod(cls->getMeta(),sel);
+
+getMeta()函数，当是类的时候，返回元类，当是元类的时候返回与元类自己
+
+底层没有所谓的类方法、对象方法，只是看在哪里获取
+
+
+
+### 寻找imp的过程
+
+根据sel查找imp的过程
