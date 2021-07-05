@@ -14,7 +14,38 @@ isa流程图 objc_getClass
 
 superclass流程 objc_getSuperclass
 
+## iskindof、ismemberof
 
+isMemberOf 是否是相同的类，如果是类对象调用，取isa在去比较。如果是对象调用，调用[self class]，去比较
+
+isKindOf 是否是相同或者子类，如果是类对象调用，取isa再去比较，然后再去取了isa之后的superclass一直比较到顶。如果是对象调用，调用[self class]，去比较
+
+类对象的class返回它自己，就还是类对象自己，要获取元类需要objc_getClass(类)
+
+NSObject是所有类的父类，包含元类，所以所有对象，包含类对象的isKindOfClass：[NSObject Class]都是YES
+
+查看汇编，并非走得是iskindof源码，而是走得objc_opt_iskindofclass。编译器搞鬼
+
+```objc
+// Calls [obj isKindOfClass]
+BOOL
+objc_opt_isKindOfClass(id obj, Class otherClass)
+{
+#if __OBJC2__
+    if (slowpath(!obj)) return NO;
+    Class cls = obj->getIsa();
+    if (fastpath(!cls->hasCustomCore())) {
+        for (Class tcls = cls; tcls; tcls = tcls->getSuperclass()) {
+            if (tcls == otherClass) return YES;
+        }
+        return NO;
+    }
+#endif
+    return ((BOOL(*)(id, SEL, Class))objc_msgSend)(obj, @selector(isKindOfClass:), otherClass);
+}
+```
+
+## 
 
 ## 类的结构
 
@@ -145,6 +176,207 @@ getMeta()函数，当是类的时候，返回元类，当是元类的时候返�
 
 
 
+### objc_msgSend
+
+Xcode有个build setting中，有objc_msgSend的配置，和参数一个两个有关
+
+objc_msgSendSuper
+
+objc_super {
+
+​	id receiver
+
+​	Class super_class
+
+}
+
+汇编分析：
+
+ENTRY \_objc\_msgSend
+
+cmp p0, #0   // 比较消息接收者是否是0，是否存在
+
+GetClassFromIsa_p16  // p16最终就等于class，通过recieve获取isa，获取class
+
+ExtractISA    // 这里就是获取最终的isa指针
+
+上面走完后，继续往下走：
+
+CacheLookUp
+
+LLookupStart
+
+----循环--找缓存
+
+缓存命中 CacheHit   NORMAL -> TailCallCachedImp -> call imp objc_msgSend(sel,imp)
+
+总结：
+
+reciever是否存在
+
+receiver->isa->class(p16)
+
+class-内存平移-cache（bucket mask）
+
+bucket掩码->bucket
+
+mask掩码->mask
+
+insert哈希函数
+
+第一次查找的index
+
+bucket+index查找具体的bucket{imp sel}
+
+判断sel==_cmd，相等的话CacheHit ->imp^isa = imp，调用objc_msgSend；不相等的话，--平移继续查找
+
+
+
+如果一直没找到，即没有缓存，调用MissLabelDynamic。这个是CacheLookUp的一个参数。即\_\_objc_msgSend_uncached->lookUpImpOrForward(C)->慢速查找-methodlist
+
+
+
+也可以通过汇编查看msgSend流程
+
+
+
+慢速查找流程：lookupimporforward
+
+​	方法查找需要用到rw和ro，所以需要保证类已经加载和初始化
+
+​	二分查找、如果同名方法，找分类的。二分查找相同元素的边界问题。--。找最前面的。分类在类的前面
+
+​	找到后，缓存 调用
+
+​	找不到，找父类缓存，再找父类慢速查找，一直找到没有
+
+​	最终没找到，imp = forward_imp
+
+
+
+​	顺便调用
+
+callInitialize
+
+class initialize
+
+
+
+cache_getImp，这里有坑，查找父类的方法，缓存没找到的话，不是直接找父类的父类，先返回0，然后在方法里面判断0，继续找父类的父类
+
+
+
 ### 寻找imp的过程
 
 根据sel查找imp的过程
+
+
+
+### cache
+
+偏移16字节
+
+bucket_t，保存sel->imp
+
+<img src="02_class.assets/image-20210623211841444.png" alt="image-20210623211841444" style="zoom:50%;" />
+
+当lldb p或者po打印不出来的时候，寻找是否有方法可以输出相关信息
+
+发现调用了方法，但是cache中，buckets中没有缓存。因为buckets使用hash来进行存储，直接打印，相当于直接获取第一个，不一定有值
+
+有插入、才有读取
+
+insert(sel,imp,reciever)，插入过程有hash，冲突的话，再hash
+
+
+
+occupy 存入了多少
+
+mask = capacity-1
+
+bucket两倍扩容：旧的回收，新的继续放，相当于老的没有了
+
+cache初始4、扩容为8，mask为7
+
+当使用lldb调用方法触发缓存时，会发现cache初始就为7，因为lldb除了调用方法，还调用了一些其他对象方法，导致其它的方法也被调用，被缓存，刚好导致扩容了一次。（mask从3->7）
+
+调用了这两个方法
+
+// respondsToSelector
+
+// class
+
+还少一个？
+
+往bucket里面插值，必须要调用b[i].set方法去插值。insert是插cache
+
+buckets最后一个存边界，所以mask = capacity-1。因为最后一个是边界，存0x1，然后cache的首地址（这里存疑）
+
+验证不通过lldb，通过代码直接调用，会不会有边界。
+
+
+
+哈希：开放定址 & 拉链
+
+0.75扩容，负载因子
+
+
+
+```cpp
+// 系统函数，打印imp信息
+// 参见以下函数，全局搜索
+inline IMP rawImp()
+  _sel.load()
+  _imp.load()
+```
+
+insert流程
+
+cache中关于imp的算法，双重异或。存编码异或一次，取解码异或一次
+
+imp()方法，imp(bucket_t *，cls())，这里的cls(),就是用于异或的参数，如果不传，就不异或，就是原始值
+
+
+
+* cache中关于arm的内容
+
+  在arm中，cache往buckets中存值，如果存在哈希冲突，就往前存值。如果存不进去，就过掉while循环，调用bad cache
+
+  arm64中，先存imp，在存sel。其他架构先存sel，在存imp
+
+
+
+
+
+## 十、动态方法决议
+
+找不到方法，赋值`imp = forward_imp = __objc_msgForward_impcache`  <-汇编
+
+在上面返回之前，会调用：
+
+resolve为啥走两次
+
+为啥resolveClass后还要调用resolveInstance
+
+
+
+aop
+
+
+
+消息转发
+
+extern void instrumentObjcMessageSends(BOOL flag)  mac开发模式
+
+调用传yes，打印输出一些消息转发的流程log
+
+
+
+hopper反汇编cf
+
+
+
+
+
+
+

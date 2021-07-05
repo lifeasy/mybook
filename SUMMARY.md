@@ -55,8 +55,10 @@
       * [iOS底层常用命令](articles/iOS/note/iOS强化/command_ioslowlevel.md)
       * [01_多环境配置](articles/iOS/note/iOS强化/01_多环境配置.md)
       * [02_Mach-O和符号](articles/iOS/note/iOS强化/02_Mach-O和符号.md)
+      * [03_ruby&pod](articles/iOS/note/iOS强化/03_pod.md)
     * iOS逆向
-      * [汇编](articles/iOS/note/LGRe/asm.md)
+      * [常用汇编指令&寄存器](articles/iOS/LGRe/re_order.md)
+      * [01_汇编](articles/iOS/note/LGRe/01_asm.md)
   * Xcode
     * Instruments
       * [TimeProfiler](articles/iOS/xcode/instruments/time_profiler.md)

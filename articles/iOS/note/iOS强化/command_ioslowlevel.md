@@ -64,7 +64,14 @@ $ lipo -info BioAuthEngine.framework
 $ lipo 文件路径 -thin 架构类型 -output 输出文件路径
 $ lipo BioAuthEngine.framework/BioAuthEngine -thin arm64 -o BioAuthEngine64
 # 架构合并
-$ lipo 文件路径1 文件路径2 -output 输出文件路径
+$ lipo -create 文件路径1 文件路径2 -output 输出文件路径
+```
+
+### libtool
+
+```shell
+# 将目标文件.o合并为静态库
+libtool -static -o xxxx.a *.o
 ```
 
 ### ar

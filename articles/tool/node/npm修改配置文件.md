@@ -43,3 +43,9 @@ $ npm config set prefix '/usr/local'
 $ npm root -g
 ```
 
+## npm取消ssl验证
+
+```shell
+$ npm config set strict-ssl false
+```
+
