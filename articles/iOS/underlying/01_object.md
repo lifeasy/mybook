@@ -2,6 +2,8 @@
 
 ## 对象的alloc流程
 
+`alloc`开辟了内存
+
 虽然在`NSObject`的`alloc`方法中打了断点，但是并未进入，进入的是：
 
 ```objective-c
@@ -113,6 +115,7 @@ obj = (id)calloc(1, size);
 
 ```objective-c
 obj->initInstanceIsa(cls, hasCxxDtor);
+最终调用了 initIsa(cls, true, hasCxxDtor);
 ```
 
 ## 结构体内存对齐
@@ -134,15 +137,18 @@ obj->initInstanceIsa(cls, hasCxxDtor);
 
 ### class_getInstanceSize
 
-* 对象占用空间大小，包含结构体对齐
+* 对象最终占用空间大小，包含结构体对齐。
+* 看源码是8字节对齐。
+* 通过malloc_size开了一一个大小，但是其中最终使用的大小
+* 比如[NSObject alloc]是8
 
 ### malloc_size
 
 * 实际分配的大小
-* 看源码是因为16字节对齐
+* 看源码是因为16字节对齐，比如[NSObject alloc]是16
 * libmalloc
 
-* calloc是一个函数生命，在实际运行中，会进行赋值
+* calloc是一个函数声明，在实际运行中，会进行赋值
 
 ```c++
 void 	*(* MALLOC_ZONE_FN_PTR(calloc))(struct _malloc_zone_t *zone, size_t num_items, size_t size); /* same as malloc, but block returned is set to zero */
