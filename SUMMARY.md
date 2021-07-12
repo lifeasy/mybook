@@ -58,7 +58,7 @@
       * [03_ruby&pod](articles/iOS/note/iOS强化/03_pod.md)
     * iOS逆向
       * [常用汇编指令&寄存器](articles/iOS/LGRe/re_order.md)
-      * [01_汇编](articles/iOS/note/LGRe/01_asm.md)
+      * [01_汇编](articles/iOS/LGRe/01_asm.md)
   * Xcode
     * Instruments
       * [TimeProfiler](articles/iOS/xcode/instruments/time_profiler.md)
