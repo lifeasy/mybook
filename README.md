@@ -37,7 +37,7 @@ $ chmod +x post-receive
 ```shell
 # 测试加在第一个，source tree不受影响，source tree读取的是最后一个url，但是同时都会上传
 [remote "origin"]
-	url = root@1.116.23.199:/var/repo/gitbookBlog
+	url = root@1.2.3.4:/var/repo/gitbookBlog
 	url = git@github.com:lifeasy/mybook.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 ```
