@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>常用汇编指令&寄存器 · lifeasy 的文档库</title>
+        <title>03_OC&Block反汇编 · lifeasy 的文档库</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -72,8 +72,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="01_asm.html" />
+    <link rel="next" href="04_apple_der.html" />
     
+    
+    <link rel="prev" href="02_asm.html" />
     
 
     <style>
@@ -900,7 +902,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="2.1.10.2.1" data-path="re_order.html">
+        <li class="chapter " data-level="2.1.10.2.1" data-path="re_order.html">
             
                 <a href="re_order.html">
             
@@ -918,7 +920,98 @@
                 <a href="01_asm.html">
             
                     
-                    01_汇编
+                    01_汇编-寄存器-函数调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.3" data-path="02_asm.html">
+            
+                <a href="02_asm.html">
+            
+                    
+                    02_汇编-条件-循环-判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.10.2.4" data-path="03_oc_asm.html">
+            
+                <a href="03_oc_asm.html">
+            
+                    
+                    03_OC&Block反汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.5" data-path="04_apple_der.html">
+            
+                <a href="04_apple_der.html">
+            
+                    
+                    04_苹果证书相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.6" data-path="05_resign.html">
+            
+                <a href="05_resign.html">
+            
+                    
+                    05_重签名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.7" data-path="06_inject.html">
+            
+                <a href="06_inject.html">
+            
+                    
+                    06_代码注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.8" data-path="07_macho.html">
+            
+                <a href="07_macho.html">
+            
+                    
+                    07_Mach-O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.9" data-path="08_dyld.html">
+            
+                <a href="08_dyld.html">
+            
+                    
+                    08_dyld
             
                 </a>
             
@@ -1791,7 +1884,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >常用汇编指令&寄存器</a>
+        <a href="../../.." >03_OC&Block反汇编</a>
     </h1>
 </div>
 
@@ -1806,9 +1899,133 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;arm&#x6C47;&#x7F16;&#x6307;&#x4EE4;&#x5BC4;&#x5B58;&#x5668;"><b></b>&#x5E38;&#x7528;ARM&#x6C47;&#x7F16;&#x6307;&#x4EE4;&amp;&#x5BC4;&#x5B58;&#x5668;</a></li></ul></div><a href="#&#x5E38;&#x7528;arm&#x6C47;&#x7F16;&#x6307;&#x4EE4;&#x5BC4;&#x5B58;&#x5668;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5E38;&#x7528;arm&#x6C47;&#x7F16;&#x6307;&#x4EE4;&#x5BC4;&#x5B58;&#x5668;"><a name="&#x5E38;&#x7528;arm&#x6C47;&#x7F16;&#x6307;&#x4EE4;&#x5BC4;&#x5B58;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;arm&#x6C47;&#x7F16;&#x6307;&#x4EE4;&#x5BC4;&#x5B58;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;ARM&#x6C47;&#x7F16;&#x6307;&#x4EE4;&amp;&#x5BC4;&#x5B58;&#x5668;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#ocblock&#x53CD;&#x6C47;&#x7F16;"><b></b>OC&amp;Block&#x53CD;&#x6C47;&#x7F16;</a></li><ul><li><span class="title-icon "></span><a href="#oc&#x65B9;&#x6CD5;&#x7684;&#x672C;&#x8D28;"><b></b>OC&#x65B9;&#x6CD5;&#x7684;&#x672C;&#x8D28;</a></li><ul><li><span class="title-icon "></span><a href="#alloc--init"><b></b>alloc &amp; init</a></li><li><span class="title-icon "></span><a href="#&#x5DE5;&#x5177;&#x9759;&#x6001;&#x5206;&#x6790;mach-o&#x7684;&#x65B9;&#x6CD5;"><b></b>&#x5DE5;&#x5177;&#x9759;&#x6001;&#x5206;&#x6790;Mach-O&#x7684;&#x65B9;&#x6CD5;</a></li></ul><li><span class="title-icon "></span><a href="#block"><b></b>Block</a></li><ul><li><span class="title-icon "></span><a href="#block&#x6570;&#x636E;&#x7ED3;&#x6784;"><b></b>block&#x6570;&#x636E;&#x7ED3;&#x6784;</a></li><li><span class="title-icon "></span><a href="#global-block"><b></b>global block</a></li><li><span class="title-icon "></span><a href="#stack-block"><b></b>stack block</a></li></ul></ul></ul></div><a href="#ocblock&#x53CD;&#x6C47;&#x7F16;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="ocblock&#x53CD;&#x6C47;&#x7F16;"><a name="ocblock&#x53CD;&#x6C47;&#x7F16;" class="anchor-navigation-ex-anchor" href="#ocblock&#x53CD;&#x6C47;&#x7F16;"><i class="fa fa-link" aria-hidden="true"></i></a>OC&amp;Block&#x53CD;&#x6C47;&#x7F16;</h1>
+<h2 id="oc&#x65B9;&#x6CD5;&#x7684;&#x672C;&#x8D28;"><a name="oc&#x65B9;&#x6CD5;&#x7684;&#x672C;&#x8D28;" class="anchor-navigation-ex-anchor" href="#oc&#x65B9;&#x6CD5;&#x7684;&#x672C;&#x8D28;"><i class="fa fa-link" aria-hidden="true"></i></a>OC&#x65B9;&#x6CD5;&#x7684;&#x672C;&#x8D28;</h2>
+<p>OC&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#xFF0C;&#x5C31;&#x662F;&#x8C03;&#x7528;<code>objc_msgSend</code></p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;<code>self</code>&#xFF0C;&#x653E;&#x5728;<code>x0</code>&#x91CC;&#x9762;</li>
+<li>&#x7B2C;&#x4E8C;&#x53C2;&#x6570;&#x4E3A;<code>SEL</code>&#xFF0C;&#x653E;&#x5728;<code>x1</code>&#x91CC;&#x9762;</li>
+</ul>
+<pre class="language-"><code class="lang-shell">0x1047160a8 <span class="token operator">&lt;</span>+2<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>:  adrp   x8, <span class="token number">7</span>
+    0x1047160ac <span class="token operator">&lt;</span>+2<span class="token operator"><span class="token file-descriptor important">8</span>&gt;</span>:  ldr    x0, <span class="token punctuation">[</span>x8, <span class="token comment">#0x560]</span>
+    0x1047160b0 <span class="token operator">&lt;</span>+3<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>:  adrp   x8, <span class="token number">7</span>
+    0x1047160b4 <span class="token operator">&lt;</span>+3<span class="token operator"><span class="token file-descriptor important">6</span>&gt;</span>:  ldr    x1, <span class="token punctuation">[</span>x8, <span class="token comment">#0x540]</span>
+-<span class="token operator">&gt;</span>  0x1047160b8 <span class="token operator">&lt;</span>+4<span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>:  bl     0x1047164e4               <span class="token punctuation">;</span> symbol stub for: objc_msgSend
+
+<span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> register <span class="token builtin class-name">read</span> x0
+      x0 <span class="token operator">=</span> 0x000000010471d648  <span class="token punctuation">(</span>void *<span class="token punctuation">)</span>0x000000010471d620: Person
+<span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> register <span class="token builtin class-name">read</span> x1
+      x1 <span class="token operator">=</span> 0x00000001d70bb5df
+<span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> p <span class="token punctuation">(</span>SEL<span class="token punctuation">)</span>0x00000001d70bb5df
+<span class="token punctuation">(</span>SEL<span class="token punctuation">)</span> <span class="token variable">$1</span> <span class="token operator">=</span> <span class="token string">&quot;person&quot;</span>
+</code></pre>
+<h3 id="alloc--init"><a name="alloc--init" class="anchor-navigation-ex-anchor" href="#alloc--init"><i class="fa fa-link" aria-hidden="true"></i></a>alloc &amp; init</h3>
+<ul>
+<li><code>[[self alloc] init]</code>&#x5728;&#x65B0;&#x7684;&#x7CFB;&#x7EDF;&#x91CC;&#x76F4;&#x63A5;&#x8C03;&#x7528;<code>objc_alloc_init</code></li>
+<li>&#x5728;&#x8001;&#x7684;&#x7CFB;&#x7EDF;&#x91CC;iOS11&#x53CA;&#x4EE5;&#x524D;&#xFF0C;&#x662F;&#x5206;&#x522B;&#x8C03;&#x7528;<code>objc_alloc</code>&#x548C;&#x901A;&#x8FC7;<code>objc_msgSend</code>&#x8C03;&#x7528;<code>init</code>&#xFF0C;&#x5176;&#x4E2D;<code>init</code>&#x7684;x0&#x5E76;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x8BBE;&#x7F6E;&#xFF0C;&#x8FD9;&#x662F;&#x5E94;&#x4E3A;x0&#x4E3A;<code>alloc</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;<code>self</code></li>
+<li><code>objc_storeStrong</code>&#xFF1A;OC&#x4E2D;&#x5EB8;<code>strong</code>&#x4FEE;&#x9970;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x3002;&#x7F16;&#x8BD1;&#x5668;&#x4F18;&#x5316;&#xFF0C;&#x51FD;&#x6570;&#x4E2D;&#x9ED8;&#x8BA4;&#x7684;&#x53D8;&#x91CF;&#x90FD;&#x662F;<code>strong</code>&#x7C7B;&#x578B;&#x3002;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x65E2;&#x80FD;&#x8BA9;&#x5BF9;&#x8C61;&#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x53C8;&#x80FD;&#x8BA9;&#x5BF9;&#x8C61;&#x9500;&#x6BC1;&#xFF0C;&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8C03;&#x7528;&#xFF0C;&#x5C31;&#x662F;&#x91CA;&#x653E;(&#x7B2C;&#x4E8C;&#x4E2A;)</li>
+</ul>
+<pre class="language-"><code class="lang-c++"><span class="token keyword">void</span>            <span class="token comment">// Person *p = [[Person allo] init];</span>
+<span class="token function">objc_storeStrong</span><span class="token punctuation">(</span>id <span class="token operator">*</span>location<span class="token punctuation">,</span> id obj<span class="token punctuation">)</span> <span class="token comment">// &#x8FD9;&#x91CC;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x76F8;&#x5F53;&#x4E8E;&#x4E34;&#x65F6;&#x53D8;&#x91CF;&amp;p , &#x7B2C;&#x4E8C;&#x4E2A;&#x5C31;&#x662F;&#x76EE;&#x6807;obj</span>
+<span class="token punctuation">{</span>
+    id prev <span class="token operator">=</span> <span class="token operator">*</span>location<span class="token punctuation">;</span> <span class="token comment">// &#x4FDD;&#x5B58;location&#x6307;&#x5411;&#x7684;&#x65E7;&#x5BF9;&#x8C61;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>obj <span class="token operator">==</span> prev<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">// &#x5224;&#x65AD; &#x65E7;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x662F;&#x8981;&#x4FDD;&#x6301;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5C31;&#x8FD4;&#x56DE;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">objc_retain</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// &#x5982;&#x679C;&#x4E0D;&#x662F;&#xFF0C;&#x4FDD;&#x6301;&#x65B0;&#x5BF9;&#x8C61;&#xFF0C;&#x5F15;&#x7528;&#x8BA1;&#x6570;+1</span>
+    <span class="token operator">*</span>location <span class="token operator">=</span> obj<span class="token punctuation">;</span>    <span class="token comment">// &#x8BA9;location&#x6307;&#x5411;&#x65B0;&#x5BF9;&#x8C61;</span>
+    <span class="token function">objc_release</span><span class="token punctuation">(</span>prev<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// &#x8001;&#x5BF9;&#x8C61;&#x5F15;&#x7528;&#x8BA1;&#x6570;-1</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// &#x5F53;OC&#x65B9;&#x6CD5;&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x4F1A;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x4F46;&#x662F;x1&#x5C31;&#x4F20;&#x5165;&#x7684;&#x662F;0x0&#x4E86;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;objc_storeStrong(&amp;p,nil)&#xFF0C;&#x6700;&#x7EC8;&#x5C31;&#x662F;&#x7C7B;&#x4F3C;&#x8C03;&#x7528;objc_release(p)</span>
+</code></pre>
+<h3 id="&#x5DE5;&#x5177;&#x9759;&#x6001;&#x5206;&#x6790;mach-o&#x7684;&#x65B9;&#x6CD5;"><a name="&#x5DE5;&#x5177;&#x9759;&#x6001;&#x5206;&#x6790;mach-o&#x7684;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5DE5;&#x5177;&#x9759;&#x6001;&#x5206;&#x6790;mach-o&#x7684;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5DE5;&#x5177;&#x9759;&#x6001;&#x5206;&#x6790;Mach-O&#x7684;&#x65B9;&#x6CD5;</h3>
+<p>&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-objective-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">int</span> argc<span class="token punctuation">,</span> <span class="token keyword">char</span> <span class="token operator">*</span> argv<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Person <span class="token operator">*</span> p <span class="token operator">=</span> <span class="token punctuation">[</span>Person person<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    p<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">@&quot;hank&quot;</span><span class="token punctuation">;</span>
+    p<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Hopper&#x53CD;&#x6C47;&#x7F16;&#xFF1A;</p>
+<pre class="language-"><code>00000001000061a4         adrp       x8, #0x10000d000
+00000001000061a8         ldr        x0, [x8, #0x558]  ; objc_cls_ref_Person(&#x7C7B;),_OBJC_CLASS_$_Person(&#x7ED3;&#x6784;&#x4F53;)&#xFF0C;&#x70B9;&#x51FB;&#x53EF;&#x8FDB;&#x5165;
+00000001000061ac         adrp       x8, #0x10000d000
+00000001000061b0         ldr        x1, [x8, #0x538]  ; &quot;person&quot;,@selector(person)
+00000001000061b4         bl         imp___stubs__objc_msgSend  ; objc_msgSend 
+// &#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;objc_msgSend&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;Person&#x7C7B;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;sel&#x3002;
+</code></pre><ul>
+<li>&#x7C7B;&#x5730;&#x5740;</li>
+</ul>
+<pre class="language-"><code>// &#x70B9;&#x51FB;&#x7C7B;&#x540D;&#x8FDB;&#x5165;
+000000010000d558         dq         _OBJC_CLASS_$_Person ; &#x5DE6;&#x8FB9;&#x7684;&#x5730;&#x5740;&#x5C31;&#x662F;Person&#x7C7B;&#x5728;Mach-O&#x4E2D;&#x7684;&#x5730;&#x5740;
+
+// &#x70B9;&#x51FB;&#x7ED3;&#x6784;&#x4F53;&#x8FDB;&#x5165; &#x5BF9;&#x5E94;&#x7684;&#x5C31;&#x662F;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x4FE1;&#x606F;
+                     _OBJC_CLASS_$_Person:
+000000010000d640         struct __objc_class {   ; DATA XREF=_main+28, 0x100008078, objc_cls_ref_Person
+                             _OBJC_METACLASS_$_Person,            // metaclass
+                             _OBJC_CLASS_$_NSObject,              // superclass
+                             __objc_empty_cache,                  // cache
+                             0x0,                                 // vtable
+                             __OBJC_CLASS_RO_$_Person             // data
+                         }
+</code></pre><p><img src="https://gitee.com/dexport/blog-image/raw/master/img/20210724131121.png" alt="&#x7C7B;&#x5730;&#x5740;"></p>
+<ul>
+<li>&#x65B9;&#x6CD5;&#x540D;&#x5730;&#x5740;</li>
+</ul>
+<pre class="language-"><code>// &#x70B9;&#x51FB;person&#x65B9;&#x6CD5;&#x540D;&#x8FDB;&#x5165;&#xFF0C;&#x67E5;&#x770B;person&#x7684;cstring&#x4F4D;&#x7F6E;
+000000010000712a         db         &quot;person&quot;, 0   ; DATA XREF=_main+36, 0x10000cc30, 0x10000d538
+</code></pre><p><img src="https://gitee.com/dexport/blog-image/raw/master/img/20210724131934.png" alt="&#x65B9;&#x6CD5;&#x540D;&#x5730;&#x5740;"></p>
+<h2 id="block"><a name="block" class="anchor-navigation-ex-anchor" href="#block"><i class="fa fa-link" aria-hidden="true"></i></a>Block</h2>
+<h3 id="block&#x6570;&#x636E;&#x7ED3;&#x6784;"><a name="block&#x6570;&#x636E;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#block&#x6570;&#x636E;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>block&#x6570;&#x636E;&#x7ED3;&#x6784;</h3>
+<pre class="language-"><code class="lang-c++"><span class="token keyword">struct</span> <span class="token class-name">Block_layout</span> <span class="token punctuation">{</span>
+    <span class="token keyword">void</span> <span class="token operator">*</span> __ptrauth_objc_isa_pointer isa<span class="token punctuation">;</span> <span class="token comment">// isa</span>
+    <span class="token keyword">volatile</span> <span class="token keyword">int32_t</span> flags<span class="token punctuation">;</span> <span class="token comment">// contains ref count</span>
+    <span class="token keyword">int32_t</span> reserved<span class="token punctuation">;</span>
+    BlockInvokeFunction invoke<span class="token punctuation">;</span> <span class="token comment">//&#x51FD;&#x6570;&#x6307;&#x9488;</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Block_descriptor_1</span> <span class="token operator">*</span>descriptor<span class="token punctuation">;</span>
+    <span class="token comment">// imported variables</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="global-block"><a name="global-block" class="anchor-navigation-ex-anchor" href="#global-block"><i class="fa fa-link" aria-hidden="true"></i></a>global block</h3>
+<blockquote>
+<p>&#x4E0D;&#x5F15;&#x7528;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x5168;&#x5C40;&#x533A;</p>
+</blockquote>
+<p>&#x6E90;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-objective-c">```
+
+Hopper<span class="token punctuation">:</span>
+</code></pre>
+<p>0000000100006188         adrp       x0, #dyld_stub_binder_100008000   ; 0x100008028@PAGE
+000000010000618c         add        x0, x0, #0x28                     ; 0x100008028@PAGEOFF, <strong><em>block_literal_global
+0000000100006190         bl         imp</em></strong>stubs__objc_retainBlock     ; objc_retainBlock</p>
+<pre class="language-"><code>
+&#x70B9;&#x51FB;`___block_literal_global`&#x8FDB;&#x5165;&#xFF1A;
+</code></pre><pre class="language-"><code>                 ___block_literal_global:
+</code></pre><p>0000000100008028         dq         0x000000010001c040       ; DATA XREF=_main+28 &#x8FD9;&#x91CC;&#x662F;isa
+0000000100008030         dd         0x50000000
+0000000100008034         dd         0x00000000
+0000000100008038         dq         0x00000001000061d4             ; &#x8FD9;&#x91CC;&#x662F;invoke &#x70B9;&#x51FB;&#x8FDB;&#x5165;
+0000000100008040         dq         0x0000000100008008</p>
+<pre class="language-"><code>
+block&#x7684;&#x5B9E;&#x73B0;
+</code></pre><p> <strong><em>main_block_invoke:
+00000001000061d4         sub        sp, sp, #0x20                               ; Objective C Block defined at 0x100008028, DATA XREF=0x100008038
+00000001000061d8         stp        x29, x30, [sp, #0x10]
+00000001000061dc         add        x29, sp, #0x10
+00000001000061e0         str        x0, [sp, #0x10 + var_8]
+00000001000061e4         str        x0, [sp, #0x10 + var_10]
+00000001000061e8         adrp       x0, #dyld_stub_binder_100008000             ; 0x100008088@PAGE
+00000001000061ec         add        x0, x0, #0x88                               ; 0x100008088@PAGEOFF, @&quot;block&quot;
+00000001000061f0         bl         imp</em></strong>stubs__NSLog                          ; NSLog
+00000001000061f4         ldp        x29, x30, [sp, #0x10]
+00000001000061f8         add        sp, sp, #0x20
+00000001000061fc         ret
+                        ; endp
+```</p>
+<h3 id="stack-block"><a name="stack-block" class="anchor-navigation-ex-anchor" href="#stack-block"><i class="fa fa-link" aria-hidden="true"></i></a>stack block</h3>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; lifeasy.top 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2021-06-29 22:30:44
+2021-07-24 14:57:55
 </span></footer>
                                 
                                 </section>
@@ -1836,8 +2053,12 @@
 
             
                 
+                <a href="02_asm.html" class="navigation navigation-prev " aria-label="Previous page: 02_汇编-条件-循环-判断">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="01_asm.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 01_汇编">
+                
+                <a href="04_apple_der.html" class="navigation navigation-next " aria-label="Next page: 04_苹果证书相关">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1848,7 +2069,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"常用汇编指令&寄存器","level":"2.1.10.2.1","depth":4,"next":{"title":"01_汇编","level":"2.1.10.2.2","depth":4,"path":"articles/iOS/LGRe/01_asm.md","ref":"articles/iOS/LGRe/01_asm.md","articles":[]},"previous":{"title":"iOS逆向","level":"2.1.10.2","depth":3,"ref":"","articles":[{"title":"常用汇编指令&寄存器","level":"2.1.10.2.1","depth":4,"path":"articles/iOS/LGRe/re_order.md","ref":"articles/iOS/LGRe/re_order.md","articles":[]},{"title":"01_汇编","level":"2.1.10.2.2","depth":4,"path":"articles/iOS/LGRe/01_asm.md","ref":"articles/iOS/LGRe/01_asm.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github","github-buttons","donate","tbfed-pagefooter","anchor-navigation-ex"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy lifeasy.top 2020","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shel":"bash","shell":"bash","objective-c":"objectivec","swi":"swift","swif":"swift","c++":"cpp"}},"github":{"url":"https://github.com/lifeasy"},"splitter":{},"search-pro":{},"donate":{"alipay":"https://www.liangqili.com/hexo/images/alipay.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://www.liangqili.com/hexo/images/wechatpay.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"lifeasy","repo":"mybook","type":"star","count":true,"size":"small"},{"user":"lifeasy","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Liang_QL","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"lifeasy 的文档库","language":"zh-hans","links":{"sidebar":{"我的小站":"https://www.liangqili.com"}},"gitbook":"*","description":"随便写写"},"file":{"path":"articles/iOS/LGRe/re_order.md","mtime":"2021-06-29T14:30:44.425Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-12T11:12:30.170Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"03_OC&Block反汇编","level":"2.1.10.2.4","depth":4,"next":{"title":"04_苹果证书相关","level":"2.1.10.2.5","depth":4,"path":"articles/iOS/renote/04_apple_der.md","ref":"articles/iOS/renote/04_apple_der.md","articles":[]},"previous":{"title":"02_汇编-条件-循环-判断","level":"2.1.10.2.3","depth":4,"path":"articles/iOS/renote/02_asm.md","ref":"articles/iOS/renote/02_asm.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github","github-buttons","donate","tbfed-pagefooter","anchor-navigation-ex"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy lifeasy.top 2020","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shel":"bash","shell":"bash","objective-c":"objectivec","swi":"swift","swif":"swift","c++":"cpp"}},"github":{"url":"https://github.com/lifeasy"},"splitter":{},"search-pro":{},"donate":{"alipay":"https://www.liangqili.com/hexo/images/alipay.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://www.liangqili.com/hexo/images/wechatpay.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"lifeasy","repo":"mybook","type":"star","count":true,"size":"small"},{"user":"lifeasy","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Liang_QL","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"lifeasy 的文档库","language":"zh-hans","links":{"sidebar":{"我的小站":"https://www.liangqili.com"}},"gitbook":"*","description":"随便写写"},"file":{"path":"articles/iOS/renote/03_oc_asm.md","mtime":"2021-07-24T06:57:55.396Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-24T16:10:14.824Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

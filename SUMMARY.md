@@ -57,8 +57,15 @@
       * [02_Mach-O和符号](articles/iOS/note/iOS强化/02_Mach-O和符号.md)
       * [03_ruby&pod](articles/iOS/note/iOS强化/03_pod.md)
     * iOS逆向
-      * [常用汇编指令&寄存器](articles/iOS/LGRe/re_order.md)
-      * [01_汇编](articles/iOS/LGRe/01_asm.md)
+      * [常用汇编指令&寄存器](articles/iOS/renote/re_order.md)
+      * [01_汇编-寄存器-函数调用](articles/iOS/renote/01_asm.md)
+      * [02_汇编-条件-循环-判断](articles/iOS/renote/02_asm.md)
+      * [03_OC&Block反汇编](articles/iOS/renote/03_oc_asm.md)
+      * [04_苹果证书相关](articles/iOS/renote/04_apple_der.md)
+      * [05_重签名](articles/iOS/renote/05_resign.md)
+      * [06_代码注入](articles/iOS/renote/06_inject.md)
+      * [07_Mach-O](articles/iOS/renote/07_macho.md)
+      * [08_dyld](articles/iOS/renote/08_dyld.md)
   * Xcode
     * Instruments
       * [TimeProfiler](articles/iOS/xcode/instruments/time_profiler.md)
