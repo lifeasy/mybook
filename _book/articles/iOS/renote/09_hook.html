@@ -1,0 +1,2506 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>09_hook · lifeasy 的文档库</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Liang_QL">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="10_symbol.html" />
+    
+    
+    <link rel="prev" href="08_dyld.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"lifeasy","repo":"mybook","type":"star","count":true,"size":"small"},{"user":"lifeasy","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.liangqili.com" target="_blank" class="custom-link">我的小站</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    iOS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" >
+            
+                <span>
+            
+                    
+                    LLDB
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="../lldb/LLDB常用命令.html">
+            
+                <a href="../lldb/LLDB常用命令.html">
+            
+                    
+                    LLDB常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" >
+            
+                <span>
+            
+                    
+                    Swift
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.1" data-path="../swift/Swift常用命令.html">
+            
+                <a href="../swift/Swift常用命令.html">
+            
+                    
+                    Swift常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.2" data-path="../swift/Swift源码编译.html">
+            
+                <a href="../swift/Swift源码编译.html">
+            
+                    
+                    Swift源码编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3" >
+            
+                <span>
+            
+                    
+                    逻辑进阶笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.3.1" data-path="../swift/logicEdu/01_类、对象、属性.html">
+            
+                <a href="../swift/logicEdu/01_类、对象、属性.html">
+            
+                    
+                    01_类、对象、属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3.2" data-path="../swift/logicEdu/02_值类型、引用类型.html">
+            
+                <a href="../swift/logicEdu/02_值类型、引用类型.html">
+            
+                    
+                    02_值类型、引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4" >
+            
+                <span>
+            
+                    
+                    Swift语法学习笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.4.1" data-path="../swift/language/01_基础部分.html">
+            
+                <a href="../swift/language/01_基础部分.html">
+            
+                    
+                    01_基础部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4.2" data-path="../swift/language/02_运算符.html">
+            
+                <a href="../swift/language/02_运算符.html">
+            
+                    
+                    02_运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4.3" data-path="../swift/language/03_字符串.html">
+            
+                <a href="../swift/language/03_字符串.html">
+            
+                    
+                    03_字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.5" >
+            
+                <span>
+            
+                    
+                    Swift服务端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.5.1" data-path="../swift/server/Vapor搭建服务端模拟接口请求.html">
+            
+                <a href="../swift/server/Vapor搭建服务端模拟接口请求.html">
+            
+                    
+                    Vapor搭建服务端模拟接口请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" >
+            
+                <span>
+            
+                    
+                    UI
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.3.1" data-path="../ui/CoreAnimation.html">
+            
+                <a href="../ui/CoreAnimation.html">
+            
+                    
+                    核心动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" >
+            
+                <span>
+            
+                    
+                    网咯
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.4.1" data-path="../network/tcpip.html">
+            
+                <a href="../network/tcpip.html">
+            
+                    
+                    图解TCP/IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" >
+            
+                <span>
+            
+                    
+                    多线程
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" >
+            
+                <span>
+            
+                    
+                    Runtime
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" >
+            
+                <span>
+            
+                    
+                    持续集成
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.7.1" data-path="../ci/jenkins.html">
+            
+                <a href="../ci/jenkins.html">
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../underlying/">
+            
+                <a href="../underlying/">
+            
+                    
+                    iOS底层原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.8.1" data-path="../underlying/pre_runtime.html">
+            
+                <a href="../underlying/pre_runtime.html">
+            
+                    
+                    前奏_Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8.2" data-path="../underlying/01_object.html">
+            
+                <a href="../underlying/01_object.html">
+            
+                    
+                    01_OC对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8.3" data-path="../underlying/02_class.html">
+            
+                <a href="../underlying/02_class.html">
+            
+                    
+                    02_类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" >
+            
+                <span>
+            
+                    
+                    iOS逆向
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.9.1" data-path="../iosre/command_iosre.html">
+            
+                <a href="../iosre/command_iosre.html">
+            
+                    
+                    iOS逆向常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.2" data-path="../iosre/iosre.html">
+            
+                <a href="../iosre/iosre.html">
+            
+                    
+                    iOS逆向简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.3" data-path="../iosre/01_jailbreak.html">
+            
+                <a href="../iosre/01_jailbreak.html">
+            
+                    
+                    01_iPhone越狱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.4" data-path="../iosre/02_ssh.html">
+            
+                <a href="../iosre/02_ssh.html">
+            
+                    
+                    02_SSH远程访问越狱设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.5" data-path="../iosre/03_usbmuxd.html">
+            
+                <a href="../iosre/03_usbmuxd.html">
+            
+                    
+                    03_usbmuxd蓝牙访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.6" data-path="../iosre/04_terminal_zh.html">
+            
+                <a href="../iosre/04_terminal_zh.html">
+            
+                    
+                    04_iPhone终端中文问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.7" data-path="../iosre/05_cycript.html">
+            
+                <a href="../iosre/05_cycript.html">
+            
+                    
+                    05_Cycript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.8" data-path="../iosre/06_reveal.html">
+            
+                <a href="../iosre/06_reveal.html">
+            
+                    
+                    06_Reveal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.9" data-path="../iosre/07_reverse.html">
+            
+                <a href="../iosre/07_reverse.html">
+            
+                    
+                    07_逆向思路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.10" data-path="../iosre/08_macho.html">
+            
+                <a href="../iosre/08_macho.html">
+            
+                    
+                    08_Mach-O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.11" data-path="../iosre/09_dyld_shared_cache.html">
+            
+                <a href="../iosre/09_dyld_shared_cache.html">
+            
+                    
+                    09_动态库共享缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.12" data-path="../iosre/10_dumpdecrypted.html">
+            
+                <a href="../iosre/10_dumpdecrypted.html">
+            
+                    
+                    10_脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.13" data-path="../iosre/11_theos.html">
+            
+                <a href="../iosre/11_theos.html">
+            
+                    
+                    11_Theos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.14" data-path="../iosre/12_debug.html">
+            
+                <a href="../iosre/12_debug.html">
+            
+                    
+                    12_动态调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.15" data-path="../iosre/13_rsa.html">
+            
+                <a href="../iosre/13_rsa.html">
+            
+                    
+                    13_RSA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.16" data-path="../iosre/14_hash.html">
+            
+                <a href="../iosre/14_hash.html">
+            
+                    
+                    14_Hash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.17" data-path="../iosre/15_resign.html">
+            
+                <a href="../iosre/15_resign.html">
+            
+                    
+                    15_重签名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9.18" data-path="../iosre/16_injection.html">
+            
+                <a href="../iosre/16_injection.html">
+            
+                    
+                    16_动态库注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" >
+            
+                <span>
+            
+                    
+                    学习笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.10.1" >
+            
+                <span>
+            
+                    
+                    iOS强化
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.10.1.1" data-path="../note/iOS强化/command_ioslowlevel.html">
+            
+                <a href="../note/iOS强化/command_ioslowlevel.html">
+            
+                    
+                    iOS底层常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.1.2" data-path="../note/iOS强化/01_多环境配置.html">
+            
+                <a href="../note/iOS强化/01_多环境配置.html">
+            
+                    
+                    01_多环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.1.3" data-path="../note/iOS强化/02_Mach-O和符号.html">
+            
+                <a href="../note/iOS强化/02_Mach-O和符号.html">
+            
+                    
+                    02_Mach-O和符号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.1.4" data-path="../note/iOS强化/03_pod.html">
+            
+                <a href="../note/iOS强化/03_pod.html">
+            
+                    
+                    03_ruby&pod
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2" >
+            
+                <span>
+            
+                    
+                    iOS逆向
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.10.2.1" data-path="re_order.html">
+            
+                <a href="re_order.html">
+            
+                    
+                    常用汇编指令&寄存器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.2" data-path="01_asm.html">
+            
+                <a href="01_asm.html">
+            
+                    
+                    01_汇编-寄存器-函数调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.3" data-path="02_asm.html">
+            
+                <a href="02_asm.html">
+            
+                    
+                    02_汇编-条件-循环-判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.4" data-path="03_oc_asm.html">
+            
+                <a href="03_oc_asm.html">
+            
+                    
+                    03_OC&Block反汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.5" data-path="04_apple_der.html">
+            
+                <a href="04_apple_der.html">
+            
+                    
+                    04_苹果证书相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.6" data-path="05_resign.html">
+            
+                <a href="05_resign.html">
+            
+                    
+                    05_重签名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.7" data-path="06_inject.html">
+            
+                <a href="06_inject.html">
+            
+                    
+                    06_代码注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.8" data-path="07_macho.html">
+            
+                <a href="07_macho.html">
+            
+                    
+                    07_Mach-O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.9" data-path="08_dyld.html">
+            
+                <a href="08_dyld.html">
+            
+                    
+                    08dyld_Load_initialize消息发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.10.2.10" data-path="09_hook.html">
+            
+                <a href="09_hook.html">
+            
+                    
+                    09_hook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10.2.11" data-path="10_symbol.html">
+            
+                <a href="10_symbol.html">
+            
+                    
+                    10_符号
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" >
+            
+                <span>
+            
+                    
+                    Xcode
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.11.1" >
+            
+                <span>
+            
+                    
+                    Instruments
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.11.1.1" data-path="../xcode/instruments/time_profiler.html">
+            
+                <a href="../xcode/instruments/time_profiler.html">
+            
+                    
+                    TimeProfiler
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    Ruby
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" >
+            
+                <span>
+            
+                    
+                    常用命令
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    源码
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" >
+            
+                <span>
+            
+                    
+                    WebKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../opensource/webkit/webkitcompile.html">
+            
+                <a href="../../opensource/webkit/webkitcompile.html">
+            
+                    
+                    WebKit编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" >
+            
+                <span>
+            
+                    
+                    LLVM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../../opensource/llvm/llvmcompile.html">
+            
+                <a href="../../opensource/llvm/llvmcompile.html">
+            
+                    
+                    LLVM编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../algorithm/算法.html">
+            
+                <a href="../../algorithm/算法.html">
+            
+                    
+                    数据结构与算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" >
+            
+                <span>
+            
+                    
+                    算法基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1.1" data-path="../../algorithm/geektime_note/01_复杂度.html">
+            
+                <a href="../../algorithm/geektime_note/01_复杂度.html">
+            
+                    
+                    复杂度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.2" data-path="../../algorithm/geektime_note/02_数组.html">
+            
+                <a href="../../algorithm/geektime_note/02_数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.3" data-path="../../algorithm/geektime_note/03_链表.html">
+            
+                <a href="../../algorithm/geektime_note/03_链表.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.4" data-path="../../algorithm/geektime_note/04_栈.html">
+            
+                <a href="../../algorithm/geektime_note/04_栈.html">
+            
+                    
+                    栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.5" data-path="../../algorithm/geektime_note/05_队列.html">
+            
+                <a href="../../algorithm/geektime_note/05_队列.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.6" data-path="../../algorithm/geektime_note/06_递归.html">
+            
+                <a href="../../algorithm/geektime_note/06_递归.html">
+            
+                    
+                    递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.7" data-path="../../algorithm/geektime_note/07_排序_1.html">
+            
+                <a href="../../algorithm/geektime_note/07_排序_1.html">
+            
+                    
+                    排序（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.8" data-path="../../algorithm/geektime_note/07_排序_2.html">
+            
+                <a href="../../algorithm/geektime_note/07_排序_2.html">
+            
+                    
+                    排序（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.9" data-path="../../algorithm/geektime_note/07_排序_3.html">
+            
+                <a href="../../algorithm/geektime_note/07_排序_3.html">
+            
+                    
+                    排序（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.10" data-path="../../algorithm/geektime_note/08_二分查找_1.html">
+            
+                <a href="../../algorithm/geektime_note/08_二分查找_1.html">
+            
+                    
+                    二分查找（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.11" data-path="../../algorithm/geektime_note/08_二分查找_2.html">
+            
+                <a href="../../algorithm/geektime_note/08_二分查找_2.html">
+            
+                    
+                    二分查找（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.12" data-path="../../algorithm/geektime_note/09_跳表.html">
+            
+                <a href="../../algorithm/geektime_note/09_跳表.html">
+            
+                    
+                    跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.13" data-path="../../algorithm/geektime_note/10_散列表_1.html">
+            
+                <a href="../../algorithm/geektime_note/10_散列表_1.html">
+            
+                    
+                    散列表（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.14" data-path="../../algorithm/geektime_note/10_散列表_2.html">
+            
+                <a href="../../algorithm/geektime_note/10_散列表_2.html">
+            
+                    
+                    散列表（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.15" data-path="../../algorithm/geektime_note/10_散列表_3.html">
+            
+                <a href="../../algorithm/geektime_note/10_散列表_3.html">
+            
+                    
+                    散列表（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.16" data-path="../../algorithm/geektime_note/11_哈希算法.html">
+            
+                <a href="../../algorithm/geektime_note/11_哈希算法.html">
+            
+                    
+                    哈希算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.17" data-path="../../algorithm/geektime_note/12_二叉树.html">
+            
+                <a href="../../algorithm/geektime_note/12_二叉树.html">
+            
+                    
+                    二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.18" data-path="../../algorithm/geektime_note/13_红黑树.html">
+            
+                <a href="../../algorithm/geektime_note/13_红黑树.html">
+            
+                    
+                    红黑树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../algorithm/swift_algorithm/">
+            
+                <a href="../../algorithm/swift_algorithm/">
+            
+                    
+                    Swift中相关的数据结构和算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.2.1" data-path="../../algorithm/swift_algorithm/String.html">
+            
+                <a href="../../algorithm/swift_algorithm/String.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.2" data-path="../../algorithm/swift_algorithm/Array.html">
+            
+                <a href="../../algorithm/swift_algorithm/Array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.3" data-path="../../algorithm/swift_algorithm/Dictionary.html">
+            
+                <a href="../../algorithm/swift_algorithm/Dictionary.html">
+            
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2.4" data-path="../../algorithm/swift_algorithm/Set.html">
+            
+                <a href="../../algorithm/swift_algorithm/Set.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../algorithm/js_algorithm/">
+            
+                <a href="../../algorithm/js_algorithm/">
+            
+                    
+                    JavaScript中相关的数据结构和算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.3.1" data-path="../../algorithm/js_algorithm/String.html">
+            
+                <a href="../../algorithm/js_algorithm/String.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3.2" data-path="../../algorithm/js_algorithm/Array.html">
+            
+                <a href="../../algorithm/js_algorithm/Array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3.3" data-path="../../algorithm/js_algorithm/Map.html">
+            
+                <a href="../../algorithm/js_algorithm/Map.html">
+            
+                    
+                    映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3.4" data-path="../../algorithm/js_algorithm/Set.html">
+            
+                <a href="../../algorithm/js_algorithm/Set.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <span>
+            
+                    
+                    Shell
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../shell/常用命令.html">
+            
+                <a href="../../shell/常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" >
+            
+                <span>
+            
+                    
+                    Gitbook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../gitbook/01_创建gitbook.html">
+            
+                <a href="../../gitbook/01_创建gitbook.html">
+            
+                    
+                    创建gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" >
+            
+                <span>
+            
+                    
+                    常用工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" >
+            
+                <span>
+            
+                    
+                    homebrew
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1.1" data-path="../../tool/homebrew/homebrew换源.html">
+            
+                <a href="../../tool/homebrew/homebrew换源.html">
+            
+                    
+                    homebrew换源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" >
+            
+                <span>
+            
+                    
+                    node
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.2.1" data-path="../../tool/node/npm修改配置文件.html">
+            
+                <a href="../../tool/node/npm修改配置文件.html">
+            
+                    
+                    npm修改配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2.2" data-path="../../tool/node/卸载node.html">
+            
+                <a href="../../tool/node/卸载node.html">
+            
+                    
+                    卸载重装node
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" >
+            
+                <span>
+            
+                    
+                    git
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.3.1" data-path="../../tool/git/git常用命令.html">
+            
+                <a href="../../tool/git/git常用命令.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3.2" data-path="../../tool/git/git常用操作.html">
+            
+                <a href="../../tool/git/git常用操作.html">
+            
+                    
+                    git常用操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" >
+            
+                <span>
+            
+                    
+                    正则表达式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.4.1" data-path="../../tool/reg/reg.html">
+            
+                <a href="../../tool/reg/reg.html">
+            
+                    
+                    Js中的正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5" >
+            
+                <span>
+            
+                    
+                    cocoapods
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.5.1" data-path="../../tool/cocoapods/常用命令.html">
+            
+                <a href="../../tool/cocoapods/常用命令.html">
+            
+                    
+                    常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5.2" data-path="../../tool/cocoapods/简单原理.html">
+            
+                <a href="../../tool/cocoapods/简单原理.html">
+            
+                    
+                    Cocoapods简单原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5.3" data-path="../../tool/cocoapods/搭建私有库.html">
+            
+                <a href="../../tool/cocoapods/搭建私有库.html">
+            
+                    
+                    Cocoapods搭建私有仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >09_hook</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#hook"><b></b>Hook</a></li><ul><li><span class="title-icon "></span><a href="#method-swizzle"><b></b>Method Swizzle</a></li><li><span class="title-icon "></span><a href="#fishhook"><b></b>FishHook</a></li><ul><li><span class="title-icon "></span><a href="#&#x6D41;&#x7A0B;"><b></b>&#x6D41;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x6C47;&#x7F16;&#x5C42;&#x9762;&#x5206;&#x6790;&#x6700;&#x7EC8;&#x6D41;&#x7A0B;"><b></b>&#x6C47;&#x7F16;&#x5C42;&#x9762;&#x5206;&#x6790;&#x6700;&#x7EC8;&#x6D41;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;"><b></b>&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x6E90;&#x7801;&#x89E3;&#x6790;"><b></b>&#x6E90;&#x7801;&#x89E3;&#x6790;</a></li></ul><li><span class="title-icon "></span><a href="#inlinehook"><b></b>inlineHook</a></li><li><span class="title-icon "></span><a href="#cydia-substrate"><b></b>Cydia Substrate</a></li></ul></ul></div><a href="#hook" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="hook"><a name="hook" class="anchor-navigation-ex-anchor" href="#hook"><i class="fa fa-link" aria-hidden="true"></i></a>Hook</h1>
+<h2 id="method-swizzle"><a name="method-swizzle" class="anchor-navigation-ex-anchor" href="#method-swizzle"><i class="fa fa-link" aria-hidden="true"></i></a>Method Swizzle</h2>
+<h2 id="fishhook"><a name="fishhook" class="anchor-navigation-ex-anchor" href="#fishhook"><i class="fa fa-link" aria-hidden="true"></i></a>FishHook</h2>
+<blockquote>
+<p>&#x91CD;&#x65B0;&#x7ED1;&#x5B9A;&#x7B26;&#x53F7;&#x8868;</p>
+<p>&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x61D2;&#x52A0;&#x8F7D;&#x548C;&#x975E;&#x61D2;&#x52A0;&#x8F7D;&#x4E24;&#x4E2A;&#x8868;&#x7684;&#x6307;&#x9488;&#x8FBE;&#x5230;C&#x51FD;&#x6570;HOOK&#x7684;&#x76EE;&#x7684;</p>
+</blockquote>
+<h3 id="&#x6D41;&#x7A0B;"><a name="&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D41;&#x7A0B;</h3>
+<pre class="language-"><code class="lang-objective-c"><span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;123&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//&#x521B;&#x5EFA;rebinding &#x7ED3;&#x6784;&#x4F53;</span>
+<span class="token keyword">struct</span> rebinding nslog<span class="token punctuation">;</span>
+nslog<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;NSLog&quot;</span><span class="token punctuation">;</span>
+nslog<span class="token punctuation">.</span>replacement <span class="token operator">=</span> my_NSLog<span class="token punctuation">;</span>
+<span class="token comment">//&#x4FDD;&#x5B58;NSLog&#x7CFB;&#x7EDF;&#x51FD;&#x6570;&#x5730;&#x5740;&#x7684;&#x6307;&#x9488;!</span>
+nslog<span class="token punctuation">.</span>replaced <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>sys_nslog<span class="token punctuation">;</span>
+<span class="token comment">//&#x9700;&#x6C42;:HOOK NSLog</span>
+<span class="token keyword">struct</span> rebinding bds<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>nslog<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">rebind_symbols</span><span class="token punctuation">(</span>bds<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;end&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ol>
+<li>&#x7A0B;&#x5E8F;&#x7F16;&#x8BD1;&#x4E4B;&#x540E;&#xFF0C;&#x5728;Mach-O&#x4E2D;&#x6709;&#x61D2;&#x52A0;&#x8F7D;&#x548C;&#x975E;&#x61D2;&#x52A0;&#x8F7D;&#x4E24;&#x5F20;&#x8868;&#x3002;</li>
+</ol>
+<p><img src="https://gitee.com/dexport/blog-image/raw/master/img/20210725123449.png" alt=""></p>
+<p>&#x8FD9;&#x4E24;&#x5F20;&#x8868;&#x4E2D;&#x8BB0;&#x5F55;&#x4E86;&#x9700;&#x8981;bind&#x7684;&#x7B26;&#x53F7;&#xFF0C;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x6F14;&#x793A;&#x7684;<code>NSLog</code>&#x5C5E;&#x4E8E;&#x61D2;&#x52A0;&#x8F7D;&#x7B26;&#x53F7;&#x8868;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x624D;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;</p>
+<ol>
+<li><p>&#x5728;&#x9996;&#x6B21;&#x6267;&#x884C;<code>NSLog</code>&#x4E4B;&#x524D;&#xFF0C;&#x5148;&#x901A;&#x8FC7;Mach-O&#x548C;&#x7A0B;&#x5E8F;&#x7684;ASLR&#x67E5;&#x770B;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x5B58;&#x50A8;&#x503C;&#xFF1A;</p>
+</li>
+<li><p>&#x901A;&#x8FC7;lldb&#x67E5;&#x770B;ASLR</p>
+</li>
+</ol>
+<pre class="language-"><code class="lang-shell"><span class="token comment"># slide &#x4E3A; 0x25ac000</span>
+<span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> image list
+<span class="token punctuation">[</span>  <span class="token number">0</span><span class="token punctuation">]</span> B5C04260-B346-3AEE-B640-D648C77F2D87 0x00000001025ac000 /Users/360jr/Library/Developer/Xcode/DerivedData/001--fishhookDemo-enjeubscnnocrabjzuikobbkipgr/Build/Products/Debug-iphoneos/001--fishhookDemo.app/001--fishhookDemo
+</code></pre>
+<ul>
+<li>Mach-O&#x4E2D;&#x627E;&#x5230;NSLog&#x7684;&#x51FD;&#x6570;&#x5730;&#x5740;&#x4FE1;&#x606F;&#xFF1A;</li>
+</ul>
+<p><img src="https://gitee.com/dexport/blog-image/raw/master/img/20210725124058.png" alt="&#x7B26;&#x53F7;&#x4FE1;&#x606F;"></p>
+<ul>
+<li>&#x901A;&#x8FC7;&#x901A;&#x8FC7;&#x7A0B;&#x5E8F;&#x8D77;&#x59CB;&#x5730;&#x5740;<code>0x00000001025ac000</code>&#x52A0;&#x4E0A;Offset<code>0xc000</code>&#xFF0C;&#x5C31;&#x7684;&#x5230;NSLog&#x7B26;&#x53F7;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x67E5;&#x770B;&#x5185;&#x5B58;&#x7A7A;&#x95F4;</li>
+</ul>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> x/g 0x00000001025ac000+0xc000
+0x1025b8000: 0x00000001025b24ec
+</code></pre>
+<ul>
+<li>&#x53D1;&#x73B0;&#x4E0E;Mach-O&#x4E2D;&#x7684;Data&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x539F;&#x56E0;&#x662F;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;Data&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;Mach-O&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x5730;&#x5740;&#xFF0C;&#x5728;dyld&#x52A0;&#x8F7D;&#x9636;&#x6BB5;&#x8FDB;&#x884C;&#x4E86;rebase&#xFF0C;&#x6240;&#x6709;&#x4F7F;&#x7528;slide&#x673A;&#x4E0A;Data&#x4E2D;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5373;&#x53EF;&#x7684;&#x5230;&#x76F8;&#x540C;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x5730;&#x5740;</li>
+</ul>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> p/x 0x1000064ec + 0x25ac000
+<span class="token punctuation">(</span>long<span class="token punctuation">)</span> <span class="token variable">$5</span> <span class="token operator">=</span> 0x00000001025b24ec
+</code></pre>
+<ul>
+<li>NSLog&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x6267;&#x884C;&#x7684;&#x4F1A;&#x540E;&#xFF0C;&#x4F1A;&#x8DF3;&#x5230;<code>0x00000001025b24ec</code>&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x6307;&#x5411;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x6267;&#x884C;&#x7ED1;&#x5B9A;&#x5DE5;&#x4F5C;&#xFF0C;&#x8FC7;&#x6389;&#x7B2C;&#x4E00;&#x4E2A;NSLog&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;Data&#x7684;&#x503C;&#x53D1;&#x751F;&#x4E86;&#x6539;&#x53D8;</li>
+</ul>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> x/g 0x00000001025ac000+0xc000
+0x1025b8000: 0x000000018932b3c4
+</code></pre>
+<ul>
+<li>&#x67E5;&#x770B;&#x6C47;&#x7F16;&#xFF0C;&#x53D1;&#x73B0;&#x5DF2;&#x7ECF;&#x53D8;&#x6210;&#x4E86;NSLog&#x7684;&#x5730;&#x5740;</li>
+</ul>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> dis -s 0x000000018932b3c4
+Foundation`NSLog:
+    0x18932b3c4 <span class="token operator">&lt;</span>+<span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>:  pacibsp 
+    0x18932b3c8 <span class="token operator">&lt;</span>+<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>:  sub    sp, sp, <span class="token comment">#0x20             ; =0x20 </span>
+    0x18932b3cc <span class="token operator">&lt;</span>+<span class="token operator"><span class="token file-descriptor important">8</span>&gt;</span>:  stp    x29, x30, <span class="token punctuation">[</span>sp, <span class="token comment">#0x10]</span>
+    0x18932b3d0 <span class="token operator">&lt;</span>+1<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>: <span class="token function">add</span>    x29, sp, <span class="token comment">#0x10            ; =0x10 </span>
+    0x18932b3d4 <span class="token operator">&lt;</span>+1<span class="token operator"><span class="token file-descriptor important">6</span>&gt;</span>: adrp   x8, <span class="token number">347853</span>
+    0x18932b3d8 <span class="token operator">&lt;</span>+2<span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>: ldr    x8, <span class="token punctuation">[</span>x8, <span class="token comment">#0xe0]</span>
+    0x18932b3dc <span class="token operator">&lt;</span>+2<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>: ldr    x8, <span class="token punctuation">[</span>x8<span class="token punctuation">]</span>
+    0x18932b3e0 <span class="token operator">&lt;</span>+2<span class="token operator"><span class="token file-descriptor important">8</span>&gt;</span>: str    x8, <span class="token punctuation">[</span>sp, <span class="token comment">#0x8]</span>
+</code></pre>
+<ul>
+<li>&#x7136;&#x540E;&#x540C;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8FC7;&#x6389;fishhook&#x4E4B;&#x540E;&#x7684;NSLog&#xFF0C;&#x53D1;&#x73B0;&#x5730;&#x5740;&#x6709;&#x53D8;&#x5316;&#x4E86;&#xFF0C;&#x6210;&#x4E3A;&#x4E86;&#x6211;&#x4EEC;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5730;&#x5740;</li>
+</ul>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> x/g 0x00000001025ac000+0xc000
+0x1025b8000: 0x00000001025b1614
+
+<span class="token punctuation">(</span>lldb<span class="token punctuation">)</span> dis -s 0x00000001025b1614
+001--fishhookDemo`my_NSLog:
+    0x1025b1614 <span class="token operator">&lt;</span>+<span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>:  sub    sp, sp, <span class="token comment">#0x30             ; =0x30 </span>
+    0x1025b1618 <span class="token operator">&lt;</span>+<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>:  stp    x29, x30, <span class="token punctuation">[</span>sp, <span class="token comment">#0x20]</span>
+    0x1025b161c <span class="token operator">&lt;</span>+<span class="token operator"><span class="token file-descriptor important">8</span>&gt;</span>:  <span class="token function">add</span>    x29, sp, <span class="token comment">#0x20            ; =0x20 </span>
+    0x1025b1620 <span class="token operator">&lt;</span>+1<span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>: sub    x8, x29, <span class="token comment">#0x8             ; =0x8 </span>
+    0x1025b1624 <span class="token operator">&lt;</span>+1<span class="token operator"><span class="token file-descriptor important">6</span>&gt;</span>: mov    x9, <span class="token comment">#0x0</span>
+    0x1025b1628 <span class="token operator">&lt;</span>+2<span class="token operator"><span class="token file-descriptor important">0</span>&gt;</span>: stur   xzr, <span class="token punctuation">[</span>x29, <span class="token comment">#-0x8]</span>
+    0x1025b162c <span class="token operator">&lt;</span>+2<span class="token operator"><span class="token file-descriptor important">4</span>&gt;</span>: str    x0, <span class="token punctuation">[</span>sp, <span class="token comment">#0x10]</span>
+    0x1025b1630 <span class="token operator">&lt;</span>+2<span class="token operator"><span class="token file-descriptor important">8</span>&gt;</span>: mov    x0, x8
+</code></pre>
+<h3 id="&#x6C47;&#x7F16;&#x5C42;&#x9762;&#x5206;&#x6790;&#x6700;&#x7EC8;&#x6D41;&#x7A0B;"><a name="&#x6C47;&#x7F16;&#x5C42;&#x9762;&#x5206;&#x6790;&#x6700;&#x7EC8;&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x6C47;&#x7F16;&#x5C42;&#x9762;&#x5206;&#x6790;&#x6700;&#x7EC8;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6C47;&#x7F16;&#x5C42;&#x9762;&#x5206;&#x6790;&#x6700;&#x7EC8;&#x6D41;&#x7A0B;</h3>
+<p>&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-objective-c"><span class="token operator">-</span> <span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>viewDidLoad <span class="token punctuation">{</span>
+    <span class="token punctuation">[</span><span class="token keyword">super</span> viewDidLoad<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;123&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">NSLog</span><span class="token punctuation">(</span><span class="token string">@&quot;end&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>&#x65AD;&#x70B9;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;NSLog&#xFF0C;&#x8FDB;&#x5165;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x67E5;&#x770B;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;&#x8DF3;&#x8F6C;&#x5230;&#x4E00;&#x4E2A;symbol stub&#x7684;&#x5730;&#x5740;&#xFF0C;&#x901A;&#x8FC7;lldb&#x83B7;&#x53D6;&#x7A0B;&#x5E8F;&#x8D77;&#x59CB;&#x5730;&#x5740;<code>0x00000001005fc000</code></li>
+</ul>
+<pre class="language-"><code>0x100601e38 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>+68</span><span class="token punctuation">&gt;</span></span>: bl     0x1006024d4               ; symbol stub for: NSLog
+
+// &#x76F8;&#x51CF;&#x83B7;&#x53D6;&#x5728;macho&#x4E2D;&#x7684;&#x504F;&#x79FB;&#x503C;
+(lldb) p/x 0x1006024d4-0x00000001005fc000
+(long) $1 = 0x00000000000064d4
+</code></pre><ul>
+<li>macho&#x4E2D;&#x67E5;&#x770B;&#x5730;&#x5740;&#x4FE1;&#x606F;</li>
+</ul>
+<p><img src="https://gitee.com/dexport/blog-image/raw/master/img/20210725135449.png" alt=""></p>
+<ul>
+<li>&#x8FD9;&#x91CC;&#x7684;Data&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4EE3;&#x7801;&#xFF0C;&#x901A;&#x8FC7;&#x6C47;&#x7F16;&#x8FDB;&#x5165;&#x8C03;&#x8BD5;&#x67E5;&#x770B;&#x4EE3;&#x7801;&#xFF0C;&#x53D1;&#x73B0;&#x6700;&#x7EC8;&#x8DF3;&#x8F6C;&#x4E86;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#xFF0C;&#x67E5;&#x770B;x16&#x7684;&#x5730;&#x5740;</li>
+</ul>
+<pre class="language-"><code>// &#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;&#x53BB;&#x6267;&#x884C;&#x61D2;&#x52A0;&#x8F7D;&#x7B26;&#x53F7;&#x8868;&#x4E2D;&#x7684;&#x5730;&#x5740;
+001--fishhookDemo`NSLog:
+-&gt;  0x1006024d4 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>+0</span><span class="token punctuation">&gt;</span></span>: nop    
+    0x1006024d8 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>+4</span><span class="token punctuation">&gt;</span></span>: ldr    x16, #0x5b28              ; (void *)0x0000000100602588
+    0x1006024dc <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>+8</span><span class="token punctuation">&gt;</span></span>: br     x16
+
+(lldb) register read x16
+     x16 = 0x0000000100602588  
+// &#x83B7;&#x53D6;macho&#x4E2D;&#x7684;&#x504F;&#x79FB;&#x5730;&#x5740;     
+(lldb) p/x 0x0000000100602588-0x00000001005fc000
+(long) $2 = 0x0000000000006588
+</code></pre><p><img src="https://gitee.com/dexport/blog-image/raw/master/img/20210725142357.png" alt=""></p>
+<ul>
+<li>&#x53D1;&#x73B0;&#x8FD9;&#x4E2A;Symbol Stubs&#x4EE3;&#x7801;&#x6267;&#x884C;&#x540E;&#x8DF3;&#x8F6C;&#x7684;&#x662F;<code>0x0000000000006588</code></li>
+</ul>
+<p><img src="https://gitee.com/dexport/blog-image/raw/master/img/20210725140209.png" alt=""></p>
+<ul>
+<li><code>0x0000000000006588</code>&#x5728;stub helper&#x4E2D;&#x6267;&#x884C;&#x4E24;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x6700;&#x7EC8;&#x8DF3;&#x8F6C;&#x5230;0x6579&#x5904;&#x6267;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x53D1;&#x73B0;&#xFF0C;&#x6700;&#x7EC8;&#x90FD;&#x8DF3;&#x8F6C;&#x5230;0x100008000&#x5904;&#x3002;<strong>&#x8FD9;&#x91CC;&#x7684;&#x5916;&#x90E8;&#x7B26;&#x53F7;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x6700;&#x7EC8;&#x90FD;&#x662F;&#x8DF3;&#x8F6C;&#x5230;&#x76F8;&#x540C;&#x7684;&#x5730;&#x5740;</strong></li>
+<li>&#x67E5;&#x770B;<code>0x8000</code>&#x5904;&#xFF0C;&#x6267;&#x884C;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x61D2;&#x52A0;&#x8F7D;&#x7ED1;&#x5B9A;&#x7684;<code>dyld_stub_binder</code>&#x7B26;&#x53F7;&#xFF0C;&#x975E;&#x61D2;&#x52A0;&#x8F7D;&#x7B26;&#x53F7;&#x5373;&#x662F;&#x5728;dyld&#x52A0;&#x8F7D;&#x9636;&#x6BB5;&#x5C31;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6267;&#x884C;&#x540E;&#xFF0C;&#x61D2;&#x52A0;&#x8F7D;&#x7B26;&#x53F7;&#x8868;&#x4E2D;&#x7684;&#x5730;&#x5740;&#x5C31;&#x88AB;&#x6539;&#x53D8;&#xFF0C;&#x4E0B;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7ECF;&#x8FC7;stub&#x51FD;&#x6570;&#xFF0C;&#x76F4;&#x63A5;&#x5C31;&#x8DF3;&#x8F6C;&#x5230;&#x7ED1;&#x5B9A;&#x540E;&#x7684;&#x4F4D;&#x7F6E;&#x4E86;</li>
+</ul>
+<p><img src="https://gitee.com/dexport/blog-image/raw/master/img/20210725140641.png" alt=""></p>
+<h3 id="&#x4F7F;&#x7528;"><a name="&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;</h3>
+<pre class="language-"><code class="lang-objective-c"><span class="token comment">//&#x521B;&#x5EFA;rebinding &#x7ED3;&#x6784;&#x4F53;</span>
+    <span class="token keyword">struct</span> rebinding nslog<span class="token punctuation">;</span>
+    nslog<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&quot;NSLog&quot;</span><span class="token punctuation">;</span>
+    nslog<span class="token punctuation">.</span>replacement <span class="token operator">=</span> my_NSLog<span class="token punctuation">;</span>
+    <span class="token comment">//&#x4FDD;&#x5B58;NSLog&#x7CFB;&#x7EDF;&#x51FD;&#x6570;&#x5730;&#x5740;&#x7684;&#x6307;&#x9488;!</span>
+    nslog<span class="token punctuation">.</span>replaced <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>sys_nslog<span class="token punctuation">;</span>
+
+    <span class="token comment">//&#x9700;&#x6C42;:HOOK NSLog</span>
+    <span class="token keyword">struct</span> rebinding bds<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>nslog<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token function">rebind_symbols</span><span class="token punctuation">(</span>bds<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="&#x6E90;&#x7801;&#x89E3;&#x6790;"><a name="&#x6E90;&#x7801;&#x89E3;&#x6790;" class="anchor-navigation-ex-anchor" href="#&#x6E90;&#x7801;&#x89E3;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E90;&#x7801;&#x89E3;&#x6790;</h3>
+<pre class="language-"><code class="lang-c++"><span class="token comment">// Hook&#x7684;&#x7ED3;&#x6784;&#x4F53;</span>
+<span class="token keyword">struct</span> <span class="token class-name">rebinding</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>name<span class="token punctuation">;</span><span class="token comment">//&#x9700;&#x8981;HOOK&#x7684;&#x51FD;&#x6570;&#x540D;&#x79F0;&#xFF0C;C&#x5B57;&#x7B26;&#x4E32;</span>
+  <span class="token keyword">void</span> <span class="token operator">*</span>replacement<span class="token punctuation">;</span><span class="token comment">//&#x65B0;&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;</span>
+  <span class="token keyword">void</span> <span class="token operator">*</span><span class="token operator">*</span>replaced<span class="token punctuation">;</span><span class="token comment">//&#x539F;&#x59CB;&#x51FD;&#x6570;&#x5730;&#x5740;&#x7684;&#x6307;&#x9488;&#xFF01;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// fishhook.c</span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&quot;fishhook.h&quot;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;dlfcn.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;sys/types.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;mach-o/dyld.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;mach-o/loader.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;mach-o/nlist.h&gt;</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">__LP64__</span></span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">mach_header_64</span> mach_header_t<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">segment_command_64</span> segment_command_t<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">section_64</span> section_t<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">nlist_64</span> nlist_t<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token expression">LC_SEGMENT_ARCH_DEPENDENT LC_SEGMENT_64</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">else</span></span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">mach_header</span> mach_header_t<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">segment_command</span> segment_command_t<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">section</span> section_t<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">nlist</span> nlist_t<span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token expression">LC_SEGMENT_ARCH_DEPENDENT LC_SEGMENT</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">SEG_DATA_CONST</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token expression">SEG_DATA_CONST  </span><span class="token string">&quot;__DATA_CONST&quot;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+
+<span class="token keyword">struct</span> <span class="token class-name">rebindings_entry</span> <span class="token punctuation">{</span>
+  <span class="token keyword">struct</span> <span class="token class-name">rebinding</span> <span class="token operator">*</span>rebindings<span class="token punctuation">;</span>
+  size_t rebindings_nel<span class="token punctuation">;</span>
+  <span class="token keyword">struct</span> <span class="token class-name">rebindings_entry</span> <span class="token operator">*</span>next<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">static</span> <span class="token keyword">struct</span> <span class="token class-name">rebindings_entry</span> <span class="token operator">*</span>_rebindings_head<span class="token punctuation">;</span>
+
+<span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">prepend_rebindings</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">rebindings_entry</span> <span class="token operator">*</span><span class="token operator">*</span>rebindings_head<span class="token punctuation">,</span>
+                              <span class="token keyword">struct</span> <span class="token class-name">rebinding</span> rebindings<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                              size_t nel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">struct</span> <span class="token class-name">rebindings_entry</span> <span class="token operator">*</span>new_entry <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">rebindings_entry</span> <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">rebindings_entry</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>new_entry<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  new_entry<span class="token operator">-&gt;</span>rebindings <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">rebinding</span> <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">rebinding</span><span class="token punctuation">)</span> <span class="token operator">*</span> nel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>new_entry<span class="token operator">-&gt;</span>rebindings<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>new_entry<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">memcpy</span><span class="token punctuation">(</span>new_entry<span class="token operator">-&gt;</span>rebindings<span class="token punctuation">,</span> rebindings<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">rebinding</span><span class="token punctuation">)</span> <span class="token operator">*</span> nel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  new_entry<span class="token operator">-&gt;</span>rebindings_nel <span class="token operator">=</span> nel<span class="token punctuation">;</span>
+  new_entry<span class="token operator">-&gt;</span>next <span class="token operator">=</span> <span class="token operator">*</span>rebindings_head<span class="token punctuation">;</span>
+  <span class="token operator">*</span>rebindings_head <span class="token operator">=</span> new_entry<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">perform_rebinding_with_section</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">rebindings_entry</span> <span class="token operator">*</span>rebindings<span class="token punctuation">,</span>
+                                           section_t <span class="token operator">*</span>section<span class="token punctuation">,</span>
+                                           intptr_t slide<span class="token punctuation">,</span>
+                                           nlist_t <span class="token operator">*</span>symtab<span class="token punctuation">,</span>
+                                           <span class="token keyword">char</span> <span class="token operator">*</span>strtab<span class="token punctuation">,</span>
+                                           <span class="token keyword">uint32_t</span> <span class="token operator">*</span>indirect_symtab<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//nl_symbol_ptr&#x548C;la_symbol_ptrsection&#x4E2D;&#x7684;reserved1&#x5B57;&#x6BB5;&#x6307;&#x660E;&#x5BF9;&#x5E94;&#x7684;indirect symbol table&#x8D77;&#x59CB;&#x7684;index</span>
+  <span class="token keyword">uint32_t</span> <span class="token operator">*</span>indirect_symbol_indices <span class="token operator">=</span> indirect_symtab <span class="token operator">+</span> section<span class="token operator">-&gt;</span>reserved1<span class="token punctuation">;</span>
+    <span class="token comment">//slide+section-&gt;addr &#x5C31;&#x662F;&#x7B26;&#x53F7;&#x5BF9;&#x5E94;&#x7684;&#x5B58;&#x653E;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x7684;&#x6570;&#x7EC4;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x76F8;&#x5E94;&#x7684;__nl_symbol_ptr&#x548C;__la_symbol_ptr&#x76F8;&#x5E94;&#x7684;&#x51FD;&#x6570;&#x6307;&#x9488;&#x90FD;&#x5728;&#x8FD9;&#x91CC;&#x9762;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x53BB;&#x5BFB;&#x627E;&#x5230;&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;</span>
+  <span class="token keyword">void</span> <span class="token operator">*</span><span class="token operator">*</span>indirect_symbol_bindings <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">(</span>uintptr_t<span class="token punctuation">)</span>slide <span class="token operator">+</span> section<span class="token operator">-&gt;</span>addr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//&#x904D;&#x5386;section&#x91CC;&#x9762;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>uint i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> section<span class="token operator">-&gt;</span>size <span class="token operator">/</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//&#x627E;&#x5230;&#x7B26;&#x53F7;&#x5728;Indrect Symbol Table&#x8868;&#x4E2D;&#x7684;&#x503C;</span>
+      <span class="token comment">//&#x8BFB;&#x53D6;indirect table&#x4E2D;&#x7684;&#x6570;&#x636E;</span>
+    <span class="token keyword">uint32_t</span> symtab_index <span class="token operator">=</span> indirect_symbol_indices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>symtab_index <span class="token operator">==</span> INDIRECT_SYMBOL_ABS <span class="token operator">||</span> symtab_index <span class="token operator">==</span> INDIRECT_SYMBOL_LOCAL <span class="token operator">||</span>
+        symtab_index <span class="token operator">==</span> <span class="token punctuation">(</span>INDIRECT_SYMBOL_LOCAL   <span class="token operator">|</span> INDIRECT_SYMBOL_ABS<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">continue</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+      <span class="token comment">//&#x4EE5;symtab_index&#x4F5C;&#x4E3A;&#x4E0B;&#x6807;&#xFF0C;&#x8BBF;&#x95EE;symbol table</span>
+      <span class="token keyword">uint32_t</span> strtab_offset <span class="token operator">=</span> symtab<span class="token punctuation">[</span>symtab_index<span class="token punctuation">]</span><span class="token punctuation">.</span>n_un<span class="token punctuation">.</span>n_strx<span class="token punctuation">;</span>
+      <span class="token comment">//&#x83B7;&#x53D6;&#x5230;symbol_name</span>
+      <span class="token keyword">char</span> <span class="token operator">*</span>symbol_name <span class="token operator">=</span> strtab <span class="token operator">+</span> strtab_offset<span class="token punctuation">;</span>
+      <span class="token comment">//&#x5224;&#x65AD;&#x662F;&#x5426;&#x51FD;&#x6570;&#x7684;&#x540D;&#x79F0;&#x662F;&#x5426;&#x6709;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x4E3A;&#x5565;&#x662F;&#x4E24;&#x4E2A;&#xFF0C;&#x56E0;&#x4E3A;&#x51FD;&#x6570;&#x524D;&#x9762;&#x6709;&#x4E2A;_&#xFF0C;&#x6240;&#x4EE5;&#x65B9;&#x6CD5;&#x7684;&#x540D;&#x79F0;&#x6700;&#x5C11;&#x8981;1&#x4E2A;</span>
+      <span class="token keyword">bool</span> symbol_name_longer_than_1 <span class="token operator">=</span> symbol_name<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> symbol_name<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token comment">//&#x904D;&#x5386;&#x6700;&#x521D;&#x7684;&#x94FE;&#x8868;&#xFF0C;&#x6765;&#x8FDB;&#x884C;hook</span>
+      <span class="token keyword">struct</span> <span class="token class-name">rebindings_entry</span> <span class="token operator">*</span>cur <span class="token operator">=</span> rebindings<span class="token punctuation">;</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>cur<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">for</span> <span class="token punctuation">(</span>uint j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> cur<span class="token operator">-&gt;</span>rebindings_nel<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token comment">//&#x8FD9;&#x91CC;if&#x7684;&#x6761;&#x4EF6;&#x5C31;&#x662F;&#x5224;&#x65AD;&#x4ECE;symbol_name[1]&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x540D;&#x5B57;&#x662F;&#x5426;&#x90FD;&#x662F;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x4EE5;&#x53CA;&#x5224;&#x65AD;&#x4E24;&#x4E2A;</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>symbol_name_longer_than_1 <span class="token operator">&amp;&amp;</span>
+                  <span class="token function">strcmp</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>symbol_name<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> cur<span class="token operator">-&gt;</span>rebindings<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token comment">//&#x5224;&#x65AD;replaced&#x7684;&#x5730;&#x5740;&#x4E0D;&#x4E3A;NULL&#x4EE5;&#x53CA;&#x6211;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x548C;rebindings[j].replacement&#x7684;&#x65B9;&#x6CD5;&#x4E0D;&#x4E00;&#x81F4;</span>
+                  <span class="token keyword">if</span> <span class="token punctuation">(</span>cur<span class="token operator">-&gt;</span>rebindings<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>replaced <span class="token operator">!=</span> <span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span>
+                      indirect_symbol_bindings<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> cur<span class="token operator">-&gt;</span>rebindings<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>replacement<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      <span class="token comment">//&#x8BA9;rebindings[j].replaced&#x4FDD;&#x5B58;indirect_symbol_bindings[i]&#x7684;&#x51FD;&#x6570;&#x5730;&#x5740;</span>
+                      <span class="token operator">*</span><span class="token punctuation">(</span>cur<span class="token operator">-&gt;</span>rebindings<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>replaced<span class="token punctuation">)</span> <span class="token operator">=</span> indirect_symbol_bindings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+                  <span class="token comment">//&#x5C06;&#x66FF;&#x6362;&#x540E;&#x7684;&#x65B9;&#x6CD5;&#x7ED9;&#x539F;&#x5148;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x66FF;&#x6362;&#x5185;&#x5BB9;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x5730;&#x5740;</span>
+                  indirect_symbol_bindings<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> cur<span class="token operator">-&gt;</span>rebindings<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>replacement<span class="token punctuation">;</span>
+                  <span class="token keyword">goto</span> symbol_loop<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      cur <span class="token operator">=</span> cur<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  symbol_loop<span class="token operator">:</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//&#x56DE;&#x8C03;&#x7684;&#x6700;&#x7EC8;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF01; &#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x8981;&#x4EA4;&#x6362;&#x7684;&#x6570;&#x7EC4;  &#x3001; image&#x7684;&#x5934; &#x3001; ASLR&#x7684;&#x504F;&#x79FB;</span>
+<span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">rebind_symbols_for_image</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">rebindings_entry</span> <span class="token operator">*</span>rebindings<span class="token punctuation">,</span>
+                                     <span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">mach_header</span> <span class="token operator">*</span>header<span class="token punctuation">,</span>
+                                     intptr_t slide<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">/*dladdr() &#x53EF;&#x786E;&#x5B9A;&#x6307;&#x5B9A;&#x7684;address &#x662F;&#x5426;&#x4F4D;&#x4E8E;&#x6784;&#x6210;&#x8FDB;&#x7A0B;&#x7684;&#x8FDB;&#x5740;&#x7A7A;&#x95F4;&#x7684;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#xFF08;&#x53EF;&#x6267;&#x884C;&#x5E93;&#x6216;&#x5171;&#x4EAB;&#x5E93;&#xFF09;&#x5185;&#xFF0C;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x5730;&#x5740;&#x4F4D;&#x4E8E;&#x5728;&#x5176;&#x4E0A;&#x9762;&#x6620;&#x5C04;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x7684;&#x57FA;&#x5740;&#x548C;&#x4E3A;&#x8BE5;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x6620;&#x5C04;&#x7684;&#x6700;&#x9AD8;&#x865A;&#x62DF;&#x5730;&#x5740;&#x4E4B;&#x95F4;&#xFF08;&#x5305;&#x62EC;&#x4E24;&#x7AEF;&#xFF09;&#xFF0C;&#x5219;&#x8BA4;&#x4E3A;&#x8BE5;&#x5730;&#x5740;&#x5728;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x7684;&#x8303;&#x56F4;&#x5185;&#x3002;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x7B26;&#x5408;&#x8FD9;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x5219;&#x4F1A;&#x641C;&#x7D22;&#x5176;&#x52A8;&#x6001;&#x7B26;&#x53F7;&#x8868;&#xFF0C;&#x4EE5;&#x67E5;&#x627E;&#x4E0E;&#x6307;&#x5B9A;&#x7684;address &#x6700;&#x63A5;&#x8FD1;&#x7684;&#x7B26;&#x53F7;&#x3002;&#x6700;&#x63A5;&#x8FD1;&#x7684;&#x7B26;&#x53F7;&#x662F;&#x6307;&#x5176;&#x503C;&#x7B49;&#x4E8E;&#xFF0C;&#x6216;&#x6700;&#x4E3A;&#x63A5;&#x8FD1;&#x4F46;&#x5C0F;&#x4E8E;&#x6307;&#x5B9A;&#x7684;address &#x7684;&#x7B26;&#x53F7;&#x3002;
+     */</span>
+    <span class="token comment">/*
+     &#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684;address &#x4E0D;&#x5728;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x7684;&#x8303;&#x56F4;&#x5185;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;0 &#xFF1B;&#x4E14;&#x4E0D;&#x4FEE;&#x6539;Dl_info &#x7ED3;&#x6784;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x5426;&#x5219;&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x975E;&#x96F6;&#x503C;&#xFF0C;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;Dl_info &#x7ED3;&#x6784;&#x7684;&#x5B57;&#x6BB5;&#x3002;
+     &#x5982;&#x679C;&#x5728;&#x5305;&#x542B;address &#x7684;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x5185;&#xFF0C;&#x627E;&#x4E0D;&#x5230;&#x5176;&#x503C;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;address &#x7684;&#x7B26;&#x53F7;&#xFF0C;&#x5219;dli_sname &#x3001;dli_saddr &#x548C;dli_size&#x5B57;&#x6BB5;&#x5C06;&#x8BBE;&#x7F6E;&#x4E3A;0 &#xFF1B; dli_bind &#x5B57;&#x6BB5;&#x8BBE;&#x7F6E;&#x4E3A;STB_LOCAL &#xFF0C; dli_type &#x5B57;&#x6BB5;&#x8BBE;&#x7F6E;&#x4E3A;STT_NOTYPE &#x3002;
+     */</span>
+    <span class="token comment">//&#x8FD9;&#x4E2A;dladdr&#x51FD;&#x6570;&#x5C31;&#x662F;&#x5728;&#x7A0B;&#x5E8F;&#x91CC;&#x9762;&#x627E;header</span>
+  Dl_info info<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">dladdr</span><span class="token punctuation">(</span>header<span class="token punctuation">,</span> <span class="token operator">&amp;</span>info<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+    <span class="token comment">//&#x4E0B;&#x9762;&#x5C31;&#x662F;&#x5B9A;&#x4E49;&#x597D;&#x51E0;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x51C6;&#x5907;&#x4ECE;MachO&#x91CC;&#x9762;&#x53BB;&#x627E;&#xFF01;</span>
+  segment_command_t <span class="token operator">*</span>cur_seg_cmd<span class="token punctuation">;</span>
+  segment_command_t <span class="token operator">*</span>linkedit_segment <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+  <span class="token keyword">struct</span> <span class="token class-name">symtab_command</span><span class="token operator">*</span> symtab_cmd <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+  <span class="token keyword">struct</span> <span class="token class-name">dysymtab_command</span><span class="token operator">*</span> dysymtab_cmd <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    <span class="token comment">//&#x8DF3;&#x8FC7;header&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x627E;loadCommand</span>
+  uintptr_t cur <span class="token operator">=</span> <span class="token punctuation">(</span>uintptr_t<span class="token punctuation">)</span>header <span class="token operator">+</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>mach_header_t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>uint i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> header<span class="token operator">-&gt;</span>ncmds<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">,</span> cur <span class="token operator">+=</span> cur_seg_cmd<span class="token operator">-&gt;</span>cmdsize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cur_seg_cmd <span class="token operator">=</span> <span class="token punctuation">(</span>segment_command_t <span class="token operator">*</span><span class="token punctuation">)</span>cur<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>cur_seg_cmd<span class="token operator">-&gt;</span>cmd <span class="token operator">==</span> LC_SEGMENT_ARCH_DEPENDENT<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">strcmp</span><span class="token punctuation">(</span>cur_seg_cmd<span class="token operator">-&gt;</span>segname<span class="token punctuation">,</span> SEG_LINKEDIT<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        linkedit_segment <span class="token operator">=</span> cur_seg_cmd<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>cur_seg_cmd<span class="token operator">-&gt;</span>cmd <span class="token operator">==</span> LC_SYMTAB<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      symtab_cmd <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">symtab_command</span><span class="token operator">*</span><span class="token punctuation">)</span>cur_seg_cmd<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>cur_seg_cmd<span class="token operator">-&gt;</span>cmd <span class="token operator">==</span> LC_DYSYMTAB<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      dysymtab_cmd <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">dysymtab_command</span><span class="token operator">*</span><span class="token punctuation">)</span>cur_seg_cmd<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+   <span class="token comment">//&#x5982;&#x679C;&#x521A;&#x624D;&#x83B7;&#x53D6;&#x7684;&#xFF0C;&#x6709;&#x4E00;&#x9879;&#x4E3A;&#x7A7A;&#x5C31;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>symtab_cmd <span class="token operator">||</span> <span class="token operator">!</span>dysymtab_cmd <span class="token operator">||</span> <span class="token operator">!</span>linkedit_segment <span class="token operator">||</span>
+      <span class="token operator">!</span>dysymtab_cmd<span class="token operator">-&gt;</span>nindirectsyms<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// Find base symbol/string table addresses</span>
+<span class="token comment">//&#x94FE;&#x63A5;&#x65F6;&#x7A0B;&#x5E8F;&#x7684;&#x57FA;&#x5740; = __LINKEDIT.VM_Address -__LINKEDIT.File_Offset + silde&#x7684;&#x6539;&#x53D8;&#x503C;</span>
+  uintptr_t linkedit_base <span class="token operator">=</span> <span class="token punctuation">(</span>uintptr_t<span class="token punctuation">)</span>slide <span class="token operator">+</span> linkedit_segment<span class="token operator">-&gt;</span>vmaddr <span class="token operator">-</span> linkedit_segment<span class="token operator">-&gt;</span>fileoff<span class="token punctuation">;</span>
+<span class="token comment">//    printf(&quot;&#x5730;&#x5740;:%p\n&quot;,linkedit_base);</span>
+    <span class="token comment">//&#x7B26;&#x53F7;&#x8868;&#x7684;&#x5730;&#x5740; = &#x57FA;&#x5740; + &#x7B26;&#x53F7;&#x8868;&#x504F;&#x79FB;&#x91CF;</span>
+  nlist_t <span class="token operator">*</span>symtab <span class="token operator">=</span> <span class="token punctuation">(</span>nlist_t <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>linkedit_base <span class="token operator">+</span> symtab_cmd<span class="token operator">-&gt;</span>symoff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token comment">//&#x5B57;&#x7B26;&#x4E32;&#x8868;&#x7684;&#x5730;&#x5740; = &#x57FA;&#x5740; + &#x5B57;&#x7B26;&#x4E32;&#x8868;&#x504F;&#x79FB;&#x91CF;</span>
+  <span class="token keyword">char</span> <span class="token operator">*</span>strtab <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>linkedit_base <span class="token operator">+</span> symtab_cmd<span class="token operator">-&gt;</span>stroff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Get indirect symbol table (array of uint32_t indices into symbol table)</span>
+    <span class="token comment">//&#x52A8;&#x6001;&#x7B26;&#x53F7;&#x8868;&#x5730;&#x5740; = &#x57FA;&#x5740; + &#x52A8;&#x6001;&#x7B26;&#x53F7;&#x8868;&#x504F;&#x79FB;&#x91CF;</span>
+  <span class="token keyword">uint32_t</span> <span class="token operator">*</span>indirect_symtab <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">uint32_t</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>linkedit_base <span class="token operator">+</span> dysymtab_cmd<span class="token operator">-&gt;</span>indirectsymoff<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  cur <span class="token operator">=</span> <span class="token punctuation">(</span>uintptr_t<span class="token punctuation">)</span>header <span class="token operator">+</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>mach_header_t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>uint i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> header<span class="token operator">-&gt;</span>ncmds<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">,</span> cur <span class="token operator">+=</span> cur_seg_cmd<span class="token operator">-&gt;</span>cmdsize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cur_seg_cmd <span class="token operator">=</span> <span class="token punctuation">(</span>segment_command_t <span class="token operator">*</span><span class="token punctuation">)</span>cur<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>cur_seg_cmd<span class="token operator">-&gt;</span>cmd <span class="token operator">==</span> LC_SEGMENT_ARCH_DEPENDENT<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//&#x5BFB;&#x627E;&#x5230;data&#x6BB5;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">strcmp</span><span class="token punctuation">(</span>cur_seg_cmd<span class="token operator">-&gt;</span>segname<span class="token punctuation">,</span> SEG_DATA<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span>
+          <span class="token function">strcmp</span><span class="token punctuation">(</span>cur_seg_cmd<span class="token operator">-&gt;</span>segname<span class="token punctuation">,</span> SEG_DATA_CONST<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">continue</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">for</span> <span class="token punctuation">(</span>uint j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> cur_seg_cmd<span class="token operator">-&gt;</span>nsects<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        section_t <span class="token operator">*</span>sect <span class="token operator">=</span>
+          <span class="token punctuation">(</span>section_t <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">(</span>cur <span class="token operator">+</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>segment_command_t<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> j<span class="token punctuation">;</span>
+          <span class="token comment">//&#x627E;&#x61D2;&#x52A0;&#x8F7D;&#x8868;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>sect<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> SECTION_TYPE<span class="token punctuation">)</span> <span class="token operator">==</span> S_LAZY_SYMBOL_POINTERS<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">perform_rebinding_with_section</span><span class="token punctuation">(</span>rebindings<span class="token punctuation">,</span> sect<span class="token punctuation">,</span> slide<span class="token punctuation">,</span> symtab<span class="token punctuation">,</span> strtab<span class="token punctuation">,</span> indirect_symtab<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+          <span class="token comment">//&#x975E;&#x61D2;&#x52A0;&#x8F7D;&#x8868;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>sect<span class="token operator">-&gt;</span>flags <span class="token operator">&amp;</span> SECTION_TYPE<span class="token punctuation">)</span> <span class="token operator">==</span> S_NON_LAZY_SYMBOL_POINTERS<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">perform_rebinding_with_section</span><span class="token punctuation">(</span>rebindings<span class="token punctuation">,</span> sect<span class="token punctuation">,</span> slide<span class="token punctuation">,</span> symtab<span class="token punctuation">,</span> strtab<span class="token punctuation">,</span> indirect_symtab<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">_rebind_symbols_for_image</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">mach_header</span> <span class="token operator">*</span>header<span class="token punctuation">,</span>
+                                      intptr_t slide<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">rebind_symbols_for_image</span><span class="token punctuation">(</span>_rebindings_head<span class="token punctuation">,</span> header<span class="token punctuation">,</span> slide<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">rebind_symbols_image</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>header<span class="token punctuation">,</span>
+                         intptr_t slide<span class="token punctuation">,</span>
+                         <span class="token keyword">struct</span> <span class="token class-name">rebinding</span> rebindings<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                         size_t rebindings_nel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">struct</span> <span class="token class-name">rebindings_entry</span> <span class="token operator">*</span>rebindings_head <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> retval <span class="token operator">=</span> <span class="token function">prepend_rebindings</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>rebindings_head<span class="token punctuation">,</span> rebindings<span class="token punctuation">,</span> rebindings_nel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">rebind_symbols_for_image</span><span class="token punctuation">(</span>rebindings_head<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">mach_header</span> <span class="token operator">*</span><span class="token punctuation">)</span> header<span class="token punctuation">,</span> slide<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>rebindings_head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">free</span><span class="token punctuation">(</span>rebindings_head<span class="token operator">-&gt;</span>rebindings<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>rebindings_head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> retval<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">rebind_symbols</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">rebinding</span> rebindings<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> size_t rebindings_nel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//prepend_rebindings&#x7684;&#x51FD;&#x6570;&#x4F1A;&#x5C06;&#x6574;&#x4E2A; rebindings &#x6570;&#x7EC4;&#x6DFB;&#x52A0;&#x5230; _rebindings_head &#x8FD9;&#x4E2A;&#x94FE;&#x8868;&#x7684;&#x5934;&#x90E8;</span>
+    <span class="token comment">//Fishhook&#x91C7;&#x7528;&#x94FE;&#x8868;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5B58;&#x50A8;&#x6BCF;&#x4E00;&#x6B21;&#x8C03;&#x7528;rebind_symbols&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6BCF;&#x6B21;&#x8C03;&#x7528;&#xFF0C;&#x5C31;&#x4F1A;&#x5728;&#x94FE;&#x8868;&#x7684;&#x5934;&#x90E8;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x94FE;&#x8868;&#x7684;&#x5934;&#x90E8;&#x662F;&#xFF1A;_rebindings_head</span>
+    <span class="token keyword">int</span> retval <span class="token operator">=</span> <span class="token function">prepend_rebindings</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>_rebindings_head<span class="token punctuation">,</span> rebindings<span class="token punctuation">,</span> rebindings_nel<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//&#x6839;&#x636E;&#x4E0A;&#x9762;&#x7684;prepend_rebinding&#x6765;&#x505A;&#x5224;&#x65AD;&#xFF0C;&#x5982;&#x679C;&#x5C0F;&#x4E8E;0&#x7684;&#x8BDD;&#xFF0C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x7801;&#x56DE;&#x53BB;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>retval <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> retval<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+    <span class="token comment">//&#x6839;&#x636E;_rebindings_head-&gt;next&#x662F;&#x5426;&#x4E3A;&#x7A7A;&#x5224;&#x65AD;&#x662F;&#x4E0D;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x3002;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>_rebindings_head<span class="token operator">-&gt;</span>next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//&#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x8BDD;&#xFF0C;&#x8C03;&#x7528;_dyld_register_func_for_add_image&#x6CE8;&#x518C;&#x76D1;&#x542C;&#x65B9;&#x6CD5;.</span>
+      <span class="token comment">//&#x5DF2;&#x7ECF;&#x88AB;dyld&#x52A0;&#x8F7D;&#x7684;image&#x4F1A;&#x7ACB;&#x523B;&#x8FDB;&#x5165;&#x56DE;&#x8C03;&#x3002;</span>
+      <span class="token comment">//&#x4E4B;&#x540E;&#x7684;image&#x4F1A;&#x5728;dyld&#x88C5;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x56DE;&#x8C03;&#x3002;</span>
+    <span class="token function">_dyld_register_func_for_add_image</span><span class="token punctuation">(</span>_rebind_symbols_for_image<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">//&#x904D;&#x5386;&#x5DF2;&#x7ECF;&#x52A0;&#x8F7D;&#x7684;image&#xFF0C;&#x8FDB;&#x884C;&#x7684;hook</span>
+    <span class="token keyword">uint32_t</span> c <span class="token operator">=</span> <span class="token function">_dyld_image_count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">uint32_t</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> c<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">_rebind_symbols_for_image</span><span class="token punctuation">(</span><span class="token function">_dyld_get_image_header</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_dyld_get_image_vmaddr_slide</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> retval<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="inlinehook"><a name="inlinehook" class="anchor-navigation-ex-anchor" href="#inlinehook"><i class="fa fa-link" aria-hidden="true"></i></a>inlineHook</h2>
+<h2 id="cydia-substrate"><a name="cydia-substrate" class="anchor-navigation-ex-anchor" href="#cydia-substrate"><i class="fa fa-link" aria-hidden="true"></i></a>Cydia Substrate</h2>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; lifeasy.top 2020 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-07-25 15:04:21
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="08_dyld.html" class="navigation navigation-prev " aria-label="Previous page: 08dyld_Load_initialize消息发送">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="10_symbol.html" class="navigation navigation-next " aria-label="Next page: 10_符号">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"09_hook","level":"2.1.10.2.10","depth":4,"next":{"title":"10_符号","level":"2.1.10.2.11","depth":4,"path":"articles/iOS/renote/10_symbol.md","ref":"articles/iOS/renote/10_symbol.md","articles":[]},"previous":{"title":"08dyld_Load_initialize消息发送","level":"2.1.10.2.9","depth":4,"path":"articles/iOS/renote/08_dyld.md","ref":"articles/iOS/renote/08_dyld.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-comscore","prism","-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github","github-buttons","donate","tbfed-pagefooter","anchor-navigation-ex"],"styles":{"website":"./public-repertory/css/gitbook-configure.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy lifeasy.top 2020","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-okaidia.css"],"lang":{"shel":"bash","shell":"bash","objective-c":"objectivec","swi":"swift","swif":"swift","c++":"cpp"}},"github":{"url":"https://github.com/lifeasy"},"splitter":{},"search-pro":{},"donate":{"alipay":"https://www.liangqili.com/hexo/images/alipay.png","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://www.liangqili.com/hexo/images/wechatpay.png","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"theme-comscore":{},"github-buttons":{"buttons":[{"user":"lifeasy","repo":"mybook","type":"star","count":true,"size":"small"},{"user":"lifeasy","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Liang_QL","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"lifeasy 的文档库","language":"zh-hans","links":{"sidebar":{"我的小站":"https://www.liangqili.com"}},"gitbook":"*","description":"随便写写"},"file":{"path":"articles/iOS/renote/09_hook.md","mtime":"2021-07-25T07:04:21.373Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-29T14:16:46.652Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

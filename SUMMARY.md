@@ -65,10 +65,17 @@
       * [05_重签名](articles/iOS/renote/05_resign.md)
       * [06_代码注入](articles/iOS/renote/06_inject.md)
       * [07_Mach-O](articles/iOS/renote/07_macho.md)
-      * [08_dyld](articles/iOS/renote/08_dyld.md)
+      * [08_dyld_Load_initialize_消息发送](articles/iOS/renote/08_dyld.md)
+      * [09_hook](articles/iOS/renote/09_hook.md)
+      * [10_符号](articles/iOS/renote/10_symbol.md)
   * Xcode
     * Instruments
       * [TimeProfiler](articles/iOS/xcode/instruments/time_profiler.md)
+
+---
+
+* Ruby
+  * 常用命令
 
 ---
 
@@ -135,4 +142,8 @@
     * [git常用操作](articles/tool/git/git常用操作.md)
   * 正则表达式
     * [Js中的正则表达式](articles/tool/reg/reg.md)
+  * cocoapods
+    * [常用命令](articles/tool/cocoapods/常用命令.md)
+    * [Cocoapods简单原理](articles/tool/cocoapods/简单原理.md)
+    * [Cocoapods搭建私有仓库](articles/tool/cocoapods/搭建私有库.md)
 
