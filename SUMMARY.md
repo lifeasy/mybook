@@ -134,6 +134,7 @@
 * 常用工具
   * homebrew
     * [homebrew换源](articles/tool/homebrew/homebrew换源.md)
+    * [brew基本使用](articles/tool/homebrew/brew基本使用.md)
   * node
     * [npm修改配置文件](articles/tool/node/npm修改配置文件.md)
     * [卸载重装node](articles/tool/node/卸载node.md)
