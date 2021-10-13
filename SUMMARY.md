@@ -121,8 +121,9 @@
 
 ---
 
-* Shell
-  * [常用命令](articles/shell/常用命令.md)
+* Linux
+  * [常用命令](articles/linux/常用命令.md)
+  * [Shell脚本](articles/linux/shell_script.md)
 
 ---
 
