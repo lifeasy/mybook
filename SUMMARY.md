@@ -127,6 +127,7 @@
     * [核心编程](articles/c++/教程/核心编程.md)
     * [运算符重载](articles/c++/教程/运算符重载.md)
     * [继承](articles/c++/教程/继承.md)
+    * [多态](articles/c++/教程/多态.md)
 
 ---
 
