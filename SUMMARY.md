@@ -130,6 +130,9 @@
     * [多态](articles/c++/教程/多态.md)
     * [文件操作](articles/c++/教程/文件操作.md)
     * [模板](articles/c++/教程/模板.md)
+    * [STL](articles/c++/教程/STL.md)
+    * [string](articles/c++/教程/string.md)
+    * [vector](articles/c++/教程/vector.md)
 
 ---
 
