@@ -133,6 +133,9 @@
     * [STL](articles/c++/教程/STL.md)
     * [string](articles/c++/教程/string.md)
     * [vector](articles/c++/教程/vector.md)
+    * [deque](articles/c++/教程/deque.md)
+    * [stack](articles/c++/教程/stack.md)
+    * [queue](articles/c++/教程/queue.md)
 
 ---
 
