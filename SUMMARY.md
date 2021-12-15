@@ -136,12 +136,16 @@
     * [deque](articles/c++/教程/deque.md)
     * [stack](articles/c++/教程/stack.md)
     * [queue](articles/c++/教程/queue.md)
+    * [list](articles/c++/教程/list.md)
+    * [set](articles/c++/教程/set.md)
 
 ---
 
 * Linux
   * [常用命令](articles/linux/常用命令.md)
   * [Shell脚本](articles/linux/shell_script.md)
+  * 教程
+    * [基本概念](articles/linux/shell教程/基本概念.md)
 
 ---
 
