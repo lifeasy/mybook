@@ -138,14 +138,17 @@
     * [queue](articles/c++/教程/queue.md)
     * [list](articles/c++/教程/list.md)
     * [set](articles/c++/教程/set.md)
+    * [map](articles/c++/教程/map.md)
 
 ---
 
 * Linux
   * [常用命令](articles/linux/常用命令.md)
   * [Shell脚本](articles/linux/shell_script.md)
-  * 教程
+  * [Linux三剑客](articles/linux/linux三剑客.md)
+  * Shell教程
     * [基本概念](articles/linux/shell教程/基本概念.md)
+    * [基础语法](articles/linux/shell教程/基础语法.md)
 
 ---
 
