@@ -139,6 +139,7 @@
     * [list](articles/c++/教程/list.md)
     * [set](articles/c++/教程/set.md)
     * [map](articles/c++/教程/map.md)
+    * [函数对象](articles/c++/教程/函数对象.md)
 
 ---
 
