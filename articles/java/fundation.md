@@ -140,5 +140,94 @@ public class PrimitiveTypeTest {
 
 <img src="https://gitee.com/dexport/blog-image/raw/master/img/202202142351797.jpg" alt="switch" style="zoom:50%;" />
 
-### 数组、排序和查找
+#### 增加for循环
 
+> for(声明语句 : 表达式) {   //代码句子 }
+
+```java
+public class Hello {  
+    public static void main(String[] args) {  
+        int[] nums = {1,2,3,4,5};
+        for(int num : nums) {
+            System.out.println(num);
+        }
+    }  
+}
+```
+
+### 包装类
+
+> 将基础数据类型封装成一个对象，所有的包装类**（Integer、Long、Byte、Double、Float、Short）**都是抽象类 Number 的子类。
+>
+> 布尔类型的包装类是**Boolean**，char的包装类是**Character**
+>
+> 这种由编译器特别支持的包装称为装箱，所以当内置数据类型被当作对象使用的时候，编译器会把内置类型装箱为包装类。相似的，编译器也可以把一个对象拆箱为内置类型。
+
+![Java Number类](https://www.runoob.com/wp-content/uploads/2013/12/OOP_WrapperClass.png)
+
+```java
+public class Hello {  
+    public static void main(String[] args) {  
+        Integer x = 5;
+        x =  x + 10;
+        System.out.println(x); 
+    }  
+}
+```
+
+### Math类
+
+> Java 的 Math 包含了用于执行基本数学运算的属性和方法，如初等指数、对数、平方根和三角函数。
+>
+> Math 的方法都被定义为 static 形式，通过 Math 类可以在主函数中直接调用。
+
+```java
+public class Hello {  
+    public static void main(String[] args) {  
+        System.out.println("90 度的正弦值：" + Math.sin(Math.PI/2));  
+        System.out.println("0度的余弦值：" + Math.cos(0));  
+        System.out.println("60度的正切值：" + Math.tan(Math.PI/3));  
+        System.out.println("1的反正切值： " + Math.atan(1));  
+        System.out.println("π/2的角度值：" + Math.toDegrees(Math.PI/2));  
+        System.out.println(Math.PI);  
+    }  
+}
+```
+
+### String
+
+> String 类是不可改变的，所以你一旦创建了 String 对象，那它的值就无法改变了
+>
+> 如果需要对字符串做很多修改，那么应该选择使用 **StringBuffer** & **StringBuilder** 类
+
+### StringBuffer 和 StringBuilder
+
+> 和 String 类不同的是，StringBuffer 和 StringBuilder 类的对象能够被多次的修改，并且不产生新的未使用对象。
+>
+> StringBuilder 类在 Java 5 中被提出，它和 StringBuffer 之间的最大不同在于 StringBuilder 的方法不是线程安全的（不能同步访问）。
+>
+> 由于 StringBuilder 相较于 StringBuffer 有速度优势，所以多数情况下建议使用 StringBuilder 类。
+>
+> 然而在应用程序要求线程安全的情况下，则必须使用 StringBuffer 类
+
+<img src="https://gitee.com/dexport/blog-image/raw/master/img/202202240008990.png" style="zoom:67%;" />
+
+```java
+public class RunoobTest{
+    public static void main(String args[]){
+        StringBuilder sb = new StringBuilder(10);
+        sb.append("Runoob..");
+        System.out.println(sb);  
+        sb.append("!");
+        System.out.println(sb);
+      
+      	StringBuffer sBuffer = new StringBuffer("菜鸟教程官网：");
+    		sBuffer.append("www");
+    		sBuffer.append(".runoob");
+    		sBuffer.append(".com");
+    		System.out.println(sBuffer);  
+    }
+}
+```
+
+### 数组
