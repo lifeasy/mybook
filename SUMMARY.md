@@ -20,7 +20,8 @@
     * Swift服务端
       * [Vapor搭建服务端模拟接口请求](articles/iOS/swift/server/Vapor搭建服务端模拟接口请求.md)
     * 小码哥Swift学习笔记
-      * [01_swiftc](articles/iOS/swift/mjswift/01_swiftc.md)
+      * [01_编译命令swiftc](articles/iOS/swift/mjswift/01_swiftc.md)
+      * [02_Playground](articles/iOS/swift/mjswift/02_playground.md)
   * UI
     * [核心动画](articles/iOS/ui/CoreAnimation.md)
   * 网络
