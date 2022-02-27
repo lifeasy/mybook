@@ -140,7 +140,7 @@ public class PrimitiveTypeTest {
 
 <img src="https://gitee.com/dexport/blog-image/raw/master/img/202202142351797.jpg" alt="switch" style="zoom:50%;" />
 
-#### 增加for循环
+#### For-Each循环
 
 > for(声明语句 : 表达式) {   //代码句子 }
 
@@ -230,4 +230,113 @@ public class RunoobTest{
 }
 ```
 
-### 数组
+### Array
+
+> 封装了一些操作数据的方法
+
+```java
+import java.util.Arrays;
+public class Hello {  
+    public static void main(String[] args) {  
+        int[] nums = new int[3];
+        Arrays.fill(nums, 3);
+        for (int i : nums) {
+            System.out.println(i);
+        }
+
+        int[] height = {1,3,5,6,7,8,10,78,98,109};
+        int index = Arrays.binarySearch(height, 3);
+        System.out.println(index);
+    }  
+}
+```
+
+### Date
+
+```java
+import java.util.Date;
+public class Hello {  
+    public static void main(String[] args) {  
+        Date date = new Date();
+        System.out.println(date);
+    }  
+}
+```
+
+#### SimpleDateFormat
+
+```java
+import java.text.SimpleDateFormat;
+import java.util.Date;
+public class Hello {  
+    public static void main(String[] args) {  
+        Date date = new Date();
+        System.out.println(date);
+
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(format.format(date));
+    }  
+}
+```
+
+### Sleep
+
+```java
+public class Hello {  
+    public static void main(String[] args) {  
+        try {
+            System.out.println("start");
+            Thread.sleep(1000 * 3);
+            System.out.println("end");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }  
+}
+```
+
+### Calender
+
+```java
+import java.util.Calendar;
+public class Hello {  
+    public static void main(String[] args) {  
+        Calendar c = Calendar.getInstance();//返回一个默认用当前的语言环境和时区初始化的GregorianCalendar对象 默认是当前日期
+        c.set(2009, 6 - 1, 25);
+        c.set(Calendar.DATE, 27);
+        System.out.println(c);
+    }  
+}
+```
+
+### 正则
+
+> java.util.regex 包主要包括以下三个类：
+>
+> - Pattern 类：
+>
+>   pattern 对象是一个正则表达式的编译表示。Pattern 类没有公共构造方法。要创建一个 Pattern 对象，你必须首先调用其公共静态编译方法，它返回一个 Pattern 对象。该方法接受一个正则表达式作为它的第一个参数。
+>
+> - Matcher 类：
+>
+>   Matcher 对象是对输入字符串进行解释和匹配操作的引擎。与Pattern 类一样，Matcher 也没有公共构造方法。你需要调用 Pattern 对象的 matcher 方法来获得一个 Matcher 对象。
+>
+> - PatternSyntaxException：
+>
+>   PatternSyntaxException 是一个非强制异常类，它表示一个正则表达式模式中的语法错误。
+
+```java
+import java.util.regex.Pattern;
+
+public class Hello {  
+    public static void main(String[] args) {  
+        String content = "I am noob from runoob.com.";
+        String pattern = ".*runoob.*";
+        boolean isMatch = Pattern.matches(pattern, content);
+        System.out.println(isMatch);
+    }  
+}
+```
+
+
+
