@@ -25,3 +25,28 @@ PlaygroundPage.current.liveView = vc
 
 <img src="https://gitee.com/dexport/blog-image/raw/master/img/202202280022094.png" style="zoom:50%;" />
 
+## markup
+
+> 类似markdown，markup只在playground中有效
+
+```swift
+//: #单行markup
+/*:
+# 多行markup
+*/
+//: [Previous](@previous)
+/*:
+ # 一级标题
+ ## 二级标题
+ - 变量
+ - 常量
+ */
+
+import Foundation
+
+var greeting = "Hello, playground"
+
+//: [Next](@next)
+
+```
+
