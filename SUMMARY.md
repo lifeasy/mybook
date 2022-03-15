@@ -85,7 +85,7 @@
 ---
 
 * Ruby
-  * 常用命令
+  * [常用命令](articles/ruby/常用命令.md)
 
 ---
 
@@ -150,6 +150,11 @@
     * [set](articles/c++/教程/set.md)
     * [map](articles/c++/教程/map.md)
     * [函数对象](articles/c++/教程/函数对象.md)
+
+---
+
+* python
+  * [环境搭建](articles/python/环境搭建.md)
 
 ---
 
