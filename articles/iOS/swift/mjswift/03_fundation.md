@@ -5,7 +5,6 @@
 ```swift
 let a = 1.25e2
 let b = 0xFp2
-
 ```
 
 ## 元组
@@ -406,8 +405,7 @@ print(getFirstPositive(a: 10, b: 20))
 * 在初始化器中设置属性值，不会触发属性观察器
 * 在属性定义时赋值，不会触发属性观察器
 * 属性观察器可以用在全局变量和局部变量上
-
-
+* **父类的属性在它自己的初始化器中赋值不会触发属性观察器，但在子类的初始化器中赋值会触发属性观察器**
 
 ### 计算属性
 
@@ -434,7 +432,7 @@ print(getFirstPositive(a: 10, b: 20))
 * 可以通过`static`定义类型属性，如果是类，也可以用关键字`class`
 * **必须给类型存储属性设置初始值**，因为类型没有实例那样的初始化方法
 * 类型属性默认就是`lazy`，会在第一次使用的时候初始化
-* 线程安全
+* 只会初始化一次，底层调用`swift_once`进行初始化操作，实际最终调用的就是`dispatch_oncen `
 * 可以是`let`
 * 枚举类型也可以定义类型属性（存储类型属性、计算类型属性）
 
@@ -447,5 +445,505 @@ public class FileManager {
 }
 ```
 
+## 方法
 
+* 枚举、结构体、类**都可以定义类型方法和实例方法**
+* 类型方法通过`class`或者`static`修饰
+
+* 枚举和结构体为值类型，默认情况下，值类型不允许被自身实例方法修改，如果需要修改，使用`mutating`修饰方法
+
+```swift
+struct Point {
+    var x: Int = 0
+    var y: Int = 0
+    mutating func move(delta: Int) {
+        x += delta
+        y += delta
+    }
+}
+// 需要用var修饰
+var p = Point()
+p.move(delta: 3)
+```
+
+## 下标
+
+* 使用`subscript`可以给任意类型（枚举、结构体、类）添加下标方法
+* 本质是方法（函数），类似于计算属性
+* 下标可以没有`set`,但是必须要有`get`，如果只有`get`，可以省略`get`
+* 下标中的返回值类型也是`set`中的`newValue`类型
+* 下标可以是类型方法
+* 下标可以设置多个值
+* 下标函数可以设置参数标签
+
+```swift
+struct Sum {
+    var array = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]
+    ]
+    subscript(row: Int, column: Int) -> Int {
+        set {
+            guard row >= 0 && row <= 2 && column >= 0 && column <= 2 else {
+                return
+            }
+            array[row][column] = newValue
+        }
+        get {
+            guard row >= 0 && row <= 2 && column >= 0 && column <= 2 else {
+                return -1
+            }
+            return array[row][column]
+        }
+    }
+}
+var sum = Sum()
+print(sum[1,1])
+sum[1,1] = 99
+print(sum[1,1])
+```
+
+## 继承
+
+* 只有类可以继承，值类型没有继承
+* 子类可以重写父类的`方法`、`属性`、`下标`，重写必须加上`override`
+
+* 类型方法也可以重写
+  * 被`class`修饰的类型方法，可以被子类重写，`static`修饰的类型方法，不能被子类重写
+* 重写属性
+  * 子类可以将父类的存储属性、计算属性重写为计算属性
+  * 子类不可以将父类的属性重写为存储属性
+  * 只能重写`var`属性，不能重写`let`属性
+  * 重写时，属性名、类型要一致
+  * 子类重写后的属性权限，不能小于父类属性的权限
+    * 如果父类属性是只读的，那么重写后的子类属性可以是只读的，也可以是可读写的
+    * 如果父类属性是可读写的，那么重写后的子类属性，只能是可读写的
+  * 如果将父类的存储属性重写为了计算属性，那么在子类的实例内存中，仍然有父类属性的存储空间。可以通过`super.属性名`访问这个属性
+* 属性观察器
+  * 可以在子类中为父类属性（出了只读计算属性、`let`属性）增加属性观察器
+
+* `final`
+  * 被`final`修饰的方法、下标、属性禁止被子类重写
+  * 被`final`修饰的类，不能被继承
+
+## 初始化
+
+* 类、结构体、枚举都可以定义初始化器，因为值类型没有继承，相对比较简单，重点关注类的初始化器
+* 类有两种初始化器：指定初始化器和便捷初始化器，类的设计原则就是要少量的指定初始化器
+  * 每个类至少有一个指定初始化器，指定初始化器是类的主要初始化器，**指定初始化器的目标就是要完成类的初始化工作**
+  * 指定初始化器**首先**完成自有属性的初始化工作，**然后**必须调用直接父类的指定初始化器，**然后**再完成一些自定义操作
+  * 便捷初始化器必须**首先**横向调用其他初始化器（包括便捷初始化器和指定初始化器），最终调用链**必须**要调用到自身的一个指定初始化器。调用完其他的初始化器之后，**然后**再进行一些自定义的操作
+  * 上述规则保证了安全性，确保了任何一个初始化器，都能安全完成实例的初始化工作
+
+<img src="https://gitee.com/dexport/blog-image/raw/master/img/202203191635560.png" style="zoom:50%;" />
+
+### 两段式初始化过程
+
+* 初始化所有存储属性
+* 自定义初始化过程
+
+### 重写
+
+* 当重写父类的指定初始化器时，必须加上`override`,且子类可以将父类的指定初始化器重写为便捷初始化器
+* 因为子类不能直接调用父类的便捷初始化器，所以不存在重写父类便捷初始化器的操作，因为子类可以定义和父类便捷初始化器一样名称的初始化器，且不用加`override`
+
+### 自动继承
+
+* 如果子类没有自定义任何指定初始化器，那么它将自动继承父类的所有指定初始化器
+* 如果子类提供了父类所有指定初始化器的实现（要么自动继承，要么重写，重写包含重写为便捷初始化器），那么子类将自动继承父类所有的便捷初始化器
+
+### required
+
+* 用`required`修饰指定初始化器，表明其所有子类都必须实现该初始化器(通过继承或者重写实现)，可以重写为便捷初始化器。
+* 如果子类重写了required初始化器，也必须加上required，不用加override
+
+```swift
+class Person {
+    required init(age: Int) {}
+}
+
+class Student : Person {
+//    init() {
+//        super.init(age: 0)
+//    }
+// 可以重写为便捷初始化器
+//    required convenience init(age: Int) {
+//        print("1")
+//        self.init()
+//        print("2")
+//    }
+    required init(age: Int) {
+        super.init(age: age)
+    }
+}
+```
+
+* 使用元类型调用初始化方法，必须是`required`的，因为必须要确保有此方法
+
+```swift
+class Animal {
+    // 确保子类必有这个初始化器
+    required init() {}
+}
+class Dog: Animal {}
+class Cat: Animal {}
+class Pig: Animal {}
+
+func create(animals: [Animal.Type]) -> [Animal] {
+    var arr: [Animal] = []
+    for cls in animals {
+        arr.append(cls.init())
+    }
+    return arr
+}
+create(animals: [Dog.self, Pig.self, Cat.self])
+```
+
+
+
+### 可失败初始化器
+
+* 类、结构体、枚举都可以使用`init?`定义可失败初始化器
+
+```swift
+class Person {
+    var name: String
+    init?(name: String) {
+        if name.isEmpty {
+            return nil
+        }
+        self.name = name
+    }
+}
+var p = Person(name: "") // Person?
+```
+
+* 不允许同时定义参数标签、参数个数、参数类型相同的可失败初始化器和非可失败初始化器
+* 可以用`init!`定义隐式解包的可失败初始化器
+* 可失败初始化器可以调用非可失败初始化器，非可失败初始化器调用可失败初始化器需要进行解包
+* 如果初始化器调用一个可失败初始化器导致初始化失败，那么整个初始化过程都失败，并且之后的代码都停止执行
+* 可以用一个非可失败初始化器重写一个可失败初始化器，但反过来是不行的
+
+## 反初始化（deinit）
+
+* `deinit`不接受任何参数，不能写小括号，不能自行调用
+* 父类的`deinit`能被子类继承
+* 子类的`deinit`实现执行完毕后会调用父类的`deinit`，无需手动调用
+
+```swift
+class Person {
+    deinit {
+        print("Person deinit")
+    }
+}
+class Student: Person {
+    deinit {
+        print("Student deinit")
+    }
+}
+func test() {
+    var _ = Student()
+}
+test()
+// Student deinit
+// Person deinit
+```
+
+## 可选链
+
+* 如果可选项为`nil`，调用方法、下标、属性失败，结果为`nil`
+* 如果可选项不为`nil`，调用方法、下标、属性成功，结果会被包装成可选项
+  * 如果结果本来就是可选项，不会进行再次包装
+* 多个?可以链接在一起
+  * 如果链中任何一个节点是`nil`，那么整个链就会调用失败，且`nil`后的代码不会再执行
+* 无返回值的函数，其实也是有返回值的，是一个可选空元祖`()`
+
+```swif
+if let _ = person?.eat() { // ()?
+	print("eat调用成功")
+} else {
+	print("eat调用失败")
+}
+```
+
+* 可选链的应用
+
+```swift
+var scores = ["Jack": [86, 82, 84], "Rose": [79, 94, 81]]
+scores["Jack"]?[0] = 100
+scores["Rose"]?[2] += 10
+scores["Kate"]?[0] = 88
+
+var dict: [String : (Int, Int) -> Int] = [
+"sum" : (+),
+"difference" : (-)
+]
+var result = dict["sum"]?(10, 20) // Optional(30), Int?
+```
+
+* 可以在可选变量赋值的时候添加`?`，表明如果可选变量如果是`nil`，就不进行赋值运算
+
+```swift
+var num1: Int? = 5
+num1? = 10 // Optional(10)
+var num2: Int? = nil 
+// num2为nil，所有后续的赋值操作不进行调用
+num2? = 10 // nil
+```
+
+## 协议
+
+* 协议可以用来定义方法、属性、下标的声明，协议可以被枚举、结构体、类遵守（多个协议之间用逗号隔开）
+  * 协议中定义方法时不能有默认参数值
+  * 协议中定义属性时必须用`var`关键字，因为可以是计算属性
+  * 实现协议时的属性权限要不小于协议中定义的属性权限，即协议规定了至少可以做什么
+    * 协议定义`get`、`set`，用`var`存储属性或`get`、`set`计算属性去实现
+    * 协议定义`get`，用任何属性都可以实现
+  * 为了保证通用，协议中必须用`static`定义类型方法、类型属性、类型下标，不能使用`class`，因为值类型也可以遵守协议
+    * 类实现`static`定义的类型方法、类型属性、类型下标时，可以使用`class`
+
+```swift
+// 协议定义
+protocol Person {
+    func run()
+    var name: String { set get } // 可以为存储属性、也可以为计算属性
+    var height: Int { get } // 可以为存储属性（let）、也可以为计算属性
+    subscript(index: Int) -> Int { set get }
+}
+class Student: Person {
+    var name: String
+    let height: Int
+    init(name: String, height: Int) {
+        self.name = name
+        self.height = height
+    }
+    func run() {
+        print("\(name) run")
+    }
+    subscript(index: Int) -> Int {
+        set {
+            
+        }
+        get {
+            index
+        }
+    }
+}
+var stu = Student(name: "lisi", height: 178)
+stu.run()
+// 实现多个协议
+protocol Test1 {}
+protocol Test2 {}
+protocol Test3 {}
+class TestClass : Test1, Test2, Test3 {}
+```
+
+* 只有将协议中的实例方法标记为`mutating`，才可以允许值类型方法修改自身，类类型可以无视这个关键字，不用添加
+
+* 协议中还可以定义初始化器`init`
+  * 非`final`类实现时必须加上`required`
+
+```swift
+protocol Animal {
+    init()
+}
+class Dog: Animal {
+    required init() {
+        
+    }
+}
+final class Cat: Animal {
+    init() {
+        
+    }
+}
+```
+
+* 如果从协议实现的初始化器，刚好是重写了父类的指定初始化器，那么这个初始化必须同时加`required`、`override`
+
+```swift
+protocol Animal {
+    init()
+}
+class Dog {
+    init() {
+        
+    }
+}
+class ErHa: Dog, Animal {
+    required override init() {
+        
+    }
+}
+```
+
+* 协议中定义的`init?`、`init!`，可以用`init`、`init?`、`init!`去实现
+* 协议中定义的`init`，可以用`init`、`init!`去实现
+
+```swift
+protocol Livable {
+	init()
+	init?(age: Int)
+	init!(no: Int)
+}
+class Person : Livable {
+	required init() {}
+	// required init!() {}
+	required init?(age: Int) {}
+	// required init!(age: Int) {}
+	// required init(age: Int) {}
+	required init!(no: Int) {}
+	// required init?(no: Int) {}
+	// required init(no: Int) {}
+}
+```
+
+* 协议可以继承
+
+### 协议组合
+
+* 协议组合，可以包含1个类类型**（最多1个）**
+
+```swift
+protocol Livable {}
+protocol Runnable {}
+class Person {}
+
+// 接收Person或者其子类的实例
+func fn0(obj: Person) {}
+// 接收遵守Livable协议的实例
+func fn1(obj: Livable) {}
+// 接收同时遵守Livable、Runnable协议的实例
+func fn2(obj: Livable & Runnable) {}
+// 接收同时遵守Livable、Runnable协议、并且是Person或者其子类的实例
+func fn3(obj: Person & Livable & Runnable) {}
+
+typealias RealPerson = Person & Livable & Runnable
+// 接收同时遵守Livable、Runnable协议、并且是Person或者其子类的实例
+func fn4(obj: RealPerson) {}
+```
+
+### CaseIterable 协议
+
+* 让枚举遵守`CaseIterable`协议，可以实现遍历枚举值
+
+```swift
+enum Season: CaseIterable {
+    case Spring, Summer, Autum, Winter
+}
+for season in Season.allCases {
+    print(season)
+}
+```
+
+### CustomStringConvertible、CustomDebugStringConvertible 协议
+
+* 遵守`CustomStringConvertible`、 `CustomDebugStringConvertible`协议，都可以自定义实例的打印字符串
+  * `print`调用的是`CustomStringConvertible`协议的`description`
+  * `debugPrint`、`po`调用的是`CustomDebugStringConvertible`协议的`debugDescription`
+
+```swift
+class Person: CustomStringConvertible, CustomDebugStringConvertible {
+    var name: String
+    var age: Int
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+    var description: String {
+        return "Person who name is \(name), age is \(age)"
+    }
+    var debugDescription: String {
+        return "Debug that person name = \(name), age = \(age)"
+    }
+}
+var p = Person(name: "lisi", age: 19)
+print(p)
+```
+
+## Any / AnyObject
+
+* Swift提供了2种特殊的类型：Any、AnyObject
+  * Any：可以代表任意类型（枚举、结构体、类，也包括函数类型）
+  * AnyObject：可以代表任意类类型（在协议后面写上: AnyObject代表只有类能遵守这个协议,在协议后面写上: class也代表只有类能遵守这个协议）
+
+## is、as?、as!、as
+
+* is用来判断是否为某种类型，as用来做强制类型转换
+
+## X.self、X.Type、AnyClass
+
+* X.self是一个元类型（metadata）的指针，metadata存放着类型相关信息
+* X.self属于X.Type类型
+* `public typealias AnyClass = AnyObject.Type`
+* type(of: ) 返回元类型
+
+```swift
+class Person {}
+class Student : Person {}
+var perType: Person.Type = Person.self
+var stuType: Student.Type = Student.self
+perType = Student.self
+
+var anyType: AnyObject.Type = Person.self
+anyType = Student.self
+var anyType2: AnyClass = Person.self
+anyType2 = Student.self
+
+var per = Person()
+var perType = type(of: per) // Person.self
+print(Person.self == type(of: per)) // true
+```
+
+* Swift还有个隐藏的基类：`Swift._SwiftObject`
+
+```swift
+class Person {
+	var age: Int = 0
+}
+class Student : Person {
+	var no: Int = 0
+}
+print(class_getInstanceSize(Student.self)) // 32
+print(class_getSuperclass(Student.self)!) // Person
+print(class_getSuperclass(Person.self)!) // Swift._SwiftObject
+```
+
+## Self
+
+* Self代表当前类型
+
+```swift
+class Person {
+    var name: String = "lisi"
+    static let category: String = "Human"
+    func test() {
+        print(self.name)
+        print(Self.category)
+    }
+}
+var p = Person()
+p.test()
+```
+
+* Self一般用作返回值类型，限定返回值跟方法调用者必须是同一类型（也可以作为参数类型）
+
+```swift
+protocol Runnable {
+	func test() -> Self
+}
+class Person : Runnable {
+	required init() {}
+	func test() -> Self { type(of: self).init() }
+}
+class Student : Person {}
+
+var p = Person()
+// Person
+print(p.test())
+var stu = Student()
+// Student
+print(stu.test())
+```
 
