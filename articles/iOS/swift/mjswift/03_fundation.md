@@ -947,3 +947,377 @@ var stu = Student()
 print(stu.test())
 ```
 
+## 错误处理
+
+* Swift中，可以通过实现`Error`协议，自定义运行时错误
+
+```swift
+enum SomeError : Error {
+    case illegalArg(String)
+    case outOfBounds(Int, Int)
+    case outOfMemory
+}
+```
+
+* 函数内部通过`throw`抛出错误，可能抛出错误的函数必须加上`throws`声明
+
+```swift
+func devide(_ num1: Int, _ num2: Int) throws -> Int {
+    if num2 == 0 {
+        throw SomeError.illegalArg("0 不能作为除数")
+    }
+    return num1 / num2
+}
+```
+
+* 可能抛出错误的函数，需要使用`try`调用
+
+```swift
+var ret = try devide(10, 2)
+```
+
+* 可以使用`do-catch`捕捉错误
+
+```swift
+func test() {
+    do {
+        print("start")
+        try devide(10, 0)
+        print("end")
+    } catch let SomeError.illegalArg(msg) {
+        print(msg)
+    } catch let SomeError.outOfBounds(size, index) {
+        print(size, index)
+    } catch {
+        // 默认参数 error, 也可以使用匹配接收
+        print("其他错误：\(error)")
+    }
+}
+test()
+// start
+// 0 不能作为除数
+```
+
+* 抛出`Error`后，`try`开始到作用域结束的代码都不会执行了
+
+* 可以使用`try?`,`try!`调用可能会抛出`Error`的函数，这样就不用处理`Error`了
+  * `try?`返回一个可选值，当出现`Error`时，返回nil
+  * 当确认不会出现错误时，可以使用`try!`隐式解包
+
+* `rethrows`表明函数本身不会抛出错误，是内部调用量闭包参数抛出错误，那么它将重新向上抛出错误。作用等价于`throws`，用于语法表明其实是内部调用闭包参数发生的错误，可以使用`rethrows`替换
+
+```swift
+func test(fn: (Int, Int) throws -> Int, num1: Int, num2: Int) rethrows -> Int {
+    return try fn(num1, num2)
+}
+try test(fn: devide, num1: 10, num2: 2)
+```
+
+## defer
+
+* `defer`定义一个离开函数时执行的代码块。可以定义多个，执行顺序和定义顺序相反
+* 必须定义在离开函数之前，假如函数提前返回，那么定义在提前返回之后的`defer`不会执行
+
+```swift
+func test(num: Int) {
+    defer {
+        print("1 do something")
+    }
+    print("start")
+    if num == 0 {
+        return
+    }
+    defer {
+        print("2 do something")
+    }
+    print("end")
+}
+// return 之后的defer不会执行
+test(num: 0)
+
+// try 后面的defer不会调用
+func test(num: Int) throws{
+    defer {
+        print("1 do something")
+    }
+    print("start")
+    try devide(10, num)
+    defer {
+        print("2 do something")
+    }
+    print("end")
+}
+func test() {
+    do {
+        try test(num: 0)
+    } catch {
+        print(error)
+    }
+}
+test()
+```
+
+## `fatalError`
+
+* 可以通过`fatalError`抛出错误，不用`throw / throws`，不能通过`do-catch`捕获这个错误
+* 那么不得不实现，但是又不想别人调用的代码，可以通过`fatalError`抛出错误
+
+```swift
+class Person {
+    required init() {}
+}
+class Student: Person {
+    required init() {
+        fatalError()
+    }
+    init(name: String) {
+    }
+}
+var stu1 = Student(name: "lisi")
+var stu2 = Student() // Fatal error
+```
+
+## do{}
+
+* 可以使用`do`定义局部作用域
+
+```swift
+func test() {
+    do {
+        let a = 0
+        print(a)
+    }
+    print("do something")
+}
+```
+
+## 泛型
+
+* 泛型可以将类型参数化，提高代码复用性，减少代码量
+
+```swift
+func swapValue<T>(_ num1:inout T, _ num2:inout T) {
+    (num1, num2) = (num2, num1)
+}
+var a = 1
+var b = 2
+// 这里可以唯一确定泛型T为Int，所以不用传入。使用swapValue<Int>(&a, &b)也可以
+swapValue(&a, &b)
+print(a, b)
+```
+
+* 只要可以确定泛型的值，泛型函数就可以调用成功
+
+```swi
+var n1 = 10
+var n2 = 20
+// 这里可以赋值成功的原因就是因为编译器可以推断出swapValue中的T为Int
+var fn: (_ num1: inout Int, _ num2: inout Int) -> () = swapValue
+fn(&n1, &n2)
+print(n1, n2)
+```
+
+* 泛型可以修饰协议、类、结构体、枚举
+
+```swift
+struct Point<T> {
+    var x: T
+    var y: T
+}
+var p1: Point<Double> = Point(x: 10, y: 20)
+var p2 = Point(x: "2", y: "1")
+print(p1.x)
+print(p2.x)
+```
+
+## 关联类型（Associated Type）
+
+* 作用：给协议中用到的类型定义一个占位名称
+* 协议中可以定义多个关联类型
+
+```swift
+protocol Stackable {
+    associatedtype Element
+    mutating func push(_ element: Element)
+    mutating func pop() -> Element?
+    func top() -> Element?
+    func size() -> Int
+}
+
+struct Stack<T> : Stackable {
+    var arr: Array<T> = []
+    typealias Element = T
+    func size() -> Int {
+        arr.count
+    }
+    mutating func push(_ element: T) {
+        arr.append(element)
+    }
+    mutating func pop() -> T? {
+        guard size() > 0 else {
+            return nil
+        }
+        return arr.removeLast()
+    }
+    func top() -> T? {
+        arr.first
+    }
+}
+
+var s = Stack<String>()
+if let ele = s.pop() {
+    print(ele)
+} else {
+    print("s is empty")
+}
+```
+
+## 泛型类型约束
+
+* 泛型函数类型约束
+
+```swift
+protocol Runnable {}
+class Person {}
+
+func swapValue<T: Runnable & Person>(_ value1: inout T, _ value2: inout T) {
+    (value1, value2) = (value2, value1)
+}
+
+class Student: Person, Runnable {}
+
+var stu1 = Student()
+var stu2 = Student()
+
+swapValue(&stu1, &stu2)
+```
+
+* 关联类型约束
+
+```swift
+protocol Stackable {
+    associatedtype Element: Equatable
+}
+struct Stack<T: Equatable> : Stackable {
+    typealias Element = T
+}
+var s = Stack<Int>()
+```
+
+* 泛型函数通过`where`语句约束
+
+```swift
+protocol Stackable {
+    associatedtype Element
+}
+struct Stack<T> : Stackable {
+    typealias Element = T
+}
+func calcValue<T1: Stackable, T2: Stackable>(_ value1: T1, _ value2: T2) -> Bool where T1.Element == T2.Element, T2.Element : Hashable {
+    return true
+}
+var s1 = Stack<Int>()
+var s2 = Stack<Int>()
+var s3 = Stack<String>()
+calcValue(s1, s2)
+// error: global function 'calcValue' requires the types 'Stack<Int>.Element' (aka 'Int')
+// and 'Stack<String>.Element' (aka 'String') be equivalent
+calcValue(s1, s3)
+```
+
+* 协议作为返回类型
+
+```swift
+protocol Runnable {}
+
+class Dog: Runnable {}
+class Cat: Runnable {}
+
+func get(_ type: Int) -> Runnable {
+    if type == 0 {
+        return Dog()
+    }
+    return Cat()
+}
+// a: Runnable
+var a = get(1)
+// b: Runnable
+var b = get(0)
+```
+
+* 当协议作为返回值，但是协议中有`Self`或者关联类型时，需要注意要唯一确认`Self`或者关联类型的类型
+
+```swift
+protocol Runnable {
+    associatedtype SpeedType
+    var speed: SpeedType { get }
+}
+class Dog : Runnable {
+    typealias SpeedType = Double
+    var speed: Double {
+        10.1
+    }
+}
+class Cat : Runnable {
+    typealias SpeedType = Int
+    var speed: Int {
+        21
+    }
+}
+// error: protocol 'Runnable' can only be used as a generic constraint
+// because it has Self or associated type requirements
+// 当协议中有 Self 或者 关联类型时，编译器不能确定其中的Self或者关联类型 的类型，所以会报错
+// 比如这里无法确定返回值中的 SpeedType 究竟是 Double 还是 Int
+func get(_ type: Int) -> Runnable {
+  // 这里不管返回一个还是两个都会报错，例如注释下面这个if语句也会报错
+    if type == 0 {
+        return Dog()
+    }
+    return Cat()
+}
+```
+
+* 解决方案一：使用泛型
+
+```swift
+// 解决，使用泛型确认，当调用get是，需要传入泛型T，即可唯一确认返回值T
+func get<T: Runnable>(_ type: Int) -> T {
+    if type == 0 {
+        return Dog() as! T
+    }
+    return Cat() as! T
+}
+var dog: Dog = get(0)
+var cat: Cat = get(1)
+```
+
+* 解决方案二：使用`some`关键字声明一个不透明类型
+  * `some`限制只能返回一种类型，如果返回两种类型还是会报错
+  * `some`用于隐藏内部实现细节
+  * `some`除了用在返回值上，还可以用在类型属性上
+
+```swift
+func get(_ type: Int) -> some Runnable {
+    return Cat()
+}
+
+// 属性
+class Person {
+    var pet: some Runnable {
+        Dog()
+    }
+}
+```
+
+## 可选项的本质
+
+* 可选项的本质是枚举
+
+```swift
+var a: Int?
+a = 10
+a = .none
+a = .some(11)
+a = nil
+```
+
