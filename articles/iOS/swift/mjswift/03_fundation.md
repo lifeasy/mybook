@@ -1365,16 +1365,157 @@ case .none:
 
 溢出之后相当于绕类型取值范围做圆环运动
 
+<img src="https://cdn.jsdelivr.net/gh/lifeasy/ImageBed@master/img/202204212352401.png" style="zoom:33%;" />
+
 ## 运算符重载
 
-* 前缀
-* 中缀
-* 后缀
-* inout
+> 类、结构体、枚举可以为现有的运算符提供自定义的实现，这个操作叫做：运算符重载
+>
+> * 前缀
+> * 中缀
+> * 后缀
+> * inout
+
+```swift
+struct Point {
+    var x: Int
+    var y: Int
+    static func + (lhs: Point, rhs: Point) -> Point {
+        Point(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
+    }
+    static prefix func ++ (rhs: inout Point) -> Point {
+        rhs = Point(x: rhs.x + 1, y: rhs.y + 1)
+        return rhs
+    }
+    
+    static postfix func ++ (lhs: inout Point) -> Point {
+        let tmp = lhs
+        lhs = Point(x: lhs.x + 1, y: lhs.y + 1)
+        return tmp
+    }
+}
+
+var p1 = Point(x: 10, y: 20)
+var p2 = Point(x: 100, y: 200)
+
+print(p1 + p2)
+
+var p3 = ++p1
+print(p3, p1)
+var p4 = p2++
+print(p4, p2)
+// Point(x: 110, y: 220)
+// Point(x: 11, y: 21) Point(x: 11, y: 21)
+// Point(x: 100, y: 200) Point(x: 101, y: 201)
+```
 
 ## Equatabel
 
+> 要想得知2个实例是否等价，一般做法是遵守 Equatable 协议，重载 == 运算符
+>
+> 与此同时，等价于重载了 != 运算符
 
+* Swift为以下类型提供默认的 Equatable 实现
+  * 没有关联类型的枚举
+  * 只拥有遵守 Equatable 协议关联类型的枚举
+  * 只拥有遵守 Equatable 协议存储属性的结构体
+
+* 引用类型比较存储的地址值是否相等（是否引用着同一个对象），使用恒等运算符 === 、!==
+
+## Comparable
+
+> 要想比较2个实例的大小，一般做法是：
+>
+> * 遵守 Comparable 协议
+> * 重载相应的运算符
+
+```swift
+// score大的比较大，若score相等，age小的比较大
+struct Student : Comparable {
+	var age: Int
+	var score: Int
+	init(score: Int, age: Int) {
+		self.score = score
+		self.age = age
+	}
+  static func < (lhs: Student, rhs: Student) -> Bool {
+    (lhs.score < rhs.score) || (lhs.score == rhs.score && lhs.age > rhs.age)
+  }
+  static func > (lhs: Student, rhs: Student) -> Bool {
+    (lhs.score > rhs.score) || (lhs.score == rhs.score && lhs.age < rhs.age)
+  }
+  static func <= (lhs: Student, rhs: Student) -> Bool {
+    !(lhs > rhs)
+  }
+  static func >= (lhs: Student, rhs: Student) -> Bool {
+    !(lhs < rhs)
+  }
+}
+var stu1 = Student(score: 100, age: 20)
+var stu2 = Student(score: 98, age: 18)
+var stu3 = Student(score: 100, age: 20)
+print(stu1 > stu2) // true
+print(stu1 >= stu2) // true
+print(stu1 >= stu3) // true
+print(stu1 <= stu3) // true
+print(stu2 < stu1) // true
+print(stu2 <= stu1) // true
+```
+
+## 自定义运算符（Custom Operator）
+
+> 可以自定义新的运算符：在全局作用域使用operator进行声明
+>
+> * prefix operator 前缀运算符 
+>
+> * postfix operator 后缀运算符 
+>
+> * infix operator 中缀运算符 : 优先级组
+>
+> Apple文档参考：
+>
+> [Operator Declarations](https://developer.apple.com/documentation/swift/swift_standard_library/operator_declarations)
+>
+> [Declarations](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html)
+
+```swift
+// 优先级组
+/*
+precedencegroup 优先级组 {
+	associativity: 结合性(left\right\none)
+	higherThan: 比谁的优先级高
+	lowerThan: 比谁的优先级低
+	assignment: true代表在可选链操作中拥有跟赋值运算符一样的优先级
+}
+*/
+prefix operator +++
+	infix operator +- : PlusMinusPrecedence
+	precedencegroup PlusMinusPrecedence {
+	associativity: none
+	higherThan: AdditionPrecedence
+	lowerThan: MultiplicationPrecedence
+	assignment: true
+}
+struct Point {
+	var x: Int, y: Int
+	static prefix func +++ (point: inout Point) -> Point {
+		point = Point(x: point.x + point.x, y: point.y + point.y)
+		return point
+	}
+  static func +- (left: Point, right: Point) -> Point {
+    return Point(x: left.x + right.x, y: left.y - right.y)
+  }
+  static func +- (left: Point?, right: Point) -> Point {
+    print("+-")
+    return Point(x: left?.x ?? 0 + right.x, y: left?.y ?? 0 - right.y)
+  }
+}
+struct Person {
+	var point: Point
+}
+var person: Person? = nil
+person?.point +- Point(x: 10, y: 20)
+```
 
 
 
