@@ -7,7 +7,7 @@
 
 p12：本地公私钥
 
-![双向签名](https://gitee.com/dexport/blog-image/raw/master/img/20210724155114.png)
+![](https://cdn.jsdelivr.net/gh/lifeasy/ImageBed@master/img/202204212343506.png)
 
 3. 描述文件
 
@@ -22,5 +22,5 @@ $ security cms -D -i embedded.mobileprovision
 $ security cms -D -i embedded.mobileprovision > temp.plist
 ```
 
-![描述文件](https://gitee.com/dexport/blog-image/raw/master/img/20210724160039.png)
+![](https://cdn.jsdelivr.net/gh/lifeasy/ImageBed@master/img/202204212344827.png)
 

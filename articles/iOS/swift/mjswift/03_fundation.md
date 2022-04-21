@@ -1,4 +1,4 @@
-# Swift基础
+#  Swift基础
 
 ## 科学计数法
 
@@ -1316,10 +1316,34 @@ class Person {
 ```swift
 var a: Int?
 a = 10
+// 等价于
 a = .none
 a = .some(11)
 a = nil
 ```
+
+* 可选项使用`switch`
+
+```swift
+var age: Int? = 10
+
+switch age {
+    // 需要使用 v？ 接收，类似可选绑定
+case let v?:
+    print(v)
+case nil:
+    print("nil")
+}
+// 等价于
+switch age {
+case .some(let value):
+    print(value)
+case .none:
+    print("nil")
+}
+```
+
+
 
 ## 汇编分析String本质
 
@@ -1334,3 +1358,23 @@ a = nil
 
 * Array在Swift中定义是一个struct，表示有很多值类型的特性，但是底层其实是引用类型
 * 一个Array变量，占用8个字节，存储了一个堆上的内存地址。这段地址的前八个字节应改为类型信息（未知），第二个八字节为引用计数。第三个八字节为数组元素个数，第四个八字节为数组容量（50%扩容一倍），后面的字节存储具体元素值。
+
+## 溢出运算符
+
+`&+`、`&-`、`&*`
+
+溢出之后相当于绕类型取值范围做圆环运动
+
+## 运算符重载
+
+* 前缀
+* 中缀
+* 后缀
+* inout
+
+## Equatabel
+
+
+
+
+
