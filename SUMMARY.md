@@ -155,6 +155,8 @@
 
 * python
   * [环境搭建](articles/python/环境搭建.md)
+  * Python语法学习
+    * [基本数据类型](articles/python/fundation.md)
 
 ---
 

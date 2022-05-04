@@ -1489,8 +1489,8 @@ precedencegroup 优先级组 {
 }
 */
 prefix operator +++
-	infix operator +- : PlusMinusPrecedence
-	precedencegroup PlusMinusPrecedence {
+infix operator +- : PlusMinusPrecedence
+precedencegroup PlusMinusPrecedence {
 	associativity: none
 	higherThan: AdditionPrecedence
 	lowerThan: MultiplicationPrecedence
