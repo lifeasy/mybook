@@ -1517,5 +1517,248 @@ var person: Person? = nil
 person?.point +- Point(x: 10, y: 20)
 ```
 
+## 扩展
+
+* 扩展可以为枚举、结构体、类、协议添加新功能
+  * 可以添加方法、计算属性、下标、（便捷）初始化器、嵌套类型、协议等等
+* 扩展不能办到的事情
+  * 不能覆盖原有的功能
+  * 不能添加存储属性，不能向已有的属性添加属性观察器
+  * 不能添加父类
+  * 不能为类添加指定初始化器，不能添加反初始化器
+* 添加计算属性
+
+```swift
+extension Double {
+    var km: Double {
+        self / 1000
+    }
+    
+    var m: Double {
+        get {
+            return self
+        }
+    }
+    
+    var dm: Double {
+        self * 10
+    }
+    
+    var cm: Double {
+        self * 100
+    }
+}
+
+var num = 100.0
+print(num.km)
+```
+
+* 添加下标
+
+```swift
+extension Array {
+    subscript(nullable idx: Int) -> Element? {
+        if (startIndex..<endIndex).contains(idx) {
+            return self[idx]
+        }
+        return nil
+    }
+}
+
+var nums = [1,2,3,4,5]
+
+print(nums[1])
+print(nums[nullable: 10])
+```
+
+* 添加方法、嵌套类型
+
+```swift
+extension Int {
+    func repetitions(task: () -> Void) {
+        for _ in 0 ..< self { task() }
+    }
+
+    mutating func square() -> Int {
+        self = self * self
+        return self
+    }
+
+    enum Kind { case negative, zero, positive }
+    var kind: Kind {
+        switch self {
+        case 0: return .zero
+        case let x where x > 0: return .positive
+        default: return .negative
+        }
+    }
+
+    subscript(digitIndex: Int) -> Int {
+        var decimalBase = 1
+        for _ in 0 ..< digitIndex { decimalBase *= 10 }
+        return (self / decimalBase) % 10
+    }
+}
+```
+
+* 遵守协议
+
+```swift
+class Person {
+    var age: Int
+    var name: String
+    init(age: Int, name: String) {
+        self.age = age
+        self.name = name
+    }
+}
+
+extension Person: Equatable {
+    static func == (left: Person, right: Person) -> Bool {
+        left.age == right.age && left.name == right.name
+    }
+}
+```
+
+* 扩展初始化器
+  * `required`初始化器不能写在扩展中
+  * 为`struct`添加扩展，如果希望自定义初始化器的同时，编译器也能够生成默认初始化器
+    * 可以在扩展中编写自定义初始化器（如果写在原`struct`中，则编译器不会生成默认初始化器）
+
+```swift
+class Person {
+    var age: Int
+    var name: String
+    init(age: Int, name: String) {
+        self.age = age
+        self.name = name
+    }
+}
+
+extension Person: Equatable {
+    static func == (left: Person, right: Person) -> Bool {
+        left.age == right.age && left.name == right.name
+    }
+
+    convenience init() {
+        self.init(age: 0, name: "")
+    }
+}
+
+
+struct Point {
+    var x: Int = 0
+    var y: Int = 0
+}
+
+extension Point {
+    init(_ point: Point) {
+        self.init(x: point.x, y: point.y)
+    }
+}
+
+var p1 = Point()
+var p2 = Point(x: 10)
+var p3 = Point(y: 20)
+var p4 = Point(x: 10, y: 20)
+var p5 = Point(p4)
+```
+
+* 扩展协议
+  * 如果一个类型已经实现了协议的所有要求，但是还没有声明它遵守了这个协议，可以通过扩展来让它遵守这个协议
+
+```swift
+protocol TestProtocol {
+    func test()
+}
+
+class TestClass {
+    func test() {
+        print("test")
+    }
+}
+extension TestClass: TestProtocol {}
+
+// 编写一个函数，判断一个整数是否为奇数？
+func isOdd<T: BinaryInteger>(_ i: T) -> Bool {
+    i % 2 != 0
+}
+print(isOdd(10))
+// 这种实现方式更加优雅
+extension BinaryInteger {
+    func isOdd() -> Bool {
+        self % 2 != 0
+    }
+}
+print(10.isOdd())
+```
+
+* 扩展可以给协议提供默认实现，也间接实现『可选协议』的效果
+* 扩展可以给协议扩充『协议中从未声明过的方法』
+
+```swift
+protocol TestProtocol {
+    func test1()
+}
+
+extension TestProtocol {
+    func test1() {
+        print("TestProtocol test1")
+    }
+
+    func test2() {
+        print("TestProtocol test2")
+    }
+}
+
+//class TestClass : TestProtocol {}
+//var cls = TestClass()
+//cls.test1() // TestProtocol test1
+//cls.test2() // TestProtocol test2
+//var cls2: TestProtocol = TestClass()
+//cls2.test1() // TestProtocol test1
+//cls2.test2() // TestProtocol test2
+
+class TestClass: TestProtocol {
+    func test1() { print("TestClass test1") }
+    func test2() { print("TestClass test2") }
+}
+
+var cls = TestClass()
+cls.test1() // TestClass test1
+cls.test2() // TestClass test2
+var cls2: TestProtocol = TestClass()
+// test1() 为必须实现的协议方法，编译器认为类中肯定有实现，所以优先到类中查找
+cls2.test1() // TestClass test1
+// test2() 为非必须实现，编译器认为类中不一定会实现，所以优先到扩展中调用
+cls2.test2() // TestProtocol test2
+```
+
+* 扩展泛型
+
+```swift
+class Stack<E> {
+    var elements = [E]()
+    func push(_ element: E) {
+        elements.append(element)
+    }
+
+    func pop() -> E { elements.removeLast() }
+    func size() -> Int { elements.count }
+}
+
+// 扩展中依然可以使用原类型中的泛型类型
+extension Stack {
+    func top() -> E { elements.last! }
+}
+
+// 符合条件才扩展
+extension Stack: Equatable where E: Equatable {
+    static func == (left: Stack, right: Stack) -> Bool {
+        left.elements == right.elements
+    }
+}
+```
+
 
 
