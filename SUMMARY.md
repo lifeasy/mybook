@@ -98,7 +98,9 @@
 ----
 
 * [数据结构与算法](articles/algorithm/算法.md)
+  
   * 算法基础
+    
     * [复杂度](articles/algorithm/geektime_note/01_复杂度.md)
     * [数组](articles/algorithm/geektime_note/02_数组.md)
     * [链表](articles/algorithm/geektime_note/03_链表.md)
@@ -117,13 +119,16 @@
     * [哈希算法](articles/algorithm/geektime_note/11_哈希算法.md)
     * [二叉树](articles/algorithm/geektime_note/12_二叉树.md)
     * [红黑树](articles/algorithm/geektime_note/13_红黑树.md)
+  
   * [Swift中相关的数据结构和算法](articles/algorithm/swift_algorithm/index.md)
+    
     * [字符串](articles/algorithm/swift_algorithm/String.md)
     * [数组](articles/algorithm/swift_algorithm/Array.md)
     * [字典](articles/algorithm/swift_algorithm/Dictionary.md)
     * [集合](articles/algorithm/swift_algorithm/Set.md)
+  
   * [JavaScript中相关的数据结构和算法](articles/algorithm/js_algorithm/index.md)
-
+    
     * [字符串](articles/algorithm/js_algorithm/String.md)
     * [数组](articles/algorithm/js_algorithm/Array.md)
     * [映射](articles/algorithm/js_algorithm/Map.md)
@@ -156,7 +161,9 @@
 * python
   * [环境搭建](articles/python/环境搭建.md)
   * Python语法学习
-    * [基本数据类型](articles/python/fundation.md)
+    * [01_print函数](articles/python/01_print.md)
+    * [02_关键字](articles/python/02_keyword.md)
+    * [03_基本数据类型](articles/python/03_datatype.md)
 
 ---
 
@@ -191,4 +198,3 @@
     * [常用命令](articles/tool/cocoapods/常用命令.md)
     * [Cocoapods简单原理](articles/tool/cocoapods/简单原理.md)
     * [Cocoapods搭建私有仓库](articles/tool/cocoapods/搭建私有库.md)
-

@@ -23,3 +23,6 @@ $ swiftc -dump-ast main.swift
 &0x100511630, (char *) $4 = 0x00007ffeefbff2a0 "0x100511630 heap pointer, (0x30 bytes), zone: 0x7fff88ac1000"
 ```
 
+```swift
+
+```
