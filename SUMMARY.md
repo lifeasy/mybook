@@ -163,7 +163,9 @@
   * Python语法学习
     * [01_print函数](articles/python/01_print.md)
     * [02_关键字](articles/python/02_keyword.md)
-    * [03_基本数据类型](articles/python/03_datatype.md)
+    * [03_字符串](articles/python/03_string.md)
+    * [04_数字](articles/python/04_number.md)
+    * [05_列表](articles/python/05_list.md)
 
 ---
 
