@@ -166,6 +166,10 @@
     * [03_字符串](articles/python/03_string.md)
     * [04_数字](articles/python/04_number.md)
     * [05_列表](articles/python/05_list.md)
+    * [06_if语句](articles/python/06_if.md)
+    * [07_字典](articles/python/07_dict.md)
+    * [08_用户输入和While循环](articles/python/08_input.md)
+    * [09_函数](articles/python/09_function.md)
 
 ---
 
