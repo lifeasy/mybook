@@ -170,6 +170,10 @@
     * [07_字典](articles/python/07_dict.md)
     * [08_用户输入和While循环](articles/python/08_input.md)
     * [09_函数](articles/python/09_function.md)
+    * [10_类](articles/python/10_class.md)
+    * [11_文件操作](articles/python/11_file.md)
+    * [12_异常处理](articles/python/12_error.md)
+    * [13_json](articles/python/13_json.md)
 
 ---
 
