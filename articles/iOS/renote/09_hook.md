@@ -30,7 +30,7 @@ NSLog(@"end");
 
 1. 程序编译之后，在Mach-O中有懒加载和非懒加载两张表。
 
-![](https://gitee.com/dexport/blog-image/raw/master/img/20210725123449.png)
+![](https://cdn.jsdelivr.net/gh/lifeasy/ImageBed@master/img/202211301504986.png)
 
 这两张表中记录了需要bind的符号，我们这里演示的`NSLog`属于懒加载符号表，在使用的时候才进行绑定
 
@@ -46,7 +46,7 @@ NSLog(@"end");
 
 * Mach-O中找到NSLog的函数地址信息：
 
-![符号信息](https://gitee.com/dexport/blog-image/raw/master/img/20210725124058.png)
+![](https://cdn.jsdelivr.net/gh/lifeasy/ImageBed@master/img/202211301505113.png)
 
 * 通过通过程序起始地址`0x00000001025ac000`加上Offset`0xc000`，就的到NSLog符号在运行时的内存地址，查看内存空间
 
@@ -126,7 +126,7 @@ Foundation`NSLog:
 
 * macho中查看地址信息
 
-![](https://gitee.com/dexport/blog-image/raw/master/img/20210725135449.png)
+![](https://cdn.jsdelivr.net/gh/lifeasy/ImageBed@master/img/202211301507387.png)
 
 * 这里的Data实际上是代码，通过汇编进入调试查看代码，发现最终跳转了一个地址，查看x16的地址
 
@@ -144,16 +144,16 @@ Foundation`NSLog:
 (long) $2 = 0x0000000000006588
 ```
 
-![](https://gitee.com/dexport/blog-image/raw/master/img/20210725142357.png)
+![](https://cdn.jsdelivr.net/gh/lifeasy/ImageBed@master/img/202211301509869.png)
 
 * 发现这个Symbol Stubs代码执行后跳转的是`0x0000000000006588`
 
-![](https://gitee.com/dexport/blog-image/raw/master/img/20210725140209.png)
+![](https://cdn.jsdelivr.net/gh/lifeasy/ImageBed@master/img/202211301510583.png)
 
 * `0x0000000000006588`在stub helper中执行两行代码，最终跳转到0x6579处执行代码，发现，最终都跳转到0x100008000处。**这里的外部符号执行代码最终都是跳转到相同的地址**
 * 查看`0x8000`处，执行的是一个非懒加载绑定的`dyld_stub_binder`符号，非懒加载符号即是在dyld加载阶段就进行绑定的，这个函数执行后，懒加载符号表中的地址就被改变，下一次调用的时候，经过stub函数，直接就跳转到绑定后的位置了
 
-![](https://gitee.com/dexport/blog-image/raw/master/img/20210725140641.png)
+![](https://cdn.jsdelivr.net/gh/lifeasy/ImageBed@master/img/202211301511306.png)
 
 ### 使用
 
